@@ -49,4 +49,3 @@ The addon:
 They'll be available in the editor _ColorPicker_.
 
 ![ColorPicker presets](readme/colorpicker_presets.png)
-
