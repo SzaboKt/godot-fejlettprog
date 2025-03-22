@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cnedxfn2pxh2t"]
+[gd_scene load_steps=22 format=3 uid="uid://cnedxfn2pxh2t"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_hwp5q"]
 [ext_resource type="PackedScene" uid="uid://7s1esfbldf1" path="res://level/cactus/cactus_small_4.tscn" id="1_oaaa3"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cip1awte2184j" path="res://level/cactus/cactus_small_2.tscn" id="6_ona4a"]
 [ext_resource type="Material" uid="uid://da188d7yrcfr8" path="res://level/platforms.tres" id="7_njuj4"]
 [ext_resource type="PackedScene" uid="uid://c6uew1wfpkt16" path="res://level/interactable/flag/flag_3d.tscn" id="8_kebk2"]
+[ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="12_tpysj"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.697336, 1), 0.51276, 0.0, 0, 0]
@@ -40,11 +41,11 @@ noise = SubResource("FastNoiseLite_jnnrx")
 shader = ExtResource("1_hwp5q")
 shader_parameter/top_color = Color(0.288469, 0.182916, 1, 1)
 shader_parameter/bottom_color = Color(1, 0.46805, 0, 1)
-shader_parameter/moon_direction = Vector3(-1.095, 0.68, 1)
-shader_parameter/moon_size = 0.045
 shader_parameter/gradient_curve = SubResource("CurveTexture_moxc7")
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_83fre")
 shader_parameter/moon_texture = ExtResource("2_kb37w")
+shader_parameter/moon_direction = Vector3(-1.095, 0.68, 1)
+shader_parameter/moon_size = 0.045
 
 [sub_resource type="Sky" id="Sky_0h0bb"]
 sky_material = SubResource("ShaderMaterial_g8ud2")
@@ -77,6 +78,10 @@ fog_height_density = 0.1
 volumetric_fog_density = 0.01
 volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
 volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_c0ihj"]
+vertices = PackedVector3Array(-24.25, 8.5, -19.5, -25.25, 8.5, -19.75, -25.5, 8.5, -19.25, -27, 8.5, -23.5, -27, 8.5, -21.5, -25.75, 8.5, -22.25, -24.75, 8.5, -22.25, -23, 8.5, -23.5, -23, 8.5, -16.5, -23.75, 8.5, -21.5, -26.25, 8.5, -19.25, -27, 8.5, -20.5, -27, 8.5, -16.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(5, 3, 6), PackedInt32Array(6, 3, 7), PackedInt32Array(9, 7, 0), PackedInt32Array(0, 7, 8), PackedInt32Array(9, 6, 7), PackedInt32Array(12, 11, 10), PackedInt32Array(12, 10, 2), PackedInt32Array(0, 8, 2), PackedInt32Array(2, 8, 12)]
 
 [node name="Level" type="Node3D"]
 
@@ -156,12 +161,6 @@ transform = Transform3D(-3.02021, 0.729762, 0.355604, 0.681151, 3.02339, -0.4193
 [node name="Cactus_Small_9" parent="." instance=ExtResource("6_ona4a")]
 transform = Transform3D(-2.99633, 0.231602, -1.56352, 0.381736, 3.35793, -0.234152, 1.5338, -0.383288, -2.99613, -47.7949, 8.42468, -22.8013)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 7.5, -20)
-material_override = ExtResource("7_njuj4")
-use_collision = true
-size = Vector3(5, 1, 8)
-
 [node name="CSGBox3D11" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 7.5, -20)
 material_override = ExtResource("7_njuj4")
@@ -233,3 +232,91 @@ use_collision = true
 polygon = PackedVector2Array(0, 0, 3, 2, 3, 0)
 depth = 4.0
 material = ExtResource("7_njuj4")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_c0ihj")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 7.5, -20)
+material_override = ExtResource("7_njuj4")
+use_collision = true
+size = Vector3(5, 1, 8)
+
+[node name="Rogue" parent="NavigationRegion3D" instance=ExtResource("12_tpysj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.356, 7.98995, -21.0254)
+
+[node name="Skeleton3D" parent="NavigationRegion3D/Rogue/Rig" index="0"]
+bones/1/position = Vector3(0, 0.405663, 0)
+bones/1/rotation = Quaternion(0, -1.19209e-07, 0, 1)
+bones/2/rotation = Quaternion(0, 7.10543e-15, 0, 1)
+bones/3/rotation = Quaternion(0, 0, 0, 1)
+bones/4/position = Vector3(0.212007, 0.134132, 8.40246e-08)
+bones/4/rotation = Quaternion(-0.514121, -0.485468, -0.485468, 0.514122)
+bones/5/rotation = Quaternion(1.64805e-09, -5.95036e-08, -0.0552855, 0.998471)
+bones/7/rotation = Quaternion(1.20018e-09, 1.33102e-07, -5.4552e-06, 1)
+bones/8/position = Vector3(8.34815e-10, 0.0961251, -0.0575001)
+bones/8/rotation = Quaternion(1.60975e-09, 1.60975e-09, -0.707107, 0.707107)
+bones/10/position = Vector3(-0.212007, 0.134132, 8.40246e-08)
+bones/10/rotation = Quaternion(-0.514121, 0.485468, 0.485468, 0.514122)
+bones/11/rotation = Quaternion(1.64805e-09, 5.95036e-08, 0.0552855, 0.998471)
+bones/13/rotation = Quaternion(1.19993e-09, -8.93186e-08, 5.4552e-06, 1)
+bones/14/position = Vector3(-8.34815e-10, 0.0961251, -0.0575001)
+bones/14/rotation = Quaternion(1.60973e-09, -1.60973e-09, 0.707107, 0.707107)
+bones/19/rotation = Quaternion(0, 1.19209e-07, 0, 1)
+bones/21/position = Vector3(0.170945, 0.113587, 1.39233e-08)
+bones/21/rotation = Quaternion(0.999849, -7.13277e-08, -1.20427e-08, 0.0173732)
+bones/22/rotation = Quaternion(0.106225, 6.86529e-08, -7.37702e-08, 0.994342)
+bones/23/rotation = Quaternion(-0.455239, 1.6197e-08, -3.43567e-08, 0.890369)
+bones/24/rotation = Quaternion(-3.04797e-08, 0.920355, -0.391084, 6.94849e-08)
+bones/25/position = Vector3(-0.170945, 0.113587, 1.39233e-08)
+bones/25/rotation = Quaternion(0.999849, 7.42657e-08, -3.17263e-08, 0.0173732)
+bones/26/rotation = Quaternion(0.106225, -6.86529e-08, 7.37702e-08, 0.994342)
+bones/27/rotation = Quaternion(-0.455239, 1.65983e-07, 2.25077e-09, 0.890369)
+bones/28/rotation = Quaternion(3.04797e-08, 0.920355, -0.391084, -6.94849e-08)
+bones/29/rotation = Quaternion(0.707107, -2.29302e-07, -4.60551e-08, 0.707107)
+bones/30/position = Vector3(0.170945, 0.0259903, 0.245789)
+bones/30/rotation = Quaternion(-0.707107, -7.05285e-08, -7.05285e-08, 0.707107)
+bones/31/rotation = Quaternion(7.10544e-15, -1.38321e-22, 1, -2.33983e-34)
+bones/32/position = Vector3(-1.11482e-08, 0.213436, -2.50942e-15)
+bones/32/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.9526e-08)
+bones/33/position = Vector3(8.58988e-09, 0.16565, -5.09137e-09)
+bones/34/rotation = Quaternion(1, -3.10863e-15, 1.94707e-07, -6.91739e-22)
+bones/36/rotation = Quaternion(0.707107, -3.82385e-08, 1.45009e-07, 0.707107)
+bones/37/rotation = Quaternion(-0.707107, -7.05285e-08, -7.05285e-08, 0.707107)
+bones/38/rotation = Quaternion(7.10544e-15, -1.38321e-22, 1, -2.33983e-34)
+bones/39/position = Vector3(3.75294e-09, 0.213436, 0)
+bones/39/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.95261e-08)
+bones/40/position = Vector3(-6.31128e-09, 0.16565, 1.36608e-09)
+bones/41/rotation = Quaternion(1, 4.44086e-16, 1.94707e-07, 6.91739e-22)
+bones/43/rotation = Quaternion(-0.707107, -7.27951e-08, -7.27951e-08, 0.707107)
+bones/44/position = Vector3(0.713181, 1.10676, 2.54914e-07)
+bones/44/rotation = Quaternion(0.5, 0.5, 0.5, -0.5)
+bones/45/rotation = Quaternion(-0.707107, -7.27951e-08, -7.27951e-08, 0.707107)
+bones/46/position = Vector3(-0.713182, 1.10676, -8.51573e-08)
+bones/46/rotation = Quaternion(-0.5, 0.5, 0.5, 0.5)
+
+[node name="Knife_Offhand" parent="NavigationRegion3D/Rogue/Rig/Skeleton3D" index="0"]
+transform = Transform3D(-0.999999, -1.36089e-07, 2.60633e-08, -7.18755e-08, -5.30967e-07, 1, -2.14323e-07, 0.999999, 6.23449e-07, 0.883132, 1.04926, -1.63278e-05)
+
+[node name="1H_Crossbow" parent="NavigationRegion3D/Rogue/Rig/Skeleton3D" index="1"]
+transform = Transform3D(-4.5731e-07, 5.4959e-08, -0.999999, -1, -4.96538e-07, 3.978e-07, -4.43667e-07, 0.999999, -1.20936e-08, -0.778504, 1.04926, -0.0103745)
+
+[node name="2H_Crossbow" parent="NavigationRegion3D/Rogue/Rig/Skeleton3D" index="2"]
+transform = Transform3D(-4.5731e-07, 5.4959e-08, -0.999999, -1, -4.96538e-07, 3.978e-07, -4.43667e-07, 0.999999, -1.20936e-08, -0.778504, 1.04926, -0.0103745)
+
+[node name="Knife" parent="NavigationRegion3D/Rogue/Rig/Skeleton3D" index="3"]
+transform = Transform3D(0.999999, 2.03146e-07, -4.39072e-07, -3.79561e-07, -7.95385e-07, -1, -1.36094e-07, 0.999999, -7.42514e-07, -0.883132, 1.04926, -1.60483e-05)
+
+[node name="Throwable" parent="NavigationRegion3D/Rogue/Rig/Skeleton3D" index="4"]
+transform = Transform3D(0.999999, 2.17879e-07, -4.52757e-07, -3.93247e-07, -6.76176e-07, -1, -1.50827e-07, 0.999999, -6.23305e-07, -0.883132, 1.04926, 0.18023)
+
+[node name="Rogue_Cape" parent="NavigationRegion3D/Rogue/Rig/Skeleton3D" index="5"]
+transform = Transform3D(1, 1.25214e-21, 0, -1.25214e-21, 1, 0, 0, 0, 1, 0, 1.21587, 0)
+
+[node name="Area3D" parent="NavigationRegion3D/Rogue" index="4"]
+collision_mask = 2
+
+[connection signal="bake_finished" from="NavigationRegion3D" to="NavigationRegion3D/Rogue" method="_on_navigation_region_3d_bake_finished"]
+[connection signal="body_exited" from="NavigationRegion3D/Rogue/Area3D" to="NavigationRegion3D/Rogue" method="_on_area_3d_body_exited"]
+
+[editable path="NavigationRegion3D/Rogue"]

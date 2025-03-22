@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 @export_group("Movement")
 ## Character maximum run speed on the ground in meters per second.
@@ -14,6 +15,8 @@ extends CharacterBody3D
 ## Minimum horizontal speed on the ground. This controls when the character skin's
 ## animation tree changes between the idle and running states.
 @export var stopping_speed := 1.0
+
+@export var push_speed := 40
 
 @export_group("Camera")
 @export_range(0.0, 1.0) var mouse_sensitivity := 0.25
@@ -71,6 +74,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_input_direction.x = -event.relative.x * mouse_sensitivity
 		_camera_input_direction.y = -event.relative.y * mouse_sensitivity
 
+func get_skin() -> SophiaSkin:
+	return _skin
+	
+func push(global_projectile_position) -> void:
+	var push_direction = (global_position - global_projectile_position).normalized()
+	velocity = push_direction * push_speed
 
 func _physics_process(delta: float) -> void:
 	_camera_pivot.rotation.x += _camera_input_direction.y * delta

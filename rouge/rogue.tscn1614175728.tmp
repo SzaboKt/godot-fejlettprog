@@ -1,76 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://me2krwhpqgrn"]
+[gd_scene load_steps=5 format=3 uid="uid://me2krwhpqgrn"]
 
 [ext_resource type="PackedScene" uid="uid://dw5tfojduc0p8" path="res://rouge/Rogue.glb" id="1_qgo38"]
 [ext_resource type="Script" uid="uid://bqpweyfrpe6bn" path="res://rouge/rogue.gd" id="2_hs352"]
-[ext_resource type="PackedScene" uid="uid://ba5fay6ja3xen" path="res://projectile/projectile_launcher.tscn" id="3_sb5rj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lmthd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_pq5jb"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sb5rj"]
-animation = &"1H_Ranged_Reload"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nha0d"]
-animation = &"1H_Ranged_Shoot"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eppps"]
-animation = &"Idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iyckh"]
-animation = &"Walking_B"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qv84k"]
-advance_mode = 2
-advance_condition = &"idle"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cwi6l"]
-advance_mode = 2
-advance_condition = &"is_walking"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cbupo"]
-advance_mode = 2
-advance_condition = &"idle"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ulmp0"]
-advance_mode = 2
-advance_condition = &"is_shooting"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_002pn"]
-advance_mode = 2
-advance_condition = &"is_shooting"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nlw5l"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yvco7"]
-switch_mode = 2
-advance_mode = 2
-advance_condition = &"idle"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_71d2f"]
-switch_mode = 2
-advance_mode = 2
-advance_condition = &"is_walking"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sb5rj"]
-switch_mode = 2
-advance_mode = 2
-advance_condition = &"is_shooting"
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_f1ml0"]
-states/1H_Ranged_Reload/node = SubResource("AnimationNodeAnimation_sb5rj")
-states/1H_Ranged_Reload/position = Vector2(575.892, 75)
-states/1H_Ranged_Shoot/node = SubResource("AnimationNodeAnimation_nha0d")
-states/1H_Ranged_Shoot/position = Vector2(354.892, 75)
-states/Idle/node = SubResource("AnimationNodeAnimation_eppps")
-states/Idle/position = Vector2(354.892, 162)
-states/Start/position = Vector2(133, 120)
-states/Walking_B/node = SubResource("AnimationNodeAnimation_iyckh")
-states/Walking_B/position = Vector2(575.892, 162)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_qv84k"), "Idle", "Walking_B", SubResource("AnimationNodeStateMachineTransition_cwi6l"), "Walking_B", "Idle", SubResource("AnimationNodeStateMachineTransition_cbupo"), "Idle", "1H_Ranged_Shoot", SubResource("AnimationNodeStateMachineTransition_ulmp0"), "Walking_B", "1H_Ranged_Shoot", SubResource("AnimationNodeStateMachineTransition_002pn"), "1H_Ranged_Shoot", "1H_Ranged_Reload", SubResource("AnimationNodeStateMachineTransition_nlw5l"), "1H_Ranged_Reload", "Idle", SubResource("AnimationNodeStateMachineTransition_yvco7"), "1H_Ranged_Reload", "Walking_B", SubResource("AnimationNodeStateMachineTransition_71d2f"), "1H_Ranged_Reload", "1H_Ranged_Shoot", SubResource("AnimationNodeStateMachineTransition_sb5rj")]
-graph_offset = Vector2(-72.1078, 0)
 
 [node name="Rogue" instance=ExtResource("1_qgo38")]
 script = ExtResource("2_hs352")
@@ -149,17 +84,17 @@ transform = Transform3D(6.2664e-07, 0.262863, 0.964833, 0.999999, -2.20542e-07, 
 visible = false
 
 [node name="1H_Crossbow" parent="Rig/Skeleton3D" index="1"]
-transform = Transform3D(0.955738, -0.063973, -0.287177, -0.0481936, 0.928851, -0.367303, 0.290242, 0.364887, 0.884656, -0.46035, 0.669824, 0.0102502)
+transform = Transform3D(0.955738, -0.0639731, -0.287177, -0.0481935, 0.928851, -0.367303, 0.290242, 0.364887, 0.884656, -0.46035, 0.669824, 0.0102502)
 
 [node name="2H_Crossbow" parent="Rig/Skeleton3D" index="2"]
-transform = Transform3D(0.955738, -0.063973, -0.287177, -0.0481936, 0.928851, -0.367303, 0.290242, 0.364887, 0.884656, -0.46035, 0.669824, 0.0102502)
+transform = Transform3D(0.955738, -0.0639731, -0.287177, -0.0481935, 0.928851, -0.367303, 0.290242, 0.364887, 0.884656, -0.46035, 0.669824, 0.0102502)
 
 [node name="Knife" parent="Rig/Skeleton3D" index="3"]
-transform = Transform3D(0.287177, -0.0639727, 0.955738, 0.367303, 0.928851, -0.0481939, -0.884656, 0.364887, 0.290242, -0.49106, 0.641016, 0.10659)
+transform = Transform3D(0.287177, -0.0639728, 0.955738, 0.367303, 0.928851, -0.0481938, -0.884656, 0.364887, 0.290242, -0.49106, 0.641016, 0.10659)
 visible = false
 
 [node name="Throwable" parent="Rig/Skeleton3D" index="4"]
-transform = Transform3D(0.287177, -0.0639728, 0.955738, 0.367303, 0.928851, -0.0481938, -0.884656, 0.364887, 0.290242, -0.502591, 0.808437, 0.172359)
+transform = Transform3D(0.287177, -0.0639729, 0.955738, 0.367303, 0.928851, -0.0481937, -0.884656, 0.364887, 0.290242, -0.502591, 0.808437, 0.172359)
 visible = false
 
 [node name="Rogue_Cape" parent="Rig/Skeleton3D" index="5"]
@@ -178,24 +113,8 @@ debug_enabled = true
 [node name="Area3D" type="Area3D" parent="." index="4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("SphereShape3D_pq5jb")
-
-[node name="ProjectileLauncher" parent="." index="5" instance=ExtResource("3_sb5rj")]
-transform = Transform3D(-0.993171, -0.116671, 8.74228e-08, -0.116671, 0.993171, 0, -8.68257e-08, -1.01997e-08, -1, 0, 0.832371, 0)
-
-[node name="AnimationTree" type="AnimationTree" parent="." index="6"]
-tree_root = SubResource("AnimationNodeStateMachine_f1ml0")
-anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/idle = false
-parameters/conditions/is_shooting = false
-parameters/conditions/is_walking = false
-
-[node name="IdleTimer" type="Timer" parent="." index="7"]
-one_shot = true
 
 [connection signal="navigation_finished" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_navigation_finished"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Area3D" to="ProjectileLauncher" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="Area3D" to="ProjectileLauncher" method="_on_area_3d_body_exited"]
-[connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
