@@ -73,6 +73,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-72.1078, 0)
 
 [node name="Rogue" instance=ExtResource("1_qgo38")]
+collision_layer = 9
 script = ExtResource("2_hs352")
 speed = 2.5
 
@@ -130,7 +131,8 @@ parameters/conditions/is_walking = false
 one_shot = true
 
 [connection signal="navigation_finished" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_navigation_finished"]
-[connection signal="body_entered" from="Area3D" to="ProjectileLauncher" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D" to="ProjectileLauncher" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
 [connection signal="body_exited" from="Area3D" to="ProjectileLauncher" method="_on_area_3d_body_exited"]
 [connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]

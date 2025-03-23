@@ -5,6 +5,7 @@ class_name Rouge
 @export var jump_velocity: float = 4.5
 @export var rotation_speed: float = 5.0
 @export var acceleration: float = 20.0
+@export var push_speed: float = 20.0
 
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var gravity: float = -ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -18,6 +19,7 @@ var wander_time: float
 var move_direction: Vector3
 var bake_finished: bool = false
 var player: Player
+var being_pushed: bool = false
 
 func randomize_wander():
 	var random_point := Vector3(randf_range(-30, 30), 0, randf_range(-30, 30))
@@ -36,14 +38,19 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if player:
-		velocity = Vector3.ZERO
 		look_at(player.global_position, Vector3(0,1,0), true)
 		animation_tree["parameters/conditions/is_shooting"] = true
 		animation_tree["parameters/conditions/idle"] = false
 		animation_tree["parameters/conditions/is_walking"] = false
+		if state_machine.get_current_node() == "Walking_B":
+			velocity = Vector3.ZERO
+	#elif being_pushed:
+		#print(velocity)
+		#move_toward(velocity.x, 0.0, delta)
+		#move_toward(velocity.z, 0.0, delta)
 	else:
 		animation_tree["parameters/conditions/is_shooting"] = false
-		if idle_timer.is_stopped():
+		if idle_timer.is_stopped() and not state_machine.get_current_node() in ["1H_Ranged_Shoot", "1H_Ranged_Reload"]:
 			animation_tree["parameters/conditions/idle"] = false
 			animation_tree["parameters/conditions/is_walking"] = true
 			var destination: Vector3 = navigation_agent_3d.get_next_path_position()
@@ -59,20 +66,20 @@ func _physics_process(delta: float) -> void:
 			animation_tree["parameters/conditions/is_walking"] = false
 			velocity = Vector3.ZERO
 	
-	if state_machine.get_current_node() in ["1H_Ranged_Reload", "1H_Ranged_Shoot"]:
-		print("asd")
-		velocity = Vector3.ZERO
+	#if state_machine.get_current_node() in ["1H_Ranged_Reload", "1H_Ranged_Shoot"]:
+		#velocity = Vector3.ZERO
 	#if velocity.normalized() == Vector3(0, -1, 0):
 		#$AnimationPlayer.play("Unarmed_Pose")
-		
 	velocity.y += gravity
 	move_and_slide()
 
 func _on_navigation_agent_3d_navigation_finished() -> void:
 	randomize_idle()
 	
-#func _on_navigation_region_3d_bake_finished() -> void:
-	#randomize_wander()
+func push() -> void:
+	being_pushed = true
+	print("push")
+	velocity += -global_transform.basis.z * push_speed
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	print("enemy detected")

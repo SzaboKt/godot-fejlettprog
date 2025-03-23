@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1ot6gn6tms6h"]
+[gd_scene load_steps=13 format=3 uid="uid://b1ot6gn6tms6h"]
 
 [ext_resource type="Script" uid="uid://d2uy8fff483py" path="res://player/player_3d_template.gd" id="1_6bmsq"]
 [ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://player/sophia_skin/sophia_skin.tscn" id="2_4dj54"]
@@ -47,6 +47,9 @@ rings = 8
 length = 0.5
 slide_on_slope = true
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_6bmsq"]
+radius = 2.87594
+
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 3
 script = ExtResource("1_6bmsq")
@@ -94,3 +97,22 @@ unique_name_in_owner = true
 transform = Transform3D(1, 3.19744e-14, 2.13163e-14, 0, 1, 0, 0, 0, 1, -2.4869e-14, 2.38419e-07, 10)
 current = true
 fov = 50.0
+
+[node name="EnemyDetectionArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyDetectionArea"]
+shape = SubResource("SphereShape3D_6bmsq")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 1084.0
+offset_top = 615.0
+offset_right = 1449.0
+offset_bottom = 684.0
+theme_override_font_sizes/font_size = 50
+text = "Press F to push"
+
+[connection signal="body_entered" from="EnemyDetectionArea" to="." method="_enemy_in_detection_area"]
+[connection signal="body_exited" from="EnemyDetectionArea" to="." method="_enemy_exited_detection_area"]

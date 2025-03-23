@@ -16,7 +16,7 @@ class_name Player
 ## animation tree changes between the idle and running states.
 @export var stopping_speed := 1.0
 
-@export var push_speed := 40
+@export var push_speed: float = 40.0
 
 @export_group("Camera")
 @export_range(0.0, 1.0) var mouse_sensitivity := 0.25
@@ -30,6 +30,7 @@ var ground_height := 0.0
 var _gravity := -30.0
 var _was_on_floor_last_frame := true
 var _camera_input_direction := Vector2.ZERO
+var _enemy : CharacterBody3D
 
 ## The last movement or aim direction input by the player. We use this to orient
 ## the character model.
@@ -43,7 +44,7 @@ var _camera_input_direction := Vector2.ZERO
 @onready var _landing_sound: AudioStreamPlayer3D = %LandingSound
 @onready var _jump_sound: AudioStreamPlayer3D = %JumpSound
 @onready var _dust_particles: GPUParticles3D = %DustParticles
-
+@onready var label: Label = $Label
 
 func _ready() -> void:
 	Events.kill_plane_touched.connect(func on_kill_plane_touched() -> void:
@@ -64,6 +65,8 @@ func _input(event: InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	elif event.is_action_pressed("left_click"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if _enemy and event.is_action_pressed("push_enemy"):
+		_enemy.push()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -79,7 +82,7 @@ func get_skin() -> SophiaSkin:
 	
 func push(global_projectile_position) -> void:
 	var push_direction = (global_position - global_projectile_position).normalized()
-	velocity = push_direction * push_speed
+	velocity += push_direction * push_speed
 
 func _physics_process(delta: float) -> void:
 	_camera_pivot.rotation.x += _camera_input_direction.y * delta
@@ -135,4 +138,13 @@ func _physics_process(delta: float) -> void:
 		_landing_sound.play()
 
 	_was_on_floor_last_frame = is_on_floor()
+	
 	move_and_slide()
+
+func _enemy_in_detection_area(body: Node3D) -> void:
+	_enemy = body
+	label.visible = true
+
+func _enemy_exited_detection_area(body: Node3D) -> void:
+	_enemy = null
+	label.visible = false
