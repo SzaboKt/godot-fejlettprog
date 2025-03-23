@@ -12,6 +12,7 @@ class_name Rouge
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var idle_timer: Timer = $IdleTimer
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var state_machine := animation_tree.get("parameters/playback") as AnimationNodeStateMachinePlayback
 
 var wander_time: float
 var move_direction: Vector3
@@ -40,9 +41,11 @@ func _physics_process(delta: float) -> void:
 		animation_tree["parameters/conditions/is_shooting"] = true
 		animation_tree["parameters/conditions/idle"] = false
 		animation_tree["parameters/conditions/is_walking"] = false
-	elif animation_player.current_animation not in ["1H_Ranged_Reload", "1H_Ranged_Shoot"]:
+	else:
 		animation_tree["parameters/conditions/is_shooting"] = false
 		if idle_timer.is_stopped():
+			animation_tree["parameters/conditions/idle"] = false
+			animation_tree["parameters/conditions/is_walking"] = true
 			var destination: Vector3 = navigation_agent_3d.get_next_path_position()
 			destination.y = global_position.y
 			var move_to: Vector3 = destination - global_position
@@ -51,13 +54,14 @@ func _physics_process(delta: float) -> void:
 			if move_to != Vector3(0, 0, 0):
 				look_at(destination, Vector3(0,1,0), true)
 			velocity = move_direction * speed
-			animation_tree["parameters/conditions/idle"] = false
-			animation_tree["parameters/conditions/is_walking"] = true
 		else:
-			velocity = Vector3.ZERO
 			animation_tree["parameters/conditions/idle"] = true
 			animation_tree["parameters/conditions/is_walking"] = false
+			velocity = Vector3.ZERO
 	
+	if state_machine.get_current_node() in ["1H_Ranged_Reload", "1H_Ranged_Shoot"]:
+		print("asd")
+		velocity = Vector3.ZERO
 	#if velocity.normalized() == Vector3(0, -1, 0):
 		#$AnimationPlayer.play("Unarmed_Pose")
 		
