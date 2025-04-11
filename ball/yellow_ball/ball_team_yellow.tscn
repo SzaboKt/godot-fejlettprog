@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt5k03xoccayq"]
+
+[ext_resource type="PackedScene" uid="uid://beesihgmn5rme" path="res://ball/yellow_ball/ball_teamYellow.fbx" id="1_jfw1x"]
+[ext_resource type="Script" uid="uid://0verworebjhw" path="res://ball/yellow_ball/ball_team_yellow.gd" id="2_gvxvk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4xb03"]
+radius = 1.01845
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3pt4w"]
+radius = 1.02355
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gvxvk"]
+radius = 25.0
+
+[node name="ball_teamYellow" instance=ExtResource("1_jfw1x")]
+mass = 0.5
+inertia = Vector3(1, 0, 0)
+script = ExtResource("2_gvxvk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("SphereShape3D_4xb03")
+
+[node name="CollisionArea" type="Area3D" parent="." index="2"]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionArea" index="0"]
+shape = SubResource("SphereShape3D_3pt4w")
+
+[node name="DetectionArea" type="Area3D" parent="." index="3"]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" index="0"]
+shape = SubResource("SphereShape3D_gvxvk")
+
+[connection signal="body_entered" from="CollisionArea" to="." method="_player_in_way"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_player_in_range"]

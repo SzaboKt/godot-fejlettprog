@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://fdk0uprpsenf"]
+
+[ext_resource type="PackedScene" uid="uid://dfowvvudr58yd" path="res://level/platforms/dessert_tiles/tileMedium_desert.fbx" id="1_pa56c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4qqfr"]
+size = Vector3(1.98706, 1.52051, 2.01685)
+
+[node name="tileMedium_desert" instance=ExtResource("1_pa56c")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00012207, 0.750488, -0.00012207)
+shape = SubResource("BoxShape3D_4qqfr")

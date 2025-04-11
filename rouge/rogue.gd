@@ -78,15 +78,12 @@ func _on_navigation_agent_3d_navigation_finished() -> void:
 	
 func push() -> void:
 	being_pushed = true
-	print("push")
 	velocity += -global_transform.basis.z * push_speed
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	print("enemy detected")
 	player = body
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
-	print("enemy out of range")
 	player = null
 
 func _on_idle_timer_timeout() -> void:

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://v41yfuipplms"]
+
+[ext_resource type="PackedScene" uid="uid://bcttshce3p01s" path="res://level/platforms/dessert_tiles/tileSlopeLowHigh_desert.fbx" id="1_288o3"]
+
+[node name="tileSlopeLowHigh_desert" instance=ExtResource("1_288o3")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." index="1"]
+depth = 1.9
+polygon = PackedVector2Array(-0.921671, 2.02126, -1.01025, 1.93267, -1.01025, -0.00572312, 1.01152, 0.00469846, 1.00109, 0.942633)

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd2vq3m61j81d"]
+
+[ext_resource type="PackedScene" uid="uid://74j3vumcyhcc" path="res://level/platforms/blue_tiles/tileLarge_teamBlue.fbx" id="1_7sfmf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cpx35"]
+size = Vector3(6.0376, 1.02008, 6.04993)
+
+[node name="tileLarge_teamBlue" instance=ExtResource("1_7sfmf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495941, -0.0140991)
+shape = SubResource("BoxShape3D_cpx35")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://eqt8ubm3k644"]
+
+[ext_resource type="PackedScene" uid="uid://ptjqxef3k2cp" path="res://level/platforms/dessert_tiles/scenes/tile_large_desert.tscn" id="1_q3fe5"]
+[ext_resource type="PackedScene" uid="uid://v41yfuipplms" path="res://level/platforms/dessert_tiles/scenes/tile_slope_low_high_desert.tscn" id="2_y8j8a"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="tileLarge_desert" parent="." instance=ExtResource("1_q3fe5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="tileSlopeLowHigh_desert" parent="." instance=ExtResource("2_y8j8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9838, 1, -0.0793927)
+
+[node name="tileSlopeLowHigh_desert2" parent="." instance=ExtResource("2_y8j8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9838, 1, 1.92061)

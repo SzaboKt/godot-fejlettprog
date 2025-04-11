@@ -31,6 +31,7 @@ var _gravity := -30.0
 var _was_on_floor_last_frame := true
 var _camera_input_direction := Vector2.ZERO
 var _enemy : CharacterBody3D
+var can_move: bool = true
 
 ## The last movement or aim direction input by the player. We use this to orient
 ## the character model.
@@ -54,9 +55,7 @@ func _ready() -> void:
 		set_physics_process(true)
 	)
 	Events.flag_reached.connect(func on_flag_reached() -> void:
-		set_physics_process(false)
 		_skin.idle()
-		_dust_particles.emitting = false
 	)
 
 
@@ -74,11 +73,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
 	if player_is_using_mouse:
-		_camera_input_direction.x = -event.relative.x * mouse_sensitivity
+		_camera_input_direction.x = event.relative.x * mouse_sensitivity
 		_camera_input_direction.y = -event.relative.y * mouse_sensitivity
 
 func get_skin() -> SophiaSkin:
 	return _skin
+	
+func set_can_move(listen_to_input: bool = false) -> void:
+	can_move = listen_to_input
 	
 func push(global_projectile_position) -> void:
 	var push_direction = (global_position - global_projectile_position).normalized()
@@ -87,16 +89,19 @@ func push(global_projectile_position) -> void:
 func _physics_process(delta: float) -> void:
 	_camera_pivot.rotation.x += _camera_input_direction.y * delta
 	_camera_pivot.rotation.x = clamp(_camera_pivot.rotation.x, tilt_lower_limit, tilt_upper_limit)
-	_camera_pivot.rotation.y += _camera_input_direction.x * delta
+	_camera_pivot.rotation.y += -_camera_input_direction.x * delta
 
 	_camera_input_direction = Vector2.ZERO
 
-	# Calculate movement input and align it to the camera's direction.
+	
+		# Calculate movement input and align it to the camera's direction.
 	var raw_input := Input.get_vector("move_left", "move_right", "move_up", "move_down", 0.4)
-	# Should be projected onto the ground plane.
+		# Should be projected onto the ground plane.
 	var forward := _camera.global_basis.z
 	var right := _camera.global_basis.x
-	var move_direction := forward * raw_input.y + right * raw_input.x
+	var move_direction := Vector3.ZERO 
+	if can_move:
+		move_direction = forward * raw_input.y + right * raw_input.x
 	move_direction.y = 0.0
 	move_direction = move_direction.normalized()
 
