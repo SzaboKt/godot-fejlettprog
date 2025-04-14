@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://c0chpw8faqo1p"]
+[gd_scene load_steps=21 format=3 uid="uid://c0chpw8faqo1p"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_oc35s"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_suhml"]
 [ext_resource type="PackedScene" uid="uid://bd2vq3m61j81d" path="res://level/platforms/blue_tiles/scenes/tile_large_team_blue.tscn" id="3_xj6fv"]
 [ext_resource type="PackedScene" uid="uid://e3qhieb3repm" path="res://level/platforms/blue_tiles/scenes/tile_small_team_blue.tscn" id="4_suhml"]
 [ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="5_xj6fv"]
+[ext_resource type="PackedScene" uid="uid://bij84ol81kcts" path="res://level/interactable/kill_plane/kill_plane_3d.tscn" id="6_dxks8"]
 
 [sub_resource type="Gradient" id="Gradient_suhml"]
 offsets = PackedFloat32Array(0, 0.0181818, 0.472727)
@@ -94,12 +95,17 @@ volumetric_fog_density = 0.01
 volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
 volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_xj6fv"]
+vertices = PackedVector3Array(-13.0338, 3.73141, 4.91696, -13.0338, 3.73141, 9.91696, -8.0338, 3.73141, 9.91696, -8.0338, 3.73141, 4.91696)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 amount = 4500
 lifetime = 20.0
 preprocess = 30.0
+fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_dxks8")
 draw_pass_1 = SubResource("SphereMesh_suhml")
 
@@ -115,14 +121,20 @@ directional_shadow_max_distance = 40.0
 [node name="tileLarge_teamBlue" parent="." instance=ExtResource("3_xj6fv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.898594, 0, -0.238612)
 
-[node name="tileLarge_teamBlue2" parent="." instance=ExtResource("3_xj6fv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.515, 2.24551, 7.45602)
-
 [node name="tileSmall_teamBlue" parent="." instance=ExtResource("4_suhml")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.29955, 0.81739, 3.85336)
 
-[node name="Rogue" parent="." instance=ExtResource("5_xj6fv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33308, 3.25152, 9.11755)
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_xj6fv")
 
-[node name="Rogue2" parent="." instance=ExtResource("5_xj6fv")]
-transform = Transform3D(-0.693829, 0, 0.72014, 0, 1, 0, -0.72014, 0, -0.693829, -10.1704, 3.25152, 6.0816)
+[node name="tileLarge_teamBlue2" parent="NavigationRegion3D" instance=ExtResource("3_xj6fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.515, 2.24551, 7.45602)
+
+[node name="Rogue" parent="NavigationRegion3D" instance=ExtResource("5_xj6fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33308, 3.33765, 9.11755)
+
+[node name="Rogue2" parent="NavigationRegion3D" instance=ExtResource("5_xj6fv")]
+transform = Transform3D(-0.693829, 0, 0.72014, 0, 1, 0, -0.72014, 0, -0.693829, -10.1704, 3.26643, 6.0816)
+
+[node name="KillPlane3D" parent="." instance=ExtResource("6_dxks8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.337345, -17.0163, 12.1439)

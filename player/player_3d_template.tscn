@@ -51,7 +51,7 @@ slide_on_slope = true
 radius = 2.87594
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 115
+collision_layer = 243
 script = ExtResource("1_6bmsq")
 metadata/_custom_type_script = "uid://d2uy8fff483py"
 
