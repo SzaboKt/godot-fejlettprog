@@ -37,7 +37,7 @@ var can_move: bool = true
 ## the character model.
 @onready var _last_input_direction := global_basis.z
 # We store the initial position of the player to reset to it when the player falls off the map.
-@onready var _start_position := global_position
+@onready var _start_position := Vector3.ZERO
 
 @onready var _camera_pivot: Node3D = %CameraPivot
 @onready var _camera: Camera3D = %Camera3D
@@ -58,20 +58,18 @@ func _ready() -> void:
 		_skin.idle()
 	)
 
-
 func _input(event: InputEvent) -> void:
+	print(event)
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	elif event.is_action_pressed("left_click"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if _enemy and event.is_action_pressed("push_enemy"):
 		_enemy.push()
-
-
-func _unhandled_input(event: InputEvent) -> void:
 	var player_is_using_mouse := (
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
+	print(event)
 	if player_is_using_mouse:
 		_camera_input_direction.x = event.relative.x * mouse_sensitivity
 		_camera_input_direction.y = -event.relative.y * mouse_sensitivity
@@ -79,7 +77,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func get_skin() -> SophiaSkin:
 	return _skin
 	
-func set_can_move(listen_to_input: bool = false) -> void:
+func set_can_move(listen_to_input: bool = true) -> void:
 	can_move = listen_to_input
 	
 func push(global_projectile_position) -> void:
@@ -90,18 +88,16 @@ func _physics_process(delta: float) -> void:
 	_camera_pivot.rotation.x += _camera_input_direction.y * delta
 	_camera_pivot.rotation.x = clamp(_camera_pivot.rotation.x, tilt_lower_limit, tilt_upper_limit)
 	_camera_pivot.rotation.y += -_camera_input_direction.x * delta
-
 	_camera_input_direction = Vector2.ZERO
 
-	
-		# Calculate movement input and align it to the camera's direction.
+	# Calculate movement input and align it to the camera's direction.
 	var raw_input := Input.get_vector("move_left", "move_right", "move_up", "move_down", 0.4)
-		# Should be projected onto the ground plane.
+	# Should be projected onto the ground plane.
 	var forward := _camera.global_basis.z
 	var right := _camera.global_basis.x
-	var move_direction := Vector3.ZERO 
-	if can_move:
-		move_direction = forward * raw_input.y + right * raw_input.x
+	var move_direction := forward * raw_input.y + right * raw_input.x
+	if not can_move:
+		move_direction = Vector3.ZERO
 	move_direction.y = 0.0
 	move_direction = move_direction.normalized()
 
