@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://e3qhieb3repm"]
+
+[ext_resource type="PackedScene" uid="uid://hipg0j8apu30" path="res://level/platforms/blue_tiles/tileSmall_teamBlue.fbx" id="1_d2p20"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2p20"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqll6"]
+albedo_color = Color(0.4, 0.294118, 0.2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d2p20"]
+size = Vector3(1, 1.02008, 1)
+
+[node name="tileSmall_teamBlue" instance=ExtResource("1_d2p20")]
+
+[node name="tileSmall_teamBlue" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_d2p20")
+surface_material_override/1 = SubResource("StandardMaterial3D_bqll6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502777, 0)
+shape = SubResource("BoxShape3D_d2p20")

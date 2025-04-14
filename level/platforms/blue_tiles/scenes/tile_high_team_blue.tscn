@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dif8j36tty2df"]
+[gd_scene load_steps=5 format=3 uid="uid://dif8j36tty2df"]
 
 [ext_resource type="PackedScene" uid="uid://dlrt45djt8x4d" path="res://level/platforms/blue_tiles/tileHigh_teamBlue.fbx" id="1_uejr5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fsb5c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5e1dg"]
+albedo_color = Color(0.4, 0.293333, 0.2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uejr5"]
 size = Vector3(2.0166, 2.01318, 2.00873)
 
 [node name="tileHigh_teamBlue" instance=ExtResource("1_uejr5")]
+
+[node name="tileHigh_teamBlue" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fsb5c")
+surface_material_override/1 = SubResource("StandardMaterial3D_5e1dg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00244141, 1.00269, 0.00137329)

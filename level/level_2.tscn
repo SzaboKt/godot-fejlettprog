@@ -1,8 +1,32 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0chpw8faqo1p"]
+[gd_scene load_steps=19 format=3 uid="uid://c0chpw8faqo1p"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_oc35s"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_suhml"]
 [ext_resource type="PackedScene" uid="uid://bd2vq3m61j81d" path="res://level/platforms/blue_tiles/scenes/tile_large_team_blue.tscn" id="3_xj6fv"]
+[ext_resource type="PackedScene" uid="uid://e3qhieb3repm" path="res://level/platforms/blue_tiles/scenes/tile_small_team_blue.tscn" id="4_suhml"]
+[ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="5_xj6fv"]
+
+[sub_resource type="Gradient" id="Gradient_suhml"]
+offsets = PackedFloat32Array(0, 0.0181818, 0.472727)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xj6fv"]
+gradient = SubResource("Gradient_suhml")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dxks8"]
+emission_shape = 3
+emission_box_extents = Vector3(500, 500, 500)
+scale_over_velocity_max = 4.0
+color_initial_ramp = SubResource("GradientTexture1D_xj6fv")
+turbulence_influence_min = 0.25
+turbulence_influence_max = 0.75
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_suhml"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_suhml"]
+material = SubResource("StandardMaterial3D_suhml")
+radius = 0.25
+height = 0.5
 
 [sub_resource type="Curve" id="Curve_h2oih"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.697336, 1), 0.51276, 0.0, 0, 0]
@@ -30,8 +54,8 @@ noise = SubResource("FastNoiseLite_43ny1")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tk77j"]
 shader = ExtResource("1_oc35s")
-shader_parameter/top_color = Color(0.14902, 0, 1, 1)
-shader_parameter/bottom_color = Color(0.990684, 0.646279, 0.627463, 1)
+shader_parameter/top_color = Color(0.054902, 0, 0.94902, 1)
+shader_parameter/bottom_color = Color(0.692554, 0.836185, 0.856975, 1)
 shader_parameter/gradient_curve = SubResource("CurveTexture_djs1c")
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_3fddd")
 shader_parameter/moon_texture = ExtResource("2_suhml")
@@ -72,6 +96,13 @@ volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
 
 [node name="Node3D" type="Node3D"]
 
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 4500
+lifetime = 20.0
+preprocess = 30.0
+process_material = SubResource("ParticleProcessMaterial_dxks8")
+draw_pass_1 = SubResource("SphereMesh_suhml")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nuokl")
 
@@ -83,3 +114,15 @@ directional_shadow_max_distance = 40.0
 
 [node name="tileLarge_teamBlue" parent="." instance=ExtResource("3_xj6fv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.898594, 0, -0.238612)
+
+[node name="tileLarge_teamBlue2" parent="." instance=ExtResource("3_xj6fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.515, 2.24551, 7.45602)
+
+[node name="tileSmall_teamBlue" parent="." instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.29955, 0.81739, 3.85336)
+
+[node name="Rogue" parent="." instance=ExtResource("5_xj6fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33308, 3.25152, 9.11755)
+
+[node name="Rogue2" parent="." instance=ExtResource("5_xj6fv")]
+transform = Transform3D(-0.693829, 0, 0.72014, 0, 1, 0, -0.72014, 0, -0.693829, -10.1704, 3.25152, 6.0816)
