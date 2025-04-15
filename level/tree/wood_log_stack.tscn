@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://buv0bakwkinhg"]
+
+[ext_resource type="PackedScene" uid="uid://ddad04j1etcx5" path="res://level/tree/Wood_Log_Stack.fbx" id="1_mf37j"]
+
+[node name="Wood_Log_Stack" instance=ExtResource("1_mf37j")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." index="1"]
+depth = 1.51
+polygon = PackedVector2Array(-0.003263, 1.57612, -0.473163, 1.26938, -0.636323, 0.93001, -0.936537, 0.329583, -0.962642, -0.0293687, 0.890852, -0.0358952, 0.85822, 0.486216, 0.675481, 0.773377, 0.642849, 0.988748, 0.571059, 1.20412, 0.414426, 1.18454, 0.251266, 1.56307)

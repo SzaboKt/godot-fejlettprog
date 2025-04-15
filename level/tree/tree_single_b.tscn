@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://132j35wbfd5j"]
+
+[ext_resource type="PackedScene" uid="uid://b16dd7fc0oweu" path="res://level/tree/tree_single_B.fbx" id="1_s8oby"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oifd7"]
+radius = 0.363977
+height = 1.21326
+
+[node name="tree_single_B" instance=ExtResource("1_s8oby")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, 0.489415, 0)
+shape = SubResource("CapsuleShape3D_oifd7")

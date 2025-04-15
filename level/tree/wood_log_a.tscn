@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://f0q6tri75ps2"]
+
+[ext_resource type="PackedScene" uid="uid://dgl8i63o407c7" path="res://level/tree/Wood_Log_A.fbx" id="1_irgjy"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7rinp"]
+height = 1.40283
+radius = 0.286621
+
+[node name="Wood_Log_A" instance=ExtResource("1_irgjy")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 2.02763e-10, -2.02763e-10, 0.00463867)
+shape = SubResource("CylinderShape3D_7rinp")

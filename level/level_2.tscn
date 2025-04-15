@@ -1,11 +1,16 @@
-[gd_scene load_steps=21 format=3 uid="uid://c0chpw8faqo1p"]
+[gd_scene load_steps=26 format=3 uid="uid://c0chpw8faqo1p"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_oc35s"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_suhml"]
 [ext_resource type="PackedScene" uid="uid://bd2vq3m61j81d" path="res://level/platforms/blue_tiles/scenes/tile_large_team_blue.tscn" id="3_xj6fv"]
 [ext_resource type="PackedScene" uid="uid://e3qhieb3repm" path="res://level/platforms/blue_tiles/scenes/tile_small_team_blue.tscn" id="4_suhml"]
+[ext_resource type="PackedScene" uid="uid://f0q6tri75ps2" path="res://level/tree/wood_log_a.tscn" id="5_vir0n"]
 [ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="5_xj6fv"]
 [ext_resource type="PackedScene" uid="uid://bij84ol81kcts" path="res://level/interactable/kill_plane/kill_plane_3d.tscn" id="6_dxks8"]
+[ext_resource type="PackedScene" uid="uid://ct66jeg6lw5o7" path="res://level/automatic_bow/automatic_bow.tscn" id="7_vl510"]
+[ext_resource type="PackedScene" uid="uid://cejjook1weypr" path="res://level/tree/tree_forest.tscn" id="9_fvot5"]
+[ext_resource type="PackedScene" uid="uid://buv0bakwkinhg" path="res://level/tree/wood_log_stack.tscn" id="10_rgj0g"]
+[ext_resource type="PackedScene" uid="uid://132j35wbfd5j" path="res://level/tree/tree_single_b.tscn" id="11_ejyio"]
 
 [sub_resource type="Gradient" id="Gradient_suhml"]
 offsets = PackedFloat32Array(0, 0.0181818, 0.472727)
@@ -96,8 +101,8 @@ volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
 volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_xj6fv"]
-vertices = PackedVector3Array(-13.0338, 3.73141, 4.91696, -13.0338, 3.73141, 9.91696, -8.0338, 3.73141, 9.91696, -8.0338, 3.73141, 4.91696)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-8.0338, 3.73141, 4.91696, -11.2838, 3.73141, 4.91696, -11.5338, 3.73141, 5.66696, -13.0338, 3.73141, 6.16696, -13.0338, 3.73141, 9.91696, -8.0338, 3.73141, 9.91696)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 4), PackedInt32Array(4, 2, 5), PackedInt32Array(5, 2, 0)]
 
 [node name="Node3D" type="Node3D"]
 
@@ -130,11 +135,76 @@ navigation_mesh = SubResource("NavigationMesh_xj6fv")
 [node name="tileLarge_teamBlue2" parent="NavigationRegion3D" instance=ExtResource("3_xj6fv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.515, 2.24551, 7.45602)
 
+[node name="Wood_Log_A" parent="NavigationRegion3D" instance=ExtResource("5_vir0n")]
+transform = Transform3D(-0.282676, 0, 0.959215, 0, 1, 0, -0.959215, 0, -0.282676, -12.6055, 3.48214, 5.00056)
+
 [node name="Rogue" parent="NavigationRegion3D" instance=ExtResource("5_xj6fv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33308, 3.33765, 9.11755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33308, 3.23783, 9.11755)
 
 [node name="Rogue2" parent="NavigationRegion3D" instance=ExtResource("5_xj6fv")]
-transform = Transform3D(-0.693829, 0, 0.72014, 0, 1, 0, -0.72014, 0, -0.693829, -10.1704, 3.26643, 6.0816)
+transform = Transform3D(-0.693829, 0, 0.72014, 0, 1, 0, -0.72014, 0, -0.693829, -10.1704, 3.23812, 6.0816)
 
 [node name="KillPlane3D" parent="." instance=ExtResource("6_dxks8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.337345, -17.0163, 12.1439)
+
+[node name="NarrowLine" type="Node3D" parent="."]
+
+[node name="tileSmall_teamBlue3" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.026, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue2" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0256, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.026, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue4" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0249, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue5" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0246, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue6" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0249, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue7" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.034, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue8" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0336, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue9" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.034, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue10" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0329, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue11" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0326, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue12" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0329, 2.326, 7.6)
+
+[node name="LeftRowAutomaticBows" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5455, 0, 0)
+
+[node name="Node3D" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23177, 3.00633, 10.8084)
+
+[node name="Node3D2" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98619, 3.13667, 11.0085)
+
+[node name="Node3D3" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72189, 3.25332, 11.3215)
+
+[node name="Node3D4" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.13189, 3.42228, 11.2434)
+
+[node name="tree_forest" parent="." instance=ExtResource("9_fvot5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23187, 1.00598, -2.61634)
+
+[node name="Wood_Log_Stack" parent="." instance=ExtResource("10_rgj0g")]
+transform = Transform3D(0.607334, 0, -0.794446, 0, 1, 0, 0.794446, 0, 0.607334, 1.16352, 1.01186, 1.31908)
+
+[node name="tree_single_B" parent="." instance=ExtResource("11_ejyio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1983, 1.068, -3)
