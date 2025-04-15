@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cajuwwtndw741"]
+
+[ext_resource type="PackedScene" uid="uid://cguvdnpbaxlto" path="res://projectile/arrow/arrow_teamBlue.fbx" id="1_ymp5p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymp5p"]
+
+[node name="arrow_teamBlue" instance=ExtResource("1_ymp5p")]
+
+[node name="arrow_teamBlue" parent="." index="0"]
+surface_material_override/2 = SubResource("StandardMaterial3D_ymp5p")

@@ -120,6 +120,7 @@ shape = SubResource("SphereShape3D_pq5jb")
 
 [node name="ProjectileLauncher" parent="." index="5" instance=ExtResource("3_sb5rj")]
 transform = Transform3D(-0.993171, -0.116671, 8.74228e-08, -0.116671, 0.993171, 0, -8.68257e-08, -1.01997e-08, -1, 0, 0.832371, 0)
+arrow_type = "Rouge"
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="6"]
 tree_root = SubResource("AnimationNodeStateMachine_f1ml0")
