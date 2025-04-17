@@ -186,19 +186,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0326, 2.32578, 7.60034)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0329, 2.326, 7.6)
 
 [node name="LeftRowAutomaticBows" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5455, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0491, 0, 2.19621)
 
 [node name="Node3D" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23177, 3.00633, 10.8084)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96, 2.85, 10.8)
+wait_time = 1.5
 
 [node name="Node3D2" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98619, 3.13667, 11.0085)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 2.85, 10.8)
+wait_time = 1.5
 
 [node name="Node3D3" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72189, 3.25332, 11.3215)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96, 2.85, 10.8)
+wait_time = 1.5
 
 [node name="Node3D4" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.13189, 3.42228, 11.2434)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96, 2.85, 10.8)
+wait_time = 1.5
+
+[node name="Node3D5" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96, 2.85, 10.8)
+wait_time = 1.5
+
+[node name="Node3D6" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.96, 2.85, 10.8)
+wait_time = 1.5
+
+[node name="RightRowAutomaticBows" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -27.9579, 0, 12.0275)
+
+[node name="Node3D" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96, 2.85, 10.8)
+wait_time = 5.0
+
+[node name="Node3D2" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 2.85, 10.8)
+wait_time = 5.0
+
+[node name="Node3D3" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96, 2.85, 10.8)
+wait_time = 5.0
+
+[node name="Node3D4" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96, 2.85, 10.8)
+wait_time = 5.0
+
+[node name="Node3D5" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96, 2.85, 10.8)
+wait_time = 5.0
+
+[node name="Node3D6" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.96, 2.85, 10.8)
+wait_time = 5.0
 
 [node name="tree_forest" parent="." instance=ExtResource("9_fvot5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23187, 1.00598, -2.61634)
@@ -208,3 +247,5 @@ transform = Transform3D(0.607334, 0, -0.794446, 0, 1, 0, 0.794446, 0, 0.607334, 
 
 [node name="tree_single_B" parent="." instance=ExtResource("11_ejyio")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1983, 1.068, -3)
+
+[editable path="RightRowAutomaticBows/Node3D"]

@@ -1,4 +1,4 @@
-extends Node3D
+class_name ProjectileLauncher extends Node3D
 
 var PROJECTILE: Resource
 
@@ -14,17 +14,18 @@ var player: CharacterBody3D
 func _ready() -> void:
 	if arrow_type == "Rouge":
 		PROJECTILE = preload("res://projectile/projectile.tscn")
+		cool_down_timer.wait_time = wait_time
 	elif arrow_type == "Snow":
 		PROJECTILE = preload("res://projectile/snow_projectile.tscn")
-	cool_down_timer.wait_time = wait_time
 
 func _physics_process(delta: float) -> void:
 	if automatic or (!automatic and player):
 		if cool_down_timer.is_stopped():
-				cool_down_timer.start()
-				var attack = PROJECTILE.instantiate()
-				add_child(attack)
-				attack.global_transform = global_transform
+			cool_down_timer.wait_time = wait_time
+			cool_down_timer.start()
+			var attack = PROJECTILE.instantiate()
+			add_child(attack)
+			attack.global_transform = global_transform
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	player = body
