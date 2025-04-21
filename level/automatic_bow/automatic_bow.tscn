@@ -18,4 +18,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0029285, 0.0290386, 0.0171
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0110632, 1.23519, -0.121916)
 automatic = true
 arrow_type = "Snow"
-wait_time = 1.0
+wait_time = 10.0

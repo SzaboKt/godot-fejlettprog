@@ -59,7 +59,6 @@ func _ready() -> void:
 	)
 
 func _input(event: InputEvent) -> void:
-	print(event)
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	elif event.is_action_pressed("left_click"):
@@ -69,7 +68,6 @@ func _input(event: InputEvent) -> void:
 	var player_is_using_mouse := (
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
-	print(event)
 	if player_is_using_mouse:
 		_camera_input_direction.x = event.relative.x * mouse_sensitivity
 		_camera_input_direction.y = -event.relative.y * mouse_sensitivity
