@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c0chpw8faqo1p"]
+[gd_scene load_steps=27 format=3 uid="uid://c0chpw8faqo1p"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_oc35s"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_suhml"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bij84ol81kcts" path="res://level/interactable/kill_plane/kill_plane_3d.tscn" id="6_dxks8"]
 [ext_resource type="PackedScene" uid="uid://ct66jeg6lw5o7" path="res://level/automatic_bow/automatic_bow.tscn" id="7_vl510"]
 [ext_resource type="PackedScene" uid="uid://cejjook1weypr" path="res://level/tree/tree_forest.tscn" id="9_fvot5"]
+[ext_resource type="PackedScene" uid="uid://b5n806eqo4npb" path="res://level/platforms/blue_tiles/scenes/tile_medium_team_blue.tscn" id="9_nngw5"]
 [ext_resource type="PackedScene" uid="uid://buv0bakwkinhg" path="res://level/tree/wood_log_stack.tscn" id="10_rgj0g"]
 [ext_resource type="PackedScene" uid="uid://132j35wbfd5j" path="res://level/tree/tree_single_b.tscn" id="11_ejyio"]
 
@@ -127,9 +128,6 @@ directional_shadow_max_distance = 40.0
 [node name="tileLarge_teamBlue" parent="." instance=ExtResource("3_xj6fv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.898594, 0, -0.238612)
 
-[node name="tileSmall_teamBlue" parent="." instance=ExtResource("4_suhml")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.29955, 0.81739, 3.85336)
-
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_xj6fv")
 
@@ -138,9 +136,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.515, 2.24551, 7.45602)
 
 [node name="Wood_Log_A" parent="NavigationRegion3D" instance=ExtResource("5_vir0n")]
 transform = Transform3D(-0.282676, 0, 0.959215, 0, 1, 0, -0.959215, 0, -0.282676, -12.6055, 3.48214, 5.00056)
-
-[node name="Rogue" parent="NavigationRegion3D" instance=ExtResource("5_xj6fv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33308, 3.23783, 9.11755)
 
 [node name="Rogue2" parent="NavigationRegion3D" instance=ExtResource("5_xj6fv")]
 transform = Transform3D(-0.693829, 0, 0.72014, 0, 1, 0, -0.72014, 0, -0.693829, -10.1704, 3.23812, 6.0816)
@@ -186,62 +181,101 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0326, 2.32578, 7.60034)
 [node name="tileSmall_teamBlue12" parent="NarrowLine" instance=ExtResource("4_suhml")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0329, 2.326, 7.6)
 
+[node name="tileSmall_teamBlue13" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0497, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue14" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0493, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue15" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0497, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue16" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.0486, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue17" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.0483, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue18" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0486, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue19" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0577, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue20" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0573, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue21" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0577, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue22" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0566, 2.326, 7.6)
+
+[node name="tileSmall_teamBlue23" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.0563, 2.32578, 7.60034)
+
+[node name="tileSmall_teamBlue24" parent="NarrowLine" instance=ExtResource("4_suhml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.0566, 2.326, 7.6)
+
 [node name="LeftRowAutomaticBows" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0491, 0, 2.19621)
 
 [node name="Node3D" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
 transform = Transform3D(1, 0, 0, 0, 0.999936, -0.011292, 0, 0.011292, 0.999936, -1.96, 2.85, 10.8)
-wait_time = 1.0
+wait_time = 3.0
 
 [node name="Node3D2" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 2.85, 10.8)
-wait_time = 1.0
-
-[node name="Node3D3" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96, 2.85, 10.8)
 wait_time = 1.0
 
+[node name="Node3D3" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96, 2.85, 10.8)
+wait_time = 3.0
+
 [node name="Node3D4" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96, 2.85, 10.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.96, 2.85, 10.8)
 wait_time = 1.0
 
 [node name="Node3D5" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96, 2.85, 10.8)
-wait_time = 1.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.96, 2.85, 10.8)
+wait_time = 3.0
 
 [node name="Node3D6" parent="LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.96, 2.85, 10.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.96, 2.85, 10.8)
 wait_time = 1.0
 
 [node name="RightRowAutomaticBows" type="Node3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -27.9579, 0, 12.0275)
 
 [node name="Node3D" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96, 2.85, 10.8)
-wait_time = 10.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96, 2.85, 10.8)
+wait_time = 1.0
 
 [node name="Node3D2" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 2.85, 10.8)
-wait_time = 10.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96, 2.85, 10.8)
+wait_time = 3.0
 
 [node name="Node3D3" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96, 2.85, 10.8)
-wait_time = 10.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96, 2.85, 10.8)
+wait_time = 1.0
 
 [node name="Node3D4" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96, 2.85, 10.8)
-wait_time = 10.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 2.85, 10.8)
+wait_time = 3.0
 
 [node name="Node3D5" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96, 2.85, 10.8)
-wait_time = 10.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96, 2.85, 10.8)
+wait_time = 1.0
 
 [node name="Node3D6" parent="RightRowAutomaticBows" instance=ExtResource("7_vl510")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.96, 2.85, 10.8)
-wait_time = 10.0
+wait_time = 3.0
 
 [node name="tree_forest" parent="." instance=ExtResource("9_fvot5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23187, 1.00598, -2.61634)
+
+[node name="tileMedium_teamBlue" parent="." instance=ExtResource("9_nngw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.42525, 0.839653, 3.7253)
 
 [node name="Wood_Log_Stack" parent="." instance=ExtResource("10_rgj0g")]
 transform = Transform3D(0.607334, 0, -0.794446, 0, 1, 0, 0.794446, 0, 0.607334, 1.16352, 1.01186, 1.31908)
