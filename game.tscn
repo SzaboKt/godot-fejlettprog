@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dl3tc07hrjvf8" path="res://game.gd" id="1_1il7v"]
 [ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://player/player_3d_template.tscn" id="1_w0p8v"]
-[ext_resource type="PackedScene" uid="uid://cnedxfn2pxh2t" path="res://level/level_1.tscn" id="7_2frud"]
+[ext_resource type="PackedScene" uid="uid://c0chpw8faqo1p" path="res://level/level_2.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://level/interactable/level_flag/flag_reached_screen.tscn" id="19_cpgj4"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_1il7v")
 
 [node name="Player3DTemplate" parent="." instance=ExtResource("1_w0p8v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.3693, 12.5549, 25.9647)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1318, 12.5549, -10.6589)
 
 [node name="FlagReachedScreen" parent="." instance=ExtResource("19_cpgj4")]
 
-[node name="Level" parent="." instance=ExtResource("7_2frud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20968, -2.12135, 46.2427)
+[node name="Level" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10132, -0.921925, 0.523216)
