@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d041fuwnuio0l"
-path="res://.godot/imported/trees_B_large.fbx-7f2c63675f35028f6f9aa46075903965.scn"
+uid="uid://dfpqxk31yfkyo"
+path="res://.godot/imported/ball.fbx-2a59778ea4a02881e54a059a4e96bc5e.scn"
 
 [deps]
 
-source_file="res://level/tree/trees_B_large.fbx"
-dest_files=["res://.godot/imported/trees_B_large.fbx-7f2c63675f35028f6f9aa46075903965.scn"]
+source_file="res://ball/multi-color_ball/ball.fbx"
+dest_files=["res://.godot/imported/ball.fbx-2a59778ea4a02881e54a059a4e96bc5e.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="RigidBody3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
