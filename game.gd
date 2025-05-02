@@ -2,7 +2,7 @@ extends Node
 
 const FILE_BEGIN = "res://level/level_"
 
-@onready var current_level: Node3D = $"Level"
+@export var current_level: Node3D
 @onready var player: Player = $Player3DTemplate
 @onready var flag_reached_screen: CanvasLayer = $FlagReachedScreen
 

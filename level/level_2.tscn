@@ -2,25 +2,25 @@
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_oc35s"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_suhml"]
-[ext_resource type="PackedScene" uid="uid://bd2vq3m61j81d" path="res://level/platforms/blue_tiles/scenes/tile_large_team_blue.tscn" id="3_xj6fv"]
-[ext_resource type="PackedScene" uid="uid://b0wqa1kup4d8t" path="res://level/tree/trees_b_small.tscn" id="4_qhnra"]
-[ext_resource type="PackedScene" uid="uid://e3qhieb3repm" path="res://level/platforms/blue_tiles/scenes/tile_small_team_blue.tscn" id="4_suhml"]
-[ext_resource type="PackedScene" uid="uid://f0q6tri75ps2" path="res://level/tree/wood_log_a.tscn" id="5_vir0n"]
+[ext_resource type="PackedScene" uid="uid://bd2vq3m61j81d" path="res://level/platforms/snow_tiles/scenes/tile_large_team_blue.tscn" id="3_xj6fv"]
+[ext_resource type="PackedScene" uid="uid://b0wqa1kup4d8t" path="res://level/tree/scenes/trees_b_small.tscn" id="4_qhnra"]
+[ext_resource type="PackedScene" uid="uid://e3qhieb3repm" path="res://level/platforms/snow_tiles/scenes/tile_small_team_blue.tscn" id="4_suhml"]
+[ext_resource type="PackedScene" uid="uid://f0q6tri75ps2" path="res://level/tree/scenes/wood_log_a.tscn" id="5_vir0n"]
 [ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="5_xj6fv"]
 [ext_resource type="PackedScene" uid="uid://bij84ol81kcts" path="res://level/interactable/kill_plane/kill_plane_3d.tscn" id="6_dxks8"]
 [ext_resource type="PackedScene" uid="uid://ct66jeg6lw5o7" path="res://level/automatic_bow/automatic_bow.tscn" id="7_vl510"]
-[ext_resource type="PackedScene" uid="uid://cejjook1weypr" path="res://level/tree/tree_forest.tscn" id="9_fvot5"]
-[ext_resource type="PackedScene" uid="uid://b5n806eqo4npb" path="res://level/platforms/blue_tiles/scenes/tile_medium_team_blue.tscn" id="9_nngw5"]
-[ext_resource type="PackedScene" uid="uid://buv0bakwkinhg" path="res://level/tree/wood_log_stack.tscn" id="10_rgj0g"]
-[ext_resource type="PackedScene" uid="uid://132j35wbfd5j" path="res://level/tree/tree_single_b.tscn" id="11_ejyio"]
-[ext_resource type="PackedScene" uid="uid://bybctt8b5i8ty" path="res://level/misc_assets/target_ground.tscn" id="13_uivbl"]
+[ext_resource type="PackedScene" uid="uid://cejjook1weypr" path="res://level/tree/scenes/tree_forest.tscn" id="9_fvot5"]
+[ext_resource type="PackedScene" uid="uid://b5n806eqo4npb" path="res://level/platforms/snow_tiles/scenes/tile_medium_team_blue.tscn" id="9_nngw5"]
+[ext_resource type="PackedScene" uid="uid://buv0bakwkinhg" path="res://level/tree/scenes/wood_log_stack.tscn" id="10_rgj0g"]
+[ext_resource type="PackedScene" uid="uid://132j35wbfd5j" path="res://level/tree/scenes/tree_single_b.tscn" id="11_ejyio"]
+[ext_resource type="PackedScene" uid="uid://bybctt8b5i8ty" path="res://level/misc_assets/scenes/target_ground.tscn" id="13_uivbl"]
 [ext_resource type="PackedScene" uid="uid://54kd7g8csixa" path="res://level/platforms/moving_platforms/moving_platform.tscn" id="14_35kkn"]
 [ext_resource type="PackedScene" uid="uid://be4uvbwl6k511" path="res://level/swiper/scenes/animated_swiper.tscn" id="16_mdx7b"]
 [ext_resource type="PackedScene" uid="uid://buu0xfxmcdp6" path="res://level/swiper/scenes/animated_short_swiper.tscn" id="17_drhu7"]
-[ext_resource type="PackedScene" uid="uid://bg6qdq305qq2i" path="res://level/platforms/blue_tiles/scenes/tile_slope_low_high_team_blue.tscn" id="18_qg0ee"]
+[ext_resource type="PackedScene" uid="uid://bg6qdq305qq2i" path="res://level/platforms/snow_tiles/scenes/tile_slope_low_high_team_blue.tscn" id="18_qg0ee"]
 [ext_resource type="PackedScene" uid="uid://b82101p3ft53o" path="res://ball/multi-color_ball/ball.tscn" id="19_vpspb"]
 [ext_resource type="PackedScene" uid="uid://cppp22x35fdn1" path="res://level/interactable/level_flag/flag_team_blue.tscn" id="20_algu2"]
-[ext_resource type="PackedScene" uid="uid://bb4ij6rg10tgu" path="res://level/misc_assets/cobblestones.tscn" id="21_dwbtd"]
+[ext_resource type="PackedScene" uid="uid://bb4ij6rg10tgu" path="res://level/misc_assets/scenes/cobblestones.tscn" id="21_dwbtd"]
 
 [sub_resource type="Gradient" id="Gradient_suhml"]
 offsets = PackedFloat32Array(0, 0.0181818, 0.472727)
@@ -48,7 +48,7 @@ height = 0.5
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.689394, 0.595506), 0.51276, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_djs1c"]
+[sub_resource type="CurveTexture" id="CurveTexture_dwbtd"]
 curve = SubResource("Curve_h2oih")
 
 [sub_resource type="Gradient" id="Gradient_axulw"]
@@ -60,7 +60,7 @@ frequency = 0.3589
 fractal_octaves = 4
 cellular_distance_function = 2
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3fddd"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6xooh"]
 width = 1024
 height = 1024
 generate_mipmaps = false
@@ -72,18 +72,18 @@ noise = SubResource("FastNoiseLite_43ny1")
 shader = ExtResource("1_oc35s")
 shader_parameter/top_color = Color(0.054902, 0, 0.94902, 1)
 shader_parameter/bottom_color = Color(0.916123, 0.889647, 0.919048, 1)
-shader_parameter/gradient_curve = SubResource("CurveTexture_djs1c")
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_3fddd")
+shader_parameter/gradient_curve = SubResource("CurveTexture_dwbtd")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_6xooh")
 shader_parameter/moon_texture = ExtResource("2_suhml")
 shader_parameter/moon_direction = Vector3(-1.095, 0.68, 1)
 shader_parameter/moon_size = 0.045
 
-[sub_resource type="Sky" id="Sky_k4cq1"]
+[sub_resource type="Sky" id="Sky_3c4pw"]
 sky_material = SubResource("ShaderMaterial_tk77j")
 
 [sub_resource type="Environment" id="Environment_nuokl"]
 background_mode = 2
-sky = SubResource("Sky_k4cq1")
+sky = SubResource("Sky_3c4pw")
 ambient_light_source = 3
 ambient_light_color = Color(0.740611, 0.738748, 0.675475, 1)
 ambient_light_sky_contribution = 0.0
@@ -125,7 +125,7 @@ point_count = 2
 vertices = PackedVector3Array(-43.2706, 15.0048, -17.7284, -44.0206, 15.0048, -16.9784, -42.7706, 15.0048, -16.2284, -43.2706, 15.0048, -18.7284, -18.7706, 15.0048, -24.7284, -18.7706, 15.0048, -27.7284, -16.5206, 15.0048, -15.2284, -16.5206, 15.0048, -24.4784, -42.7706, 15.0048, -15.2284, -18.2706, 15.0048, -28.2284, -16.5206, 15.0048, -27.9784, -16.5206, 15.0048, -44.4784, -45.7706, 15.0048, -44.4784, -44.7706, 15.0048, -20.2284, -45.7706, 15.0048, -19.9784, -43.2706, 25.5048, -39.2284, -42.5206, 25.5048, -38.9784, -42.5206, 25.5048, -39.4784, -30.0206, 25.5048, -36.4784, -29.2706, 25.5048, -35.9784, -29.5206, 25.5048, -36.7284, -45.5206, 16.5048, -18.4784, -44.7706, 16.5048, -17.9784, -44.7706, 16.5048, -18.7284)
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 5), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 2), PackedInt32Array(2, 6, 8), PackedInt32Array(11, 10, 9), PackedInt32Array(9, 5, 11), PackedInt32Array(11, 5, 12), PackedInt32Array(12, 5, 13), PackedInt32Array(13, 5, 3), PackedInt32Array(13, 14, 12), PackedInt32Array(17, 16, 15), PackedInt32Array(20, 19, 18), PackedInt32Array(23, 22, 21)]
 
-[node name="Node3D" type="Node3D"]
+[node name="Level2" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 amount = 4500
