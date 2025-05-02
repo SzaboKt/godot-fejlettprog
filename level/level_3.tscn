@@ -1,0 +1,161 @@
+[gd_scene load_steps=22 format=3 uid="uid://bytgkysthi0ik"]
+
+[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_octfv"]
+[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_ypwww"]
+[ext_resource type="PackedScene" uid="uid://3r1nm3th3e3" path="res://level/platforms/grass_tiles/scenes/tile_large_forest.tscn" id="3_ypwww"]
+[ext_resource type="PackedScene" uid="uid://dao6ryqrntl1f" path="res://level/tree/scenes/tree.tscn" id="4_f0ovp"]
+[ext_resource type="PackedScene" uid="uid://bnfr222dtbpjo" path="res://level/platforms/grass_tiles/scenes/tile_medium_forest.tscn" id="5_vk6f1"]
+[ext_resource type="PackedScene" uid="uid://bij84ol81kcts" path="res://level/interactable/kill_plane/kill_plane_3d.tscn" id="6_21jwj"]
+[ext_resource type="PackedScene" uid="uid://c0un8msxmahno" path="res://level/platforms/moving_platforms/moving_platform_forest_medium.tscn" id="7_6e3ox"]
+[ext_resource type="PackedScene" uid="uid://bcsxy45te0fqw" path="res://level/platforms/moving_platforms/moving_platform_forest_large.tscn" id="8_lopto"]
+[ext_resource type="PackedScene" uid="uid://c1d2hwki4vwrx" path="res://level/automatic_bow/automatic_bow_forest.tscn" id="9_6xa2d"]
+[ext_resource type="PackedScene" uid="uid://dfffd8508rgw0" path="res://level/misc_assets/scenes/target_ground_forest.tscn" id="10_07kww"]
+
+[sub_resource type="Curve" id="Curve_f0ovp"]
+_data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.689394, 0.595506), 0.51276, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_djs1c"]
+curve = SubResource("Curve_f0ovp")
+
+[sub_resource type="Gradient" id="Gradient_vk6f1"]
+offsets = PackedFloat32Array(0.784123, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_21jwj"]
+frequency = 0.3589
+fractal_octaves = 4
+cellular_distance_function = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3fddd"]
+width = 1024
+height = 1024
+generate_mipmaps = false
+seamless = true
+color_ramp = SubResource("Gradient_vk6f1")
+noise = SubResource("FastNoiseLite_21jwj")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6e3ox"]
+shader = ExtResource("1_octfv")
+shader_parameter/top_color = Color(0.108104, 0.796832, 0.870964, 1)
+shader_parameter/bottom_color = Color(0.99, 0.74052, 0.2772, 1)
+shader_parameter/gradient_curve = SubResource("CurveTexture_djs1c")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_3fddd")
+shader_parameter/moon_texture = ExtResource("2_ypwww")
+shader_parameter/moon_direction = Vector3(-1.095, 0.68, 1)
+shader_parameter/moon_size = 0.045
+
+[sub_resource type="Sky" id="Sky_k4cq1"]
+sky_material = SubResource("ShaderMaterial_6e3ox")
+
+[sub_resource type="Environment" id="Environment_lopto"]
+background_mode = 2
+sky = SubResource("Sky_k4cq1")
+ambient_light_source = 3
+ambient_light_color = Color(0.740611, 0.738748, 0.675475, 1)
+ambient_light_sky_contribution = 0.0
+tonemap_mode = 2
+tonemap_exposure = 1.05
+tonemap_white = 0.95
+ssao_enabled = true
+ssao_radius = 2.0
+ssao_intensity = 1.4
+glow_intensity = 4.98
+glow_strength = 0.26
+glow_bloom = 0.08
+glow_blend_mode = 0
+glow_hdr_threshold = 0.26
+glow_hdr_scale = 0.0
+glow_hdr_luminance_cap = 18.75
+glow_map_strength = 1.0
+fog_light_color = Color(0.843137, 0.737255, 0.329412, 1)
+fog_density = 0.0
+fog_aerial_perspective = 1.0
+fog_sky_affect = 0.0
+fog_height_density = 0.1
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
+volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_lopto"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_6e3ox"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_6xa2d"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Level3" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lopto")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.327016, 0.941731, -0.0787648, 0.688764, 0.294578, 0.662441, 0.647044, 0.162378, -0.744962, -872.48, 542.157, -28.0205)
+light_energy = 0.53
+shadow_enabled = true
+directional_shadow_max_distance = 40.0
+
+[node name="tileLarge_forest" parent="." instance=ExtResource("3_ypwww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00697, 0)
+
+[node name="tree" parent="." instance=ExtResource("4_f0ovp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22442, 0, 1.65096)
+
+[node name="tileMedium_forest" parent="." instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84751, -1.23103, 6.77149)
+
+[node name="tileLarge_forest2" parent="." instance=ExtResource("3_ypwww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2822, 0.99284, 16.4217)
+
+[node name="tileMedium_forest2" parent="." instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49876, 0, 10.1028)
+
+[node name="KillPlane3D" parent="." instance=ExtResource("6_21jwj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0621166, -27.1379, 1.34726)
+
+[node name="Path3D" parent="." instance=ExtResource("7_6e3ox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28671, 0.466171, 22.105)
+curve = SubResource("Curve3D_lopto")
+loop = false
+
+[node name="Path3D2" parent="." instance=ExtResource("7_6e3ox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.32832, -3.97567, 25.0047)
+curve = SubResource("Curve3D_6e3ox")
+loop = false
+speed = 40.0
+
+[node name="tileLarge_forest3" parent="." instance=ExtResource("3_ypwww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28405, 11.3633, 30.4977)
+
+[node name="Path3D3" parent="." instance=ExtResource("8_lopto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03632, 11.4091, 41.5162)
+curve = SubResource("Curve3D_6xa2d")
+loop = false
+
+[node name="AutomaticBow" parent="." instance=ExtResource("9_6xa2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64351, 11.8907, 47.8445)
+wait_time = 5.0
+
+[node name="PlatformAndTarget" parent="." instance=ExtResource("10_07kww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.867219, 11.7613, 14.0241)
+
+[node name="AutomaticBow2" parent="." instance=ExtResource("9_6xa2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.935304, 11.9799, 47.8102)
+wait_time = 2.5
+
+[node name="PlatformAndTarget2" parent="." instance=ExtResource("10_07kww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67368, 11.7701, 13.9697)
