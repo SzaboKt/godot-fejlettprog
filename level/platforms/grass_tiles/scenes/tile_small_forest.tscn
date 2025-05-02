@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://30id02ysgm4u"]
+
+[ext_resource type="PackedScene" uid="uid://cp18l2r4dmwas" path="res://level/platforms/grass_tiles/tileSmall_forest.fbx" id="1_c5q2a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wohcb"]
+size = Vector3(1.01282, 1.01782, 1)
+
+[node name="tileSmall_forest" instance=ExtResource("1_c5q2a")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.10352e-05, 0.501303, 0)
+shape = SubResource("BoxShape3D_wohcb")

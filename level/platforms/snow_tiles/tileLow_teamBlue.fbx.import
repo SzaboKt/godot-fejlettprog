@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dpnc8f3x3hq7e"
-path="res://.godot/imported/tileLow_teamBlue.fbx-1561a7b54021908a4c77bcff8b3c37c6.scn"
+path="res://.godot/imported/tileLow_teamBlue.fbx-9b28b54b6392716019732f67e87251bb.scn"
 
 [deps]
 
-source_file="res://level/platforms/blue_tiles/tileLow_teamBlue.fbx"
-dest_files=["res://.godot/imported/tileLow_teamBlue.fbx-1561a7b54021908a4c77bcff8b3c37c6.scn"]
+source_file="res://level/platforms/snow_tiles/tileLow_teamBlue.fbx"
+dest_files=["res://.godot/imported/tileLow_teamBlue.fbx-9b28b54b6392716019732f67e87251bb.scn"]
 
 [params]
 

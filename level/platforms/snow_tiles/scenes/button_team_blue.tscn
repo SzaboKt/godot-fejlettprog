@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cubvka8fqlwh"]
+[gd_scene load_steps=5 format=3 uid="uid://cg7wc3vjfe4vc"]
 
-[ext_resource type="PackedScene" uid="uid://dwblcg1njxerv" path="res://level/platforms/blue_tiles/button_teamBlue.fbx" id="1_oq5k6"]
+[ext_resource type="PackedScene" uid="uid://dwblcg1njxerv" path="res://level/platforms/snow_tiles/button_teamBlue.fbx" id="1_6mdin"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oq5k6"]
 
@@ -11,7 +11,7 @@ albedo_color = Color(0.4, 0.294118, 0.2, 1)
 height = 0.354294
 radius = 0.82373
 
-[node name="button_teamBlue" instance=ExtResource("1_oq5k6")]
+[node name="button_teamBlue" instance=ExtResource("1_6mdin")]
 
 [node name="button_teamBlue" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_oq5k6")

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bkcoofb1pmp67"
-path="res://.godot/imported/tileSlopeLowHigh_teamBlue.fbx-28c986e13919981aabc4c9fb58ecec0f.scn"
+uid="uid://bvc6xycngyufw"
+path="res://.godot/imported/tileMedium_teamBlue.fbx-819e72d5babe7bb2dd27fdcb0a15b704.scn"
 
 [deps]
 
-source_file="res://level/platforms/blue_tiles/tileSlopeLowHigh_teamBlue.fbx"
-dest_files=["res://.godot/imported/tileSlopeLowHigh_teamBlue.fbx-28c986e13919981aabc4c9fb58ecec0f.scn"]
+source_file="res://level/platforms/snow_tiles/tileMedium_teamBlue.fbx"
+dest_files=["res://.godot/imported/tileMedium_teamBlue.fbx-819e72d5babe7bb2dd27fdcb0a15b704.scn"]
 
 [params]
 

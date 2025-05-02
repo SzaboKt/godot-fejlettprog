@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://hipg0j8apu30"
-path="res://.godot/imported/tileSmall_teamBlue.fbx-44dbe53203a5e74eb8617d5edc822cdd.scn"
+uid="uid://dwblcg1njxerv"
+path="res://.godot/imported/button_teamBlue.fbx-0b746136b801b095ccb92500cec8c831.scn"
 
 [deps]
 
-source_file="res://level/platforms/blue_tiles/tileSmall_teamBlue.fbx"
-dest_files=["res://.godot/imported/tileSmall_teamBlue.fbx-44dbe53203a5e74eb8617d5edc822cdd.scn"]
+source_file="res://level/platforms/snow_tiles/button_teamBlue.fbx"
+dest_files=["res://.godot/imported/button_teamBlue.fbx-0b746136b801b095ccb92500cec8c831.scn"]
 
 [params]
 

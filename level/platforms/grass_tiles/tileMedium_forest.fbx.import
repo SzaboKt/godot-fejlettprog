@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cyfsf1mdc77uy"
-path="res://.godot/imported/tileSlopeLowMedium_teamBlue.fbx-27997e691f3991ae25acdcd037cea1f5.scn"
+uid="uid://c2ljwu6gfptm8"
+path="res://.godot/imported/tileMedium_forest.fbx-37aa63d11517da943ef8493aa550b7b9.scn"
 
 [deps]
 
-source_file="res://level/platforms/blue_tiles/tileSlopeLowMedium_teamBlue.fbx"
-dest_files=["res://.godot/imported/tileSlopeLowMedium_teamBlue.fbx-27997e691f3991ae25acdcd037cea1f5.scn"]
+source_file="res://level/platforms/grass_tiles/tileMedium_forest.fbx"
+dest_files=["res://.godot/imported/tileMedium_forest.fbx-37aa63d11517da943ef8493aa550b7b9.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="StaticBody3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
