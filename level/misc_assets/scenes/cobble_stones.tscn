@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://do4h8dhfclsec"]
+
+[ext_resource type="PackedScene" uid="uid://dhhsd4usd4btx" path="res://level/misc_assets/cobble_stones.fbx" id="1_rx20f"]
+
+[node name="cobble_stones" instance=ExtResource("1_rx20f")]

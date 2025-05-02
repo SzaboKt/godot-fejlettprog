@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnyk67hqnbqq1"]
+
+[ext_resource type="PackedScene" uid="uid://3hh6mf24dtu8" path="res://level/misc_assets/plantA_desert.fbx" id="1_ybncy"]
+
+[node name="plantA_desert" instance=ExtResource("1_ybncy")]

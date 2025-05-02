@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dni4ayrw3pj6o"
-path="res://.godot/imported/plantB_desert.fbx-c7b9d07a2642d75cc946ee03ac094d1b.scn"
+uid="uid://cngyrd60kryry"
+path="res://.godot/imported/rocksA_forest.fbx-0e3efb5213b69a9c2ffc9615faaf6faf.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/plantB_desert.fbx"
-dest_files=["res://.godot/imported/plantB_desert.fbx-c7b9d07a2642d75cc946ee03ac094d1b.scn"]
+source_file="res://level/misc_assets/rocksA_forest.fbx"
+dest_files=["res://.godot/imported/rocksA_forest.fbx-0e3efb5213b69a9c2ffc9615faaf6faf.scn"]
 
 [params]
 
-nodes/root_type="MeshInstance3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

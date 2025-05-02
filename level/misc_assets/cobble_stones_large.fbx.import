@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dni4ayrw3pj6o"
-path="res://.godot/imported/plantB_desert.fbx-c7b9d07a2642d75cc946ee03ac094d1b.scn"
+uid="uid://d4f648dqfi7oq"
+path="res://.godot/imported/cobble_stones_large.fbx-b245dc1468870faf58a6c58da24723a7.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/plantB_desert.fbx"
-dest_files=["res://.godot/imported/plantB_desert.fbx-c7b9d07a2642d75cc946ee03ac094d1b.scn"]
+source_file="res://level/misc_assets/cobble_stones_large.fbx"
+dest_files=["res://.godot/imported/cobble_stones_large.fbx-b245dc1468870faf58a6c58da24723a7.scn"]
 
 [params]
 

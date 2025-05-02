@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bybctt8b5i8ty"]
 
-[ext_resource type="PackedScene" uid="uid://dgrey8f8x43xl" path="res://level/misc_assets/target_stand.tscn" id="1_iimsy"]
-[ext_resource type="PackedScene" uid="uid://b5n806eqo4npb" path="res://level/platforms/blue_tiles/scenes/tile_medium_team_blue.tscn" id="2_fkmr8"]
+[ext_resource type="PackedScene" uid="uid://dgrey8f8x43xl" path="res://level/misc_assets/scenes/target_stand.tscn" id="1_iimsy"]
+[ext_resource type="PackedScene" uid="uid://b5n806eqo4npb" path="res://level/platforms/snow_tiles/scenes/tile_medium_team_blue.tscn" id="2_fkmr8"]
 
 [node name="PlatformAndTarget" type="Node3D"]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dni4ayrw3pj6o"
-path="res://.godot/imported/plantB_desert.fbx-c7b9d07a2642d75cc946ee03ac094d1b.scn"
+uid="uid://blg7soafrika5"
+path="res://.godot/imported/rocksA_desert.fbx-01361bf323a7f4ce27773a07c5d06c2c.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/plantB_desert.fbx"
-dest_files=["res://.godot/imported/plantB_desert.fbx-c7b9d07a2642d75cc946ee03ac094d1b.scn"]
+source_file="res://level/misc_assets/rocksA_desert.fbx"
+dest_files=["res://.godot/imported/rocksA_desert.fbx-01361bf323a7f4ce27773a07c5d06c2c.scn"]
 
 [params]
 
