@@ -20,7 +20,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if automatic or (!automatic and player):
-		if cool_down_timer.is_stopped():
+		if cool_down_timer.is_stopped() and wait_time > 0:
 			cool_down_timer.wait_time = wait_time
 			cool_down_timer.start()
 			var attack = PROJECTILE.instantiate()

@@ -4,6 +4,8 @@
 
 [node name="ProjectileLauncher" type="Node3D"]
 script = ExtResource("1_dwv01")
+automatic = true
+arrow_type = "Rouge"
 
 [node name="CoolDownTimer" type="Timer" parent="."]
 wait_time = 2.5
