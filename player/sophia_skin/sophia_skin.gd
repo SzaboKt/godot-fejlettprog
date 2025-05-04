@@ -10,6 +10,7 @@ var run_tilt = 0.0 : set = _set_run_tilt
 @onready var blink_timer = %BlinkTimer
 @onready var closed_eyes_timer = %ClosedEyesTimer
 @onready var eye_mat = $sophia/rig/Skeleton3D/Sophia.get("surface_material_override/2")
+@onready var sophia: Node3D = $sophia
 
 func _ready():
 	blink_timer.connect("timeout", func():
@@ -30,6 +31,9 @@ func set_blink(state : bool):
 	else:
 		blink_timer.stop()
 		closed_eyes_timer.stop()
+
+func set_skin_visibility(visible: bool = true) -> void:
+	sophia.visible = visible
 
 func _set_run_tilt(value : float):
 	run_tilt = clamp(value, -1.0, 1.0)

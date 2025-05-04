@@ -46,14 +46,24 @@ var can_move: bool = true
 @onready var _jump_sound: AudioStreamPlayer3D = %JumpSound
 @onready var _dust_particles: GPUParticles3D = %DustParticles
 @onready var label: Label = $Label
-@onready var remote_transform: RemoteTransform3D = RemoteTransform3D.new()
+@onready var death_timer: Timer = $DeathTimer
+
+func player_dies() -> void:
+	can_move = false
+	Events.player_dies.emit()
+	death_timer.start()
+	_skin.set_skin_visibility(false)
+	await death_timer.timeout
+	_skin.set_skin_visibility(true)
+	global_position = _start_position
+	velocity = Vector3.ZERO
+	_skin.idle()
+	can_move = true
+	#set_physics_process(true)
 
 func _ready() -> void:
 	Events.kill_plane_touched.connect(func on_kill_plane_touched() -> void:
-		global_position = _start_position
-		velocity = Vector3.ZERO
-		_skin.idle()
-		set_physics_process(true)
+		player_dies()
 	)
 	Events.flag_reached.connect(func on_flag_reached() -> void:
 		_skin.idle()

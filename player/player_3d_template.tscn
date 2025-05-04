@@ -114,5 +114,9 @@ offset_bottom = 684.0
 theme_override_font_sizes/font_size = 50
 text = "Press F to push"
 
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="body_entered" from="EnemyDetectionArea" to="." method="_enemy_in_detection_area"]
 [connection signal="body_exited" from="EnemyDetectionArea" to="." method="_enemy_exited_detection_area"]

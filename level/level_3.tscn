@@ -262,7 +262,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3958, 15.3261, 50.6562)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5086, 14.5011, 48.7378)
 
 [node name="Rogue2" parent="Platform13/NavigationRegion3D" instance=ExtResource("21_krmuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.192, 14.5193, 31.194)
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -36.192, 14.5193, 31.194)
 
 [node name="tree" parent="Platform13/NavigationRegion3D" instance=ExtResource("4_f0ovp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4392, 14.4662, 53.7759)
@@ -285,5 +285,19 @@ transform = Transform3D(0.43498, 0, 0.90044, 0, 1, 0, -0.90044, 0, 0.43498, -43.
 [node name="bench3" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
 transform = Transform3D(0.627583, 0, -0.77855, 0, 1, 0, 0.77855, 0, 0.627583, -36.9479, 14.4773, 38.2269)
 
+[node name="spikeRoller" parent="Platform13/NavigationRegion3D" instance=ExtResource("22_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.0619, 14.7956, 41.757)
+
+[node name="Platform14" type="Node3D" parent="."]
+
+[node name="tileMedium_forest" parent="Platform14" instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 13, 41)
+
+[node name="tileMedium_forest" parent="." instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 13, 39)
+
 [node name="spikeRoller" parent="." instance=ExtResource("22_krmuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5406, 14.4904, 38.454)
+
+[node name="tileMedium_forest2" parent="." instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.7396, 13.2848, 41.1579)
