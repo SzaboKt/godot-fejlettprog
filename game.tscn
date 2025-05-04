@@ -10,9 +10,8 @@ script = ExtResource("1_1il7v")
 current_level = NodePath("Level3")
 
 [node name="Player3DTemplate" parent="." instance=ExtResource("1_w0p8v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07332, 12.3847, 30.7924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30128, 0.0939016, -1.46093)
 
 [node name="FlagReachedScreen" parent="." instance=ExtResource("19_cpgj4")]
 
 [node name="Level3" parent="." instance=ExtResource("4_fc0e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.800531, 2.38419e-07, 0.138781)

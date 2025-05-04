@@ -7,7 +7,7 @@ const FILE_BEGIN = "res://level/level_"
 @onready var flag_reached_screen: CanvasLayer = $FlagReachedScreen
 
 var next_scene
-var level_number = 1
+var level_number = 2
 
 func _ready() -> void:
 	Events.flag_reached.connect(func on_flag_reached() -> void:
