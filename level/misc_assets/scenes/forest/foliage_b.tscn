@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmhp60ll7gyf4"]
+
+[ext_resource type="PackedScene" uid="uid://0cvp2ddyosw1" path="res://level/misc_assets/foliage_B.fbx" id="1_mgphy"]
+
+[node name="foliage_B" instance=ExtResource("1_mgphy")]

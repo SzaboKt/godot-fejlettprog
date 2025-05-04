@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://biwqawj4srlxb"
-path="res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"
+uid="uid://bvtpgqg2ed1fp"
+path="res://.godot/imported/pothos_vine_medium_C.fbx-40614a5032367a6eefa15725313d97cc.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/detail_forest.fbx"
-dest_files=["res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"]
+source_file="res://level/misc_assets/pothos_vine_medium_C.fbx"
+dest_files=["res://.godot/imported/pothos_vine_medium_C.fbx-40614a5032367a6eefa15725313d97cc.scn"]
 
 [params]
 
-nodes/root_type="MeshInstance3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

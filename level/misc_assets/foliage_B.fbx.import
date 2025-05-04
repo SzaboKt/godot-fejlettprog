@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://biwqawj4srlxb"
-path="res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"
+uid="uid://0cvp2ddyosw1"
+path="res://.godot/imported/foliage_B.fbx-e1b5497ee03028b01295b8298780f7de.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/detail_forest.fbx"
-dest_files=["res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"]
+source_file="res://level/misc_assets/foliage_B.fbx"
+dest_files=["res://.godot/imported/foliage_B.fbx-e1b5497ee03028b01295b8298780f7de.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://biwqawj4srlxb"
-path="res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"
+uid="uid://crn8cvtaqydoc"
+path="res://.godot/imported/pothos_vine_large_C.fbx-d7560c5d81c7e7fc4c9bdb11958f5dcb.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/detail_forest.fbx"
-dest_files=["res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"]
+source_file="res://level/misc_assets/pothos_vine_large_C.fbx"
+dest_files=["res://.godot/imported/pothos_vine_large_C.fbx-d7560c5d81c7e7fc4c9bdb11958f5dcb.scn"]
 
 [params]
 

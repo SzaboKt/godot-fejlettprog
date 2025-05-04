@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://biwqawj4srlxb"
-path="res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"
+uid="uid://0nmrhtcvtl06"
+path="res://.godot/imported/fountain.fbx-cc8c55135ad65a6cb1b84c9f8dd86758.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/detail_forest.fbx"
-dest_files=["res://.godot/imported/detail_forest.fbx-743828602f4b4a68d71c1d606662a22b.scn"]
+source_file="res://level/misc_assets/fountain.fbx"
+dest_files=["res://.godot/imported/fountain.fbx-cc8c55135ad65a6cb1b84c9f8dd86758.scn"]
 
 [params]
 
-nodes/root_type="MeshInstance3D"
+nodes/root_type="StaticBody3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
