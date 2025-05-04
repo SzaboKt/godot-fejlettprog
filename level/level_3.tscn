@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bytgkysthi0ik"]
+[gd_scene load_steps=36 format=3 uid="uid://bytgkysthi0ik"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_octfv"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_ypwww"]
@@ -7,9 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://bnfr222dtbpjo" path="res://level/platforms/grass_tiles/scenes/tile_medium_forest.tscn" id="5_vk6f1"]
 [ext_resource type="PackedScene" uid="uid://bij84ol81kcts" path="res://level/interactable/kill_plane/kill_plane_3d.tscn" id="6_21jwj"]
 [ext_resource type="PackedScene" uid="uid://c0un8msxmahno" path="res://level/platforms/moving_platforms/moving_platform_forest_medium.tscn" id="7_6e3ox"]
+[ext_resource type="PackedScene" uid="uid://bkx1a7f7xm3td" path="res://level/misc_assets/scenes/forest/foliage_a.tscn" id="7_w5o0a"]
 [ext_resource type="PackedScene" uid="uid://bcsxy45te0fqw" path="res://level/platforms/moving_platforms/moving_platform_forest_large.tscn" id="8_lopto"]
 [ext_resource type="PackedScene" uid="uid://c1d2hwki4vwrx" path="res://level/automatic_bow/automatic_bow_forest.tscn" id="9_6xa2d"]
 [ext_resource type="PackedScene" uid="uid://dfffd8508rgw0" path="res://level/misc_assets/scenes/target_ground_forest.tscn" id="10_07kww"]
+[ext_resource type="PackedScene" uid="uid://b2klloh6vq44r" path="res://level/swiper/scenes/animated_double_swiper.tscn" id="11_eueb8"]
+[ext_resource type="PackedScene" uid="uid://f1k8libk3wfs" path="res://level/tree/scenes/tree_large.tscn" id="12_f1jq1"]
+[ext_resource type="PackedScene" uid="uid://dt7i2sgycacsp" path="res://level/misc_assets/scenes/forest/bench.tscn" id="13_5mhvx"]
+[ext_resource type="PackedScene" uid="uid://dsvgonqrcvpnk" path="res://level/platforms/grass_tiles/scenes/tile_extra_large_forest.tscn" id="14_hrebq"]
+[ext_resource type="PackedScene" uid="uid://te3ecdmuhui7" path="res://level/misc_assets/scenes/forest/flower_a.tscn" id="16_b3knk"]
+[ext_resource type="PackedScene" uid="uid://bbtdkcx7frcki" path="res://level/misc_assets/scenes/forest/flower_b.tscn" id="17_e2u7k"]
+[ext_resource type="PackedScene" uid="uid://lbwcq64onjd" path="res://level/misc_assets/scenes/forest/pothos_vine_large_c.tscn" id="18_b3knk"]
+[ext_resource type="PackedScene" uid="uid://degtsopb0wfjj" path="res://level/misc_assets/scenes/forest/fountain.tscn" id="18_e2u7k"]
+[ext_resource type="PackedScene" uid="uid://b82101p3ft53o" path="res://ball/multi-color_ball/ball.tscn" id="20_510pp"]
+[ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="21_krmuh"]
+[ext_resource type="PackedScene" uid="uid://tco41lpdpacl" path="res://spike_roller/spike_roller.tscn" id="22_krmuh"]
 
 [sub_resource type="Curve" id="Curve_f0ovp"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.689394, 0.595506), 0.51276, 0.0, 0, 0]
@@ -77,6 +89,13 @@ volumetric_fog_density = 0.01
 volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
 volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
 
+[sub_resource type="Curve3D" id="Curve3D_5mhvx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
 [sub_resource type="Curve3D" id="Curve3D_lopto"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0),
@@ -98,6 +117,10 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_e2u7k"]
+vertices = PackedVector3Array(-54.4681, 14.9273, 38.1684, -44.4681, 14.9273, 38.1684, -43.2181, 14.9273, 37.1684, -43.2181, 14.9273, 25.4184, -54.4681, 14.9273, 25.4184, -41.7181, 14.9273, 37.6684, -41.2181, 14.9273, 38.6684, -40.4681, 14.9273, 37.9184, -38.7181, 14.9273, 38.1684, -38.7181, 14.9273, 37.4184, -37.7181, 14.9273, 36.4184, -36.9681, 14.9273, 25.4184, -36.9681, 14.9273, 36.4184, -35.9681, 14.9273, 36.9184, -35.2181, 14.9273, 38.6684, -25.2181, 14.9273, 38.6684, -25.2181, 14.9273, 25.4184, -37.4681, 15.9273, 37.9184, -36.4681, 16.1773, 38.6684, -36.9681, 16.1773, 37.6684, -44.4681, 14.9273, 42.1684, -43.9681, 14.9273, 40.4184, -44.7181, 14.9273, 40.1684, -54.4681, 14.9273, 42.1684, -42.9681, 15.9273, 39.4184, -42.7181, 15.9273, 38.6684, -43.2181, 16.1773, 38.4184, -43.7181, 16.1773, 39.1684, -28.7181, 14.9273, 52.1684, -27.4681, 14.9273, 51.9184, -26.9681, 14.9273, 50.9184, -35.7181, 14.9273, 39.6684, -37.2181, 14.9273, 39.9184, -37.2181, 14.9273, 41.4184, -39.4681, 14.9273, 54.6684, -29.2181, 14.9273, 54.6684, -29.2181, 14.9273, 52.9184, -39.4681, 14.9273, 43.1684, -25.2181, 14.9273, 50.9184, -38.2181, 15.9273, 40.9184, -38.2181, 15.9273, 40.1684, -39.4681, 15.9273, 38.9184, -41.2181, 15.9273, 39.9184, -41.2181, 15.9273, 40.9184, -39.9681, 15.9273, 42.1684, -39.0931, 16.1773, 41.5434, -42.9681, 16.1773, 42.6684, -42.4681, 16.1773, 42.6684, -42.7181, 15.9273, 41.6684, -43.4681, 16.1773, 41.6684, -43.9681, 14.9273, 43.1684, -42.7181, 14.9273, 54.6684, -42.7181, 14.9273, 43.9184, -54.4681, 14.9273, 54.6684, -40.4681, 14.9273, 43.1684, -41.2181, 14.9273, 42.4184, -41.4681, 14.9273, 43.4184, -30.7181, 19.4273, 50.4184, -30.7181, 19.4273, 50.9184, -30.2181, 19.6773, 50.9184, -30.2181, 19.6773, 50.4184)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(7, 6, 5), PackedInt32Array(9, 8, 7), PackedInt32Array(7, 5, 2), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 2), PackedInt32Array(10, 2, 3), PackedInt32Array(10, 3, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(13, 15, 14), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 16), PackedInt32Array(13, 16, 15), PackedInt32Array(18, 17, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(22, 23, 0), PackedInt32Array(0, 1, 22), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(30, 29, 28), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 15), PackedInt32Array(36, 35, 34), PackedInt32Array(31, 14, 15), PackedInt32Array(28, 36, 34), PackedInt32Array(28, 34, 30), PackedInt32Array(30, 34, 37), PackedInt32Array(30, 37, 33), PackedInt32Array(30, 33, 15), PackedInt32Array(15, 38, 30), PackedInt32Array(39, 45, 40), PackedInt32Array(40, 45, 44), PackedInt32Array(40, 44, 43), PackedInt32Array(40, 43, 42), PackedInt32Array(40, 42, 41), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 49), PackedInt32Array(23, 20, 50), PackedInt32Array(52, 51, 50), PackedInt32Array(50, 51, 53), PackedInt32Array(50, 53, 23), PackedInt32Array(56, 55, 54), PackedInt32Array(54, 37, 56), PackedInt32Array(56, 37, 52), PackedInt32Array(52, 37, 51), PackedInt32Array(51, 37, 34), PackedInt32Array(60, 59, 57), PackedInt32Array(57, 59, 58)]
+
 [node name="Level3" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -109,53 +132,158 @@ light_energy = 0.53
 shadow_enabled = true
 directional_shadow_max_distance = 40.0
 
-[node name="tileLarge_forest" parent="." instance=ExtResource("3_ypwww")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00697, 0)
-
-[node name="tree" parent="." instance=ExtResource("4_f0ovp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22442, 0, 1.65096)
-
-[node name="tileMedium_forest" parent="." instance=ExtResource("5_vk6f1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84751, -1.23103, 6.77149)
-
-[node name="tileLarge_forest2" parent="." instance=ExtResource("3_ypwww")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2822, 0.99284, 16.4217)
-
-[node name="tileMedium_forest2" parent="." instance=ExtResource("5_vk6f1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49876, 0, 10.1028)
-
 [node name="KillPlane3D" parent="." instance=ExtResource("6_21jwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0621166, -27.1379, 1.34726)
 
-[node name="Path3D" parent="." instance=ExtResource("7_6e3ox")]
+[node name="Trees" type="Node3D" parent="."]
+
+[node name="Path3D4" parent="." instance=ExtResource("8_lopto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3896, 4.0432, 32.3416)
+curve = SubResource("Curve3D_5mhvx")
+loop = false
+
+[node name="Platform1" type="Node3D" parent="."]
+
+[node name="flower_A" parent="Platform1" instance=ExtResource("16_b3knk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5975, 0.0256042, -2.68557)
+skeleton = NodePath("../..")
+
+[node name="flower_B" parent="Platform1" instance=ExtResource("17_e2u7k")]
+transform = Transform3D(0.821239, 0, -0.570585, 0, 1, 0, 0.570585, 0, 0.821239, 2.35515, 0.025604, -2.85539)
+skeleton = NodePath("../..")
+
+[node name="pothos_vine_large_C" parent="Platform1" instance=ExtResource("18_b3knk")]
+transform = Transform3D(0.12516, 0, -0.992137, 0, 1, 0, 0.992137, 0, 0.12516, -2.8255, 0, -2.09654)
+skeleton = NodePath("../..")
+
+[node name="tileLarge_forest" parent="Platform1" instance=ExtResource("3_ypwww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00697, 0)
+
+[node name="tree" parent="Platform1" instance=ExtResource("4_f0ovp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22442, 0, 1.65096)
+
+[node name="foliage_A" parent="Platform1" instance=ExtResource("7_w5o0a")]
+transform = Transform3D(-0.964179, 0, 0.265253, 0, 1, 0, -0.265253, 0, -0.964179, 1.92557, 0.0707492, 1.55455)
+
+[node name="Platform2" type="Node3D" parent="."]
+
+[node name="tileMedium_forest" parent="Platform2" instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84751, -1.23103, 6.77149)
+
+[node name="Platfrorm3" type="Node3D" parent="."]
+
+[node name="tileMedium_forest2" parent="Platfrorm3" instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49876, 0, 10.1028)
+
+[node name="Platform4" type="Node3D" parent="."]
+
+[node name="tileLarge_forest2" parent="Platform4" instance=ExtResource("3_ypwww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2822, 0.99284, 16.4217)
+
+[node name="Platform5" type="Node3D" parent="."]
+
+[node name="Path3D" parent="Platform5" instance=ExtResource("7_6e3ox")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28671, 0.466171, 22.105)
 curve = SubResource("Curve3D_lopto")
 loop = false
 
-[node name="Path3D2" parent="." instance=ExtResource("7_6e3ox")]
+[node name="Platform6" type="Node3D" parent="."]
+
+[node name="Path3D2" parent="Platform6" instance=ExtResource("7_6e3ox")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.32832, -3.97567, 25.0047)
 curve = SubResource("Curve3D_6e3ox")
 loop = false
 speed = 40.0
 
-[node name="tileLarge_forest3" parent="." instance=ExtResource("3_ypwww")]
+[node name="Platform7" type="Node3D" parent="."]
+
+[node name="tileLarge_forest3" parent="Platform7" instance=ExtResource("3_ypwww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28405, 11.3633, 30.4977)
 
-[node name="Path3D3" parent="." instance=ExtResource("8_lopto")]
+[node name="tree_large" parent="Platform7" instance=ExtResource("12_f1jq1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.53042, 12.2093, 32.5062)
+
+[node name="bench" parent="Platform7" instance=ExtResource("13_5mhvx")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.84099, 12.3301, 32.549)
+
+[node name="Platform8" type="Node3D" parent="."]
+
+[node name="Path3D3" parent="Platform8" instance=ExtResource("8_lopto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03632, 11.4091, 41.5162)
 curve = SubResource("Curve3D_6xa2d")
 loop = false
 
-[node name="AutomaticBow" parent="." instance=ExtResource("9_6xa2d")]
+[node name="Platform9" type="Node3D" parent="."]
+
+[node name="AutomaticBow" parent="Platform9" instance=ExtResource("9_6xa2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64351, 11.8907, 47.8445)
 wait_time = 5.0
 
-[node name="PlatformAndTarget" parent="." instance=ExtResource("10_07kww")]
+[node name="PlatformAndTarget" parent="Platform9" instance=ExtResource("10_07kww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.867219, 11.7613, 14.0241)
 
-[node name="AutomaticBow2" parent="." instance=ExtResource("9_6xa2d")]
+[node name="AutomaticBow2" parent="Platform9" instance=ExtResource("9_6xa2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.935304, 11.9799, 47.8102)
 wait_time = 2.5
 
-[node name="PlatformAndTarget2" parent="." instance=ExtResource("10_07kww")]
+[node name="PlatformAndTarget2" parent="Platform9" instance=ExtResource("10_07kww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67368, 11.7701, 13.9697)
+
+[node name="Platform10" type="Node3D" parent="."]
+
+[node name="tileMedium_forest3" parent="Platform10" instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61844, 11.6174, 28.1811)
+
+[node name="Platform11" type="Node3D" parent="."]
+
+[node name="tileMedium_forest4" parent="Platform11" instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1863, 12.2323, 30.2246)
+
+[node name="Platform12" type="Node3D" parent="."]
+
+[node name="tileMedium_forest5" parent="Platform12" instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5603, 13.036, 32.2256)
+
+[node name="tileMedium_forest6" parent="Platform12" instance=ExtResource("5_vk6f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7583, 13.2862, 34.5124)
+
+[node name="AnimatedDoubleSwiper" parent="Platform12" instance=ExtResource("11_eueb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6152, 14.7943, 34.4823)
+
+[node name="Platform13" type="Node3D" parent="."]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Platform13"]
+navigation_mesh = SubResource("NavigationMesh_e2u7k")
+
+[node name="ball" parent="Platform13/NavigationRegion3D" instance=ExtResource("20_510pp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3958, 15.3261, 50.6562)
+
+[node name="Rogue" parent="Platform13/NavigationRegion3D" instance=ExtResource("21_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5086, 14.5011, 48.7378)
+
+[node name="Rogue2" parent="Platform13/NavigationRegion3D" instance=ExtResource("21_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.192, 14.5193, 31.194)
+
+[node name="tree" parent="Platform13/NavigationRegion3D" instance=ExtResource("4_f0ovp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4392, 14.4662, 53.7759)
+
+[node name="tree_large" parent="Platform13/NavigationRegion3D" instance=ExtResource("12_f1jq1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5947, 14.4802, 52.7155)
+
+[node name="fountain" parent="Platform13/NavigationRegion3D" instance=ExtResource("18_e2u7k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.7503, 14.4773, 40.5265)
+
+[node name="tileLarge_forest4" parent="Platform13/NavigationRegion3D" instance=ExtResource("14_hrebq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.9351, 11.9394, 40.0362)
+
+[node name="bench" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
+transform = Transform3D(-0.564376, 0, 0.825518, 0, 1, 0, -0.825518, 0, -0.564376, -42.82, 14.4773, 42.0907)
+
+[node name="bench2" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
+transform = Transform3D(0.43498, 0, 0.90044, 0, 1, 0, -0.90044, 0, 0.43498, -43.1595, 14.4773, 38.9661)
+
+[node name="bench3" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
+transform = Transform3D(0.627583, 0, -0.77855, 0, 1, 0, 0.77855, 0, 0.627583, -36.9479, 14.4773, 38.2269)
+
+[node name="spikeRoller" parent="." instance=ExtResource("22_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
