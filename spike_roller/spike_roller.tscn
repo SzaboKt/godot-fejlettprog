@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://tco41lpdpacl"]
+
+[ext_resource type="PackedScene" uid="uid://doeo3ro14jw15" path="res://spike_roller/spikeRoller.fbx" id="1_ls2cq"]
+[ext_resource type="Script" uid="uid://jsklv07wny6w" path="res://spike_roller/spike_roller.gd" id="2_ktpg7"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8hdb4"]
+radius = 0.994629
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_05uen"]
+radius = 1.01221
+
+[node name="spikeRoller" instance=ExtResource("1_ls2cq")]
+script = ExtResource("2_ktpg7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_8hdb4")
+
+[node name="SpikeArea" type="Area3D" parent="." index="2"]
+collision_mask = 256
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01245, 0)
+shape = SubResource("CylinderShape3D_05uen")
+
+[connection signal="body_entered" from="SpikeArea" to="." method="_player_on_spike"]

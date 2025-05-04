@@ -46,6 +46,7 @@ var can_move: bool = true
 @onready var _jump_sound: AudioStreamPlayer3D = %JumpSound
 @onready var _dust_particles: GPUParticles3D = %DustParticles
 @onready var label: Label = $Label
+@onready var remote_transform: RemoteTransform3D = RemoteTransform3D.new()
 
 func _ready() -> void:
 	Events.kill_plane_touched.connect(func on_kill_plane_touched() -> void:
@@ -70,7 +71,7 @@ func _input(event: InputEvent) -> void:
 	)
 	if player_is_using_mouse:
 		_camera_input_direction.x = event.relative.x * mouse_sensitivity
-		_camera_input_direction.y = -event.relative.y * mouse_sensitivity
+		_camera_input_direction.y = event.relative.y * mouse_sensitivity
 
 func get_skin() -> SophiaSkin:
 	return _skin
@@ -130,6 +131,8 @@ func _physics_process(delta: float) -> void:
 			_skin.move()
 		else:
 			_skin.idle()
+	if not can_move:
+		_skin.idle()
 
 	_dust_particles.emitting = is_on_floor() && ground_speed > 0.0
 
