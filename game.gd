@@ -3,16 +3,19 @@ extends Node
 const FILE_BEGIN = "res://level/level_"
 
 @export var current_level: Node3D
+@export var max_level_number: int
 @onready var player: Player = $Player3DTemplate
 @onready var flag_reached_screen: CanvasLayer = $FlagReachedScreen
 
 var next_scene
-var level_number = 2
+var level_number: int = 1
 
 func _ready() -> void:
 	Events.flag_reached.connect(func on_flag_reached() -> void:
 		player.set_can_move(false)
-		var current_scene_file = get_tree().current_scene.scene_file_path
+		if level_number == max_level_number:
+			await flag_reached_screen.fade_complete
+			get_tree().change_scene_to_file("res://title_screen/title_screen.tscn")
 		var next_level_number = level_number + 1
 		level_number += 1
 		var next_level_path = FILE_BEGIN + str(next_level_number) + ".tscn"
@@ -25,6 +28,7 @@ func _ready() -> void:
 			current_level.queue_free()
 			add_child(next_scene.instantiate())
 			player.global_position = Vector3.ZERO
+			current_level = get_child(-1)
 		else:
 			printerr("Failed to load scene: ", next_level_path)
 		flag_reached_screen.play_fade(true)
