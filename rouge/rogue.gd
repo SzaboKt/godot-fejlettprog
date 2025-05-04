@@ -22,7 +22,7 @@ var player: Player
 var being_pushed: bool = false
 
 func randomize_wander():
-	var random_point := Vector3(randf_range(-30, 30), 0, randf_range(-30, 30))
+	var random_point := Vector3(randf_range(-1000, 1000), 0, randf_range(-1000, 1000))
 	navigation_agent_3d.set_target_position(random_point)
 
 func randomize_idle():

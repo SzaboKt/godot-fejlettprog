@@ -109,6 +109,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01005, 0)
 shape = SubResource("CapsuleShape3D_lmthd")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="3"]
+path_desired_distance = 2.0
+target_desired_distance = 2.0
+path_postprocessing = 1
+avoidance_enabled = true
+avoidance_layers = 8
+avoidance_mask = 8
 debug_enabled = true
 
 [node name="Area3D" type="Area3D" parent="." index="4"]
@@ -120,7 +126,7 @@ shape = SubResource("SphereShape3D_pq5jb")
 
 [node name="ProjectileLauncher" parent="." index="5" instance=ExtResource("3_sb5rj")]
 transform = Transform3D(-0.993171, -0.116671, 8.74228e-08, -0.116671, 0.993171, 0, -8.68257e-08, -1.01997e-08, -1, 0, 0.832371, 0)
-arrow_type = "Rouge"
+automatic = false
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="6"]
 tree_root = SubResource("AnimationNodeStateMachine_f1ml0")
