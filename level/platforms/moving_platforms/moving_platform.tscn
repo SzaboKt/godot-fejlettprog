@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ciik67gyxcnxq" path="res://level/platforms/moving_platforms/moving_platform.gd" id="1_lko04"]
 [ext_resource type="PackedScene" uid="uid://bd2vq3m61j81d" path="res://level/platforms/snow_tiles/scenes/tile_large_team_blue.tscn" id="1_y1h2u"]
-[ext_resource type="PackedScene" uid="uid://bb4ij6rg10tgu" path="res://level/misc_assets/scenes/cobblestones.tscn" id="3_2rv78"]
+[ext_resource type="PackedScene" uid="uid://bb4ij6rg10tgu" path="res://level/misc_assets/scenes/snow/cobblestones.tscn" id="3_2rv78"]
 
 [sub_resource type="Curve3D" id="Curve3D_53np6"]
 _data = {

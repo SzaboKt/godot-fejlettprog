@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsvgonqrcvpnk"]
+
+[ext_resource type="PackedScene" uid="uid://dkvye3axjrogi" path="res://level/platforms/grass_tiles/tileLarge_forest.fbx" id="1_4kyvd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ky77v"]
+albedo_color = Color(0.282353, 0.737255, 0.552941, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cgfh"]
+albedo_color = Color(0.607843, 0.352941, 0.270588, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ky77v"]
+size = Vector3(30.1224, 2.54991, 30.2353)
+
+[node name="tileLarge_forest" instance=ExtResource("1_4kyvd")]
+
+[node name="tileLarge_forest" parent="." index="0"]
+transform = Transform3D(5, 0, 0, 0, 2.5, 0, 0, 0, 5, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_ky77v")
+surface_material_override/1 = SubResource("StandardMaterial3D_0cgfh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0282598, 1.2629, -0.000137806)
+shape = SubResource("BoxShape3D_ky77v")
