@@ -246,6 +246,10 @@ collision_mask = 2
 [node name="NavigationRegion3D2" type="NavigationRegion3D" parent="Platform8"]
 navigation_mesh = SubResource("NavigationMesh_rhqlf")
 
+[node name="plantA_desert" parent="Platform8/NavigationRegion3D2" instance=ExtResource("19_vseoc")]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -26.0437, 8.15615, -22.2769)
+skeleton = NodePath("../Rogue/Area3D")
+
 [node name="tileLarge_desert6" parent="Platform8/NavigationRegion3D2" instance=ExtResource("13_m3nah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6817, 7.13603, -19.6849)
 
@@ -272,9 +276,6 @@ transform = Transform3D(1, 1.25214e-21, 0, -1.25214e-21, 1, 0, 0, 0, 1, 0, 1.215
 
 [node name="Area3D" parent="Platform8/NavigationRegion3D2/Rogue" index="4"]
 collision_mask = 2
-
-[node name="plantA_desert" parent="Platform8/NavigationRegion3D2/Rogue/Area3D" index="1" instance=ExtResource("19_vseoc")]
-transform = Transform3D(-0.693225, 0, -0.72072, 0, 1, 0, 0.72072, 0, -0.693225, -1.84319, 0.00932693, 2.88334)
 
 [node name="Platform9" type="Node3D" parent="."]
 

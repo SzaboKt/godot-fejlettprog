@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bytgkysthi0ik"]
+[gd_scene load_steps=38 format=3 uid="uid://bytgkysthi0ik"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_octfv"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_ypwww"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://b82101p3ft53o" path="res://ball/multi-color_ball/ball.tscn" id="20_510pp"]
 [ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="21_krmuh"]
 [ext_resource type="PackedScene" uid="uid://tco41lpdpacl" path="res://spike_roller/spike_roller.tscn" id="22_krmuh"]
+[ext_resource type="PackedScene" uid="uid://db7whh5ia8l4u" path="res://level/platforms/grass_tiles/scenes/stairs.tscn" id="23_b30fa"]
+[ext_resource type="PackedScene" uid="uid://iq628otk757r" path="res://level/interactable/level_flag/flag_team_red.tscn" id="24_8s7fs"]
 
 [sub_resource type="Curve" id="Curve_f0ovp"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.689394, 0.595506), 0.51276, 0.0, 0, 0]
@@ -285,19 +287,40 @@ transform = Transform3D(0.43498, 0, 0.90044, 0, 1, 0, -0.90044, 0, 0.43498, -43.
 [node name="bench3" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
 transform = Transform3D(0.627583, 0, -0.77855, 0, 1, 0, 0.77855, 0, 0.627583, -36.9479, 14.4773, 38.2269)
 
-[node name="spikeRoller" parent="Platform13/NavigationRegion3D" instance=ExtResource("22_krmuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.0619, 14.7956, 41.757)
-
 [node name="Platform14" type="Node3D" parent="."]
 
 [node name="tileMedium_forest" parent="Platform14" instance=ExtResource("5_vk6f1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 13, 41)
 
-[node name="tileMedium_forest" parent="." instance=ExtResource("5_vk6f1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 13, 39)
+[node name="tileLarge_forest" parent="." instance=ExtResource("3_ypwww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3087, 14.379, 41.0109)
 
 [node name="spikeRoller" parent="." instance=ExtResource("22_krmuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5406, 14.4904, 38.454)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.1179, 15.3943, 39.4018)
 
-[node name="tileMedium_forest2" parent="." instance=ExtResource("5_vk6f1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.7396, 13.2848, 41.1579)
+[node name="spikeRoller2" parent="." instance=ExtResource("22_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.1176, 15.3943, 42.6926)
+
+[node name="spikeRoller3" parent="." instance=ExtResource("22_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.2305, 15.3943, 39.3933)
+
+[node name="spikeRoller4" parent="." instance=ExtResource("22_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.3735, 15.3943, 39.3791)
+
+[node name="spikeRoller5" parent="." instance=ExtResource("22_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.205, 15.3943, 42.6641)
+
+[node name="spikeRoller6" parent="." instance=ExtResource("22_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.3643, 15.3943, 42.6556)
+
+[node name="tileLarge_forest2" parent="." instance=ExtResource("3_ypwww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.2056, 16.0678, 41.0511)
+
+[node name="Node3D" parent="." instance=ExtResource("23_b30fa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -73.4153, 17.0278, 43.3887)
+
+[node name="Node3D2" parent="." instance=ExtResource("23_b30fa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -73.3777, 19.0582, 49.3701)
+
+[node name="flag_teamRed" parent="." instance=ExtResource("24_8s7fs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.2796, 21.0886, 52.7249)
