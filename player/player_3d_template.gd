@@ -1,5 +1,5 @@
 extends CharacterBody3D
-class_name Player
+class_name  Player
 
 @export_group("Movement")
 ## Character maximum run speed on the ground in meters per second.

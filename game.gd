@@ -15,7 +15,7 @@ func _ready() -> void:
 		player.set_can_move(false)
 		if level_number == max_level_number:
 			await flag_reached_screen.fade_complete
-			get_tree().change_scene_to_file("res://title_screen/title_screen.tscn")
+			get_tree().change_scene_to_file("res://title_screen/menu.tscn")
 		var next_level_number = level_number + 1
 		level_number += 1
 		var next_level_path = FILE_BEGIN + str(next_level_number) + ".tscn"
