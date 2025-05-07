@@ -39,7 +39,6 @@ debug_color = Color(0, 0.595, 0.7, 1)
 debug_fill = false
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="4"]
-debug_enabled = true
 
 [connection signal="body_entered" from="CollisionArea" to="." method="_player_in_way"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_player_in_range"]
