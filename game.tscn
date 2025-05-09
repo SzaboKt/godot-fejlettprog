@@ -7,7 +7,7 @@
 [node name="Game" type="Node"]
 script = ExtResource("1_1il7v")
 max_level_number = 3
-current_level_number = 2
+current_level_number = 1
 
 [node name="Player3DTemplate" parent="." instance=ExtResource("1_w0p8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289711, -0.98489, -0.644026)

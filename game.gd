@@ -18,18 +18,15 @@ func load_level() -> void:
 	if not ResourceLoader.exists(level_path):
 		printerr("Scene file does not exist: ", level_path)
 		return
-	print("asd0")
 	
 	var current_scene = load(level_path)
 	
 	if get_child(-1) is Node3D:
-		print("asd")
 		get_child(-1).queue_free()
 	else:
 		print("No previous node found.")
 		
 	if current_scene:
-		print("asd")
 		add_child(current_scene.instantiate())
 		player.global_position = Vector3.ZERO
 	else:
