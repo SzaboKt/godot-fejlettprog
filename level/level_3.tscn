@@ -156,8 +156,6 @@ directional_shadow_max_distance = 40.0
 [node name="KillPlane3D" parent="." instance=ExtResource("6_21jwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0621166, -27.1379, 1.34726)
 
-[node name="Trees" type="Node3D" parent="."]
-
 [node name="Platform1" type="Node3D" parent="."]
 
 [node name="flower_A" parent="Platform1" instance=ExtResource("16_b3knk")]
