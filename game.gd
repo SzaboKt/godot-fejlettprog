@@ -2,39 +2,50 @@ extends Node
 
 const FILE_BEGIN = "res://level/level_"
 
-@export var current_level: Node3D
 @export var max_level_number: int
+@export var current_level_number: int
 @onready var player: Player = $Player3DTemplate
 @onready var flag_reached_screen: CanvasLayer = $FlagReachedScreen
 
-var next_scene
-var level_number: int = 1
+
+func load_level() -> void:
+	
+	if current_level_number > max_level_number:
+		get_tree().change_scene_to_file("res://title_screen/menu.tscn")
+	
+	var level_path = FILE_BEGIN + str(current_level_number) + ".tscn"
+	print(level_path)
+	if not ResourceLoader.exists(level_path):
+		printerr("Scene file does not exist: ", level_path)
+		return
+	print("asd0")
+	
+	var current_scene = load(level_path)
+	
+	if get_child(-1) is Node3D:
+		print("asd")
+		get_child(-1).queue_free()
+	else:
+		print("No previous node found.")
+		
+	if current_scene:
+		print("asd")
+		add_child(current_scene.instantiate())
+		player.global_position = Vector3.ZERO
+	else:
+		printerr("Failed to load scene: ", level_path)
+	flag_reached_screen.play_fade(true)
+	
 
 func _ready() -> void:
+	load_level()
 	Events.flag_reached.connect(func on_flag_reached() -> void:
 		player.set_can_move(false)
-		if level_number == max_level_number:
-			await flag_reached_screen.fade_complete
-			get_tree().change_scene_to_file("res://title_screen/menu.tscn")
-		var next_level_number = level_number + 1
-		level_number += 1
-		var next_level_path = FILE_BEGIN + str(next_level_number) + ".tscn"
-		if not ResourceLoader.exists(next_level_path):
-			printerr("Scene file does not exist: ", next_level_path)
-			return
+		current_level_number += 1
 		await flag_reached_screen.fade_complete
-		var next_scene = load(next_level_path)
-		if next_scene:
-			current_level.queue_free()
-			add_child(next_scene.instantiate())
-			player.global_position = Vector3.ZERO
-			current_level = get_child(-1)
-		else:
-			printerr("Failed to load scene: ", next_level_path)
-		flag_reached_screen.play_fade(true)
+		load_level()
 		await flag_reached_screen.fade_complete
 		player.set_can_move(true)
-		
 	)
 
 func _input(event: InputEvent) -> void:
