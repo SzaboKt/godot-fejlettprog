@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://v6mclga3aq5m"]
 
-[ext_resource type="PackedScene" uid="uid://dni4ayrw3pj6o" path="res://level/misc_assets/plantB_desert.fbx" id="1_kxwgu"]
+[ext_resource type="PackedScene" uid="uid://dni4ayrw3pj6o" path="res://assets/environment/flowers/plantB_desert.fbx" id="1_kxwgu"]
 
 [node name="plantB_desert" instance=ExtResource("1_kxwgu")]

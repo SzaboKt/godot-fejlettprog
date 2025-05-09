@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgrey8f8x43xl"]
 
-[ext_resource type="PackedScene" uid="uid://cde0c7jc7tklr" path="res://level/misc_assets/targetStand.fbx" id="1_2mumt"]
+[ext_resource type="PackedScene" uid="uid://cde0c7jc7tklr" path="res://assets/environment/target_stand/targetStand.fbx" id="1_2mumt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l3rmg"]
 size = Vector3(1.4082, 1.86511, 1.55981)

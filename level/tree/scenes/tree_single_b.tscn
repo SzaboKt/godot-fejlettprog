@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://132j35wbfd5j"]
 
-[ext_resource type="PackedScene" uid="uid://b16dd7fc0oweu" path="res://level/tree/tree_single_B.fbx" id="1_s8oby"]
+[ext_resource type="PackedScene" uid="uid://b16dd7fc0oweu" path="res://assets/environment/trees/pine/tree_single_B.fbx" id="1_s8oby"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oifd7"]
 radius = 0.363977

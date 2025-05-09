@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlt241n0voe70"]
 
-[ext_resource type="PackedScene" uid="uid://b5fqogwd4pnlw" path="res://level/swiper/swiperLong_teamRed.fbx" id="1_jf613"]
+[ext_resource type="PackedScene" uid="uid://b5fqogwd4pnlw" path="res://assets/environment/swipers/swiperLong_teamRed.fbx" id="1_jf613"]
 
 [sub_resource type="GDScript" id="GDScript_7o8rj"]
 script/source = "extends AnimatableBody3D

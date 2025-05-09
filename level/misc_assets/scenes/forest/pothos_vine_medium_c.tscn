@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvyafcph7jhfu"]
 
-[ext_resource type="PackedScene" uid="uid://bvtpgqg2ed1fp" path="res://level/misc_assets/pothos_vine_medium_C.fbx" id="1_jkb3c"]
+[ext_resource type="PackedScene" uid="uid://bvtpgqg2ed1fp" path="res://assets/environment/photos_plant/pothos_vine_medium_C.fbx" id="1_jkb3c"]
 
 [node name="pothos_vine_medium_C" instance=ExtResource("1_jkb3c")]

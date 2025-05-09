@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b82101p3ft53o"]
 
-[ext_resource type="PackedScene" uid="uid://dfpqxk31yfkyo" path="res://ball/multi-color_ball/ball.fbx" id="1_vuhe4"]
+[ext_resource type="PackedScene" uid="uid://dfpqxk31yfkyo" path="res://assets/enemies/balls/ball.fbx" id="1_vuhe4"]
 [ext_resource type="Script" uid="uid://dwemgtx547pkv" path="res://ball/multi-color_ball/ball.gd" id="2_pt674"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_pt674"]

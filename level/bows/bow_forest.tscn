@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfh1runmswt21"]
 
-[ext_resource type="PackedScene" uid="uid://uk713wpm2mbk" path="res://level/bows/bow_teamBlue.fbx" id="1_4635r"]
+[ext_resource type="PackedScene" uid="uid://uk713wpm2mbk" path="res://assets/enemies/bows/bow_teamBlue.fbx" id="1_4635r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drteb"]
 albedo_color = Color(0.282353, 0.737255, 0.552941, 1)

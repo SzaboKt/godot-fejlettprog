@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqkgc8jad82pn"]
 
-[ext_resource type="PackedScene" uid="uid://c6l7uvfc0j7gj" path="res://level/platforms/dessert_tiles/tileSmall_desert.fbx" id="1_njmwe"]
+[ext_resource type="PackedScene" uid="uid://c6l7uvfc0j7gj" path="res://assets/tiles/dessert/tileSmall_desert.fbx" id="1_njmwe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_khlv4"]
 

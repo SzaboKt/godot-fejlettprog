@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://buv0bakwkinhg"]
 
-[ext_resource type="PackedScene" uid="uid://ddad04j1etcx5" path="res://level/tree/Wood_Log_Stack.fbx" id="1_mf37j"]
+[ext_resource type="PackedScene" uid="uid://ddad04j1etcx5" path="res://assets/environment/trees/logs/Wood_Log_Stack.fbx" id="1_mf37j"]
 
 [node name="Wood_Log_Stack" instance=ExtResource("1_mf37j")]
 

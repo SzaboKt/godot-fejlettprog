@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cubvka8fqlwh"]
 
-[ext_resource type="PackedScene" uid="uid://dwblcg1njxerv" path="res://level/platforms/snow_tiles/button_teamBlue.fbx" id="1_1l7dq"]
+[ext_resource type="PackedScene" uid="uid://dwblcg1njxerv" path="res://assets/tiles/snow/button_teamBlue.fbx" id="1_1l7dq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oq5k6"]
 albedo_color = Color(0.282353, 0.737255, 0.552941, 1)

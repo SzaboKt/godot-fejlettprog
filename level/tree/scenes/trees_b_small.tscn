@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0wqa1kup4d8t"]
 
-[ext_resource type="PackedScene" uid="uid://bmgpn2mcs6k4o" path="res://level/tree/trees_B_small.fbx" id="1_1173q"]
+[ext_resource type="PackedScene" uid="uid://bmgpn2mcs6k4o" path="res://assets/environment/trees/pine/trees_B_small.fbx" id="1_1173q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6rn2u"]
 size = Vector3(1.35541, 0.927979, 1.13989)

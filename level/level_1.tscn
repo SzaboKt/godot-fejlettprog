@@ -112,6 +112,7 @@ directional_shadow_max_distance = 40.0
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -55.25, -27.3072, -20)
 
 [node name="Platform1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="plantA_desert" parent="Platform1" instance=ExtResource("19_vseoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33572, 1.99295, -44.5535)
@@ -126,17 +127,19 @@ transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -3.809, 1.98742, -49
 skeleton = NodePath("")
 
 [node name="Cactus_Tall_5" parent="Platform1" instance=ExtResource("3_b7ara")]
-transform = Transform3D(1.93396, -0.241928, -2.48772, 0.662063, 2.55211, 0.16876, 2.35812, -0.518119, 1.99287, -7.85542, 2.461, -46.7083)
+transform = Transform3D(1.93396, -0.241928, -2.48772, 0.662063, 2.55211, 0.16876, 2.35812, -0.518119, 1.99287, -7.85542, 2.26082, -46.7083)
 
 [node name="tileLarge_desert3" parent="Platform1" instance=ExtResource("13_m3nah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.90655, 0.972837, -46.9306)
 
 [node name="Platform2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="tileMedium_desert3" parent="Platform2" instance=ExtResource("15_fm1jd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.956338, -0.485364, -42.9596)
 
 [node name="Platform3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="rocksB_desert" parent="Platform3" instance=ExtResource("18_q08ld")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.2217, -0.679204, -34.8517)
@@ -155,6 +158,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.1364
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40941, -1.69379, -36.9431)
 
 [node name="Platform4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="plantB_desert2" parent="Platform4" instance=ExtResource("20_svqf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49664, 2.48738, -31.2931)
@@ -164,6 +168,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14077, 0.973701, -30.6678)
 
 [node name="Platform5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="detail_desert" parent="Platform5" instance=ExtResource("22_svqf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5.61661, -22)
@@ -189,6 +194,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8023, 3.12557, -19.6947)
 
 [node name="Platform6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="Cactus_Small_2" parent="Platform6" instance=ExtResource("6_ona4a")]
 transform = Transform3D(2.96971, 0.256071, -1.04621, -0.601084, 2.94019, -0.986561, 0.893765, 1.12651, 2.81273, -12.0921, 7.33546, -17.2451)
@@ -200,12 +206,13 @@ transform = Transform3D(-2.0693, 0.241202, -1.93468, 0.670546, 2.7372, -0.375951
 transform = Transform3D(1.96401, -0.124561, -2.16532, 0.142118, 2.92229, -0.0392004, 2.16425, -0.0788595, 1.96757, -12.8777, 7.37702, -17.7581)
 
 [node name="Cactus_Tall_3" parent="Platform6" instance=ExtResource("3_b7ara")]
-transform = Transform3D(-0.363066, -0.101082, 3.01856, -0.727051, 2.95381, 0.0114629, -2.93144, -0.720079, -0.376708, -8.95892, 6.85624, -21.8574)
+transform = Transform3D(-0.363066, -0.101082, 3.01856, -0.727051, 2.95381, 0.0114629, -2.93144, -0.720079, -0.376708, -8.95892, 7.16739, -21.8574)
 
 [node name="tileLarge_desert5" parent="Platform6" instance=ExtResource("13_m3nah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3653, 6.2968, -19.7087)
 
 [node name="Platform7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="detail_desert" parent="Platform7" instance=ExtResource("22_svqf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3004, 8.14904, -18.1588)
@@ -220,10 +227,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1473, 7.05713, -19.7018)
 [node name="Rogue" parent="Platform7/NavigationRegion3D" instance=ExtResource("12_tpysj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5437, 8.05027, -21.0254)
 
+[node name="Knife_Offhand" parent="Platform7/NavigationRegion3D/Rogue/Rig/Skeleton3D" index="0"]
+transform = Transform3D(-0.999999, -1.17465e-07, 2.60635e-08, -7.18757e-08, -5.30967e-07, 0.999999, -1.957e-07, 0.999999, 6.23449e-07, 0.883132, 1.04926, -1.63329e-05)
+
+[node name="1H_Crossbow" parent="Platform7/NavigationRegion3D/Rogue/Rig/Skeleton3D" index="1"]
+transform = Transform3D(-4.5731e-07, 4.00596e-08, -0.999999, -0.999999, -4.96539e-07, 3.978e-07, -4.43668e-07, 0.999999, -3.07174e-08, -0.778504, 1.04926, -0.0103745)
+
+[node name="2H_Crossbow" parent="Platform7/NavigationRegion3D/Rogue/Rig/Skeleton3D" index="2"]
+transform = Transform3D(-4.5731e-07, 4.00596e-08, -0.999999, -0.999999, -4.96539e-07, 3.978e-07, -4.43668e-07, 0.999999, -3.07174e-08, -0.778504, 1.04926, -0.0103745)
+
+[node name="Knife" parent="Platform7/NavigationRegion3D/Rogue/Rig/Skeleton3D" index="3"]
+transform = Transform3D(0.999999, 1.88247e-07, -4.39071e-07, -3.79561e-07, -7.95385e-07, -0.999999, -1.1747e-07, 0.999999, -7.42514e-07, -0.883132, 1.04926, -1.60515e-05)
+
+[node name="Throwable" parent="Platform7/NavigationRegion3D/Rogue/Rig/Skeleton3D" index="4"]
+transform = Transform3D(0.999999, 2.0298e-07, -4.52757e-07, -3.93247e-07, -6.76176e-07, -0.999999, -1.32203e-07, 0.999999, -6.23305e-07, -0.883132, 1.04926, 0.18023)
+
+[node name="Rogue_Cape" parent="Platform7/NavigationRegion3D/Rogue/Rig/Skeleton3D" index="5"]
+transform = Transform3D(1, 1.25214e-21, 0, -1.25214e-21, 1, 0, 0, 0, 1, 0, 1.21587, 0)
+
 [node name="Area3D" parent="Platform7/NavigationRegion3D/Rogue" index="4"]
 collision_mask = 2
 
 [node name="Platform8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="NavigationRegion3D2" type="NavigationRegion3D" parent="Platform8"]
 navigation_mesh = SubResource("NavigationMesh_rhqlf")
@@ -238,10 +264,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6817, 7.13603, -19.6849)
 [node name="Rogue" parent="Platform8/NavigationRegion3D2" instance=ExtResource("12_tpysj")]
 transform = Transform3D(-0.693226, 0, 0.720721, 0, 1, 0, -0.720721, 0, -0.693226, -29.3995, 8.14682, -21.6065)
 
+[node name="Knife_Offhand" parent="Platform8/NavigationRegion3D2/Rogue/Rig/Skeleton3D" index="0"]
+transform = Transform3D(-0.999999, -1.17465e-07, 2.60635e-08, -7.18757e-08, -5.30967e-07, 0.999999, -1.957e-07, 0.999999, 6.23449e-07, 0.883132, 1.04926, -1.63329e-05)
+
+[node name="1H_Crossbow" parent="Platform8/NavigationRegion3D2/Rogue/Rig/Skeleton3D" index="1"]
+transform = Transform3D(-4.5731e-07, 4.00596e-08, -0.999999, -0.999999, -4.96539e-07, 3.978e-07, -4.43668e-07, 0.999999, -3.07174e-08, -0.778504, 1.04926, -0.0103745)
+
+[node name="2H_Crossbow" parent="Platform8/NavigationRegion3D2/Rogue/Rig/Skeleton3D" index="2"]
+transform = Transform3D(-4.5731e-07, 4.00596e-08, -0.999999, -0.999999, -4.96539e-07, 3.978e-07, -4.43668e-07, 0.999999, -3.07174e-08, -0.778504, 1.04926, -0.0103745)
+
+[node name="Knife" parent="Platform8/NavigationRegion3D2/Rogue/Rig/Skeleton3D" index="3"]
+transform = Transform3D(0.999999, 1.88247e-07, -4.39071e-07, -3.79561e-07, -7.95385e-07, -0.999999, -1.1747e-07, 0.999999, -7.42514e-07, -0.883132, 1.04926, -1.60515e-05)
+
+[node name="Throwable" parent="Platform8/NavigationRegion3D2/Rogue/Rig/Skeleton3D" index="4"]
+transform = Transform3D(0.999999, 2.0298e-07, -4.52757e-07, -3.93247e-07, -6.76176e-07, -0.999999, -1.32203e-07, 0.999999, -6.23305e-07, -0.883132, 1.04926, 0.18023)
+
+[node name="Rogue_Cape" parent="Platform8/NavigationRegion3D2/Rogue/Rig/Skeleton3D" index="5"]
+transform = Transform3D(1, 1.25214e-21, 0, -1.25214e-21, 1, 0, 0, 0, 1, 0, 1.21587, 0)
+
 [node name="Area3D" parent="Platform8/NavigationRegion3D2/Rogue" index="4"]
 collision_mask = 2
 
 [node name="Platform9" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62083, -2.42277, 46.6455)
 
 [node name="plantB_desert" parent="Platform9" instance=ExtResource("20_svqf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.643, 8.13839, -22.1153)

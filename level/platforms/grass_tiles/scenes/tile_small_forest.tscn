@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://30id02ysgm4u"]
 
-[ext_resource type="PackedScene" uid="uid://cp18l2r4dmwas" path="res://level/platforms/grass_tiles/tileSmall_forest.fbx" id="1_c5q2a"]
+[ext_resource type="PackedScene" uid="uid://cp18l2r4dmwas" path="res://assets/tiles/forest/tileSmall_forest.fbx" id="1_c5q2a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wohcb"]
 size = Vector3(1.01282, 1.01782, 1)

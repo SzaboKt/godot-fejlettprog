@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cppp22x35fdn1"]
 
-[ext_resource type="PackedScene" uid="uid://bp81rmorb060h" path="res://level/interactable/level_flag/flag_teamBlue.fbx" id="1_wsf26"]
-[ext_resource type="Script" uid="uid://cd3rl1hvvya4e" path="res://level/interactable/level_flag/flag_team_blue.gd" id="2_u113p"]
+[ext_resource type="PackedScene" uid="uid://bp81rmorb060h" path="res://assets/interactable/flag/flag_teamBlue.fbx" id="1_wsf26"]
+[ext_resource type="Script" uid="uid://bgmqqllyiug02" path="res://level/interactable/level_flag/flag_mechanic.gd" id="2_u113p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u113p"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bvvfvfksdab5n"]
 
-[ext_resource type="PackedScene" uid="uid://6dt7k7rrkpru" path="res://level/platforms/dessert_tiles/tileSlopeMediumHigh_desert.fbx" id="1_wnh8u"]
+[ext_resource type="PackedScene" uid="uid://6dt7k7rrkpru" path="res://assets/tiles/dessert/tileSlopeMediumHigh_desert.fbx" id="1_wnh8u"]
 
 [node name="tileSlopeMediumHigh_desert" instance=ExtResource("1_wnh8u")]
 

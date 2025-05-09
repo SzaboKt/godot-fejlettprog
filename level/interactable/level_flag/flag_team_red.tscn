@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://iq628otk757r"]
 
-[ext_resource type="PackedScene" uid="uid://4bt32ba1xwub" path="res://level/interactable/level_flag/flag_teamRed.fbx" id="1_fdjr5"]
-[ext_resource type="Script" uid="uid://d3arpbxyttf36" path="res://level/interactable/level_flag/flag_team_red.gd" id="2_0fseb"]
+[ext_resource type="PackedScene" uid="uid://4bt32ba1xwub" path="res://assets/interactable/flag/flag_teamRed.fbx" id="1_fdjr5"]
+[ext_resource type="Script" uid="uid://bgmqqllyiug02" path="res://level/interactable/level_flag/flag_mechanic.gd" id="2_0fseb"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0fseb"]
 radius = 0.300293

@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://b1ot6gn6tms6h"]
+[gd_scene load_steps=14 format=3 uid="uid://b1ot6gn6tms6h"]
 
 [ext_resource type="Script" uid="uid://d2uy8fff483py" path="res://player/player_3d_template.gd" id="1_6bmsq"]
 [ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://player/sophia_skin/sophia_skin.tscn" id="2_4dj54"]
 [ext_resource type="AudioStream" uid="uid://bhoyegbjust84" path="res://player/sounds/robot_land.wav" id="3_kbqxf"]
 [ext_resource type="AudioStream" uid="uid://b4x0f4pgfifoo" path="res://player/sounds/robot_jump.wav" id="4_1v0dq"]
+[ext_resource type="Theme" uid="uid://cdeqfviu64a1g" path="res://title_screen/button_theme.tres" id="5_ivo6u"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e8pdu"]
 radius = 0.456428
@@ -111,6 +112,7 @@ offset_left = 1084.0
 offset_top = 615.0
 offset_right = 1449.0
 offset_bottom = 684.0
+theme = ExtResource("5_ivo6u")
 theme_override_font_sizes/font_size = 50
 text = "Press F to push"
 

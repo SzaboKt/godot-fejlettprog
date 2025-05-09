@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://te3ecdmuhui7"]
 
-[ext_resource type="PackedScene" uid="uid://tskiyg1xubl5" path="res://level/misc_assets/flower_A.fbx" id="1_li1us"]
+[ext_resource type="PackedScene" uid="uid://tskiyg1xubl5" path="res://assets/environment/flowers/flower_A.fbx" id="1_li1us"]
 
 [node name="flower_A" instance=ExtResource("1_li1us")]

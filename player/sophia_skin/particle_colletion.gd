@@ -9,4 +9,3 @@ func emit_particles() -> void:
 func _ready() -> void:
 	Events.kill_plane_touched.connect(emit_particles)
 	Events.player_dies.connect(emit_particles)
-	pass

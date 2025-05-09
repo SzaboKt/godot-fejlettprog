@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://w7yllfymfphx"]
 
-[ext_resource type="PackedScene" uid="uid://bfhd55jjvw2ot" path="res://level/tree/Tree_3_B_Color1.fbx" id="1_lv8u8"]
+[ext_resource type="PackedScene" uid="uid://bfhd55jjvw2ot" path="res://assets/environment/trees/oval/Tree_3_B_Color1.fbx" id="1_lv8u8"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_31r8q"]
 height = 3.01123

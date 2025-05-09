@@ -1,14 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1g77esrhmxut"]
+[gd_scene load_steps=5 format=3 uid="uid://d1g77esrhmxut"]
 
-[ext_resource type="PackedScene" uid="uid://dlbya4fo4m2uo" path="res://level/interactable/level_flag/flag_teamYellow.fbx" id="1_ohvat"]
-[ext_resource type="Script" uid="uid://6ncwjh7wr5rh" path="res://level/interactable/level_flag/flag_team_yellow.gd" id="2_6p2mo"]
+[ext_resource type="PackedScene" uid="uid://dlbya4fo4m2uo" path="res://assets/interactable/flag/flag_teamYellow.fbx" id="1_ohvat"]
+[ext_resource type="Script" uid="uid://bgmqqllyiug02" path="res://level/interactable/level_flag/flag_mechanic.gd" id="2_rydec"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6p2mo"]
 height = 2.00842
 radius = 0.969238
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ejkkr"]
+radius = 0.296387
+
 [node name="flag_teamYellow" instance=ExtResource("1_ohvat")]
-script = ExtResource("2_6p2mo")
+script = ExtResource("2_rydec")
 
 [node name="Area3D" type="Area3D" parent="." index="1"]
 unique_name_in_owner = true
@@ -17,3 +20,7 @@ collision_mask = 64
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995911, 0)
 shape = SubResource("CylinderShape3D_6p2mo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.987749, 0)
+shape = SubResource("CylinderShape3D_ejkkr")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bytgkysthi0ik"]
+[gd_scene load_steps=58 format=3 uid="uid://bytgkysthi0ik"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_octfv"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_ypwww"]
@@ -32,17 +32,17 @@
 [ext_resource type="PackedScene" uid="uid://dv1qgjpi2jkkx" path="res://level/misc_assets/scenes/forest/grass_1_d_color_1.tscn" id="24_1copb"]
 [ext_resource type="PackedScene" uid="uid://iq628otk757r" path="res://level/interactable/level_flag/flag_team_red.tscn" id="24_8s7fs"]
 [ext_resource type="PackedScene" uid="uid://bfwcnxgpo5tke" path="res://level/tree/scenes/tree_3_a_color_1.tscn" id="25_2v21y"]
-[ext_resource type="PackedScene" uid="uid://bvtpgqg2ed1fp" path="res://level/misc_assets/pothos_vine_medium_C.fbx" id="25_ynwkh"]
+[ext_resource type="PackedScene" uid="uid://bvtpgqg2ed1fp" path="res://assets/environment/photos_plant/pothos_vine_medium_C.fbx" id="25_ynwkh"]
 [ext_resource type="PackedScene" uid="uid://c7w4kdv6c21y0" path="res://level/tree/scenes/tree_3_c_color_1.tscn" id="26_dq5ba"]
 [ext_resource type="PackedScene" uid="uid://w7yllfymfphx" path="res://level/tree/scenes/tree_3_b_color_1.tscn" id="27_6u0b5"]
 [ext_resource type="PackedScene" uid="uid://c86hpd41s7ffg" path="res://level/misc_assets/scenes/forest/pothos_plant_small.tscn" id="28_vnjim"]
 [ext_resource type="PackedScene" uid="uid://dmhp60ll7gyf4" path="res://level/misc_assets/scenes/forest/foliage_b.tscn" id="29_wnvu3"]
-[ext_resource type="PackedScene" uid="uid://b4o8835y3djec" path="res://level/misc_assets/pothos_vine_small_C.fbx" id="30_m33jr"]
+[ext_resource type="PackedScene" uid="uid://b4o8835y3djec" path="res://assets/environment/photos_plant/pothos_vine_small_C.fbx" id="30_m33jr"]
 [ext_resource type="PackedScene" uid="uid://c1kmdlr1pyhu3" path="res://level/misc_assets/scenes/forest/grass_2_a_color_1.tscn" id="31_ikvvc"]
 [ext_resource type="PackedScene" uid="uid://cs48qatsng2do" path="res://level/misc_assets/scenes/forest/pothos_vine_medium_a.tscn" id="34_6l608"]
 [ext_resource type="PackedScene" uid="uid://k62egldsfbmg" path="res://level/misc_assets/scenes/forest/grass_2_b_color_1.tscn" id="39_1copb"]
-[ext_resource type="PackedScene" uid="uid://codq614xsqgm2" path="res://level/misc_assets/pothos_vine_small_D.fbx" id="42_g5u8c"]
-[ext_resource type="PackedScene" uid="uid://biwqawj4srlxb" path="res://level/misc_assets/detail_forest.fbx" id="43_m33jr"]
+[ext_resource type="PackedScene" uid="uid://codq614xsqgm2" path="res://assets/environment/photos_plant/pothos_vine_small_D.fbx" id="42_g5u8c"]
+[ext_resource type="PackedScene" uid="uid://biwqawj4srlxb" path="res://assets/environment/flowers/detail_forest.fbx" id="43_m33jr"]
 
 [sub_resource type="Curve" id="Curve_f0ovp"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.689394, 0.595506), 0.51276, 0.0, 0, 0]
@@ -141,6 +141,18 @@ point_count = 2
 [sub_resource type="NavigationMesh" id="NavigationMesh_e2u7k"]
 vertices = PackedVector3Array(-54.4681, 14.9273, 38.1684, -44.4681, 14.9273, 38.1684, -43.2181, 14.9273, 37.1684, -43.2181, 14.9273, 25.4184, -54.4681, 14.9273, 25.4184, -41.7181, 14.9273, 37.6684, -41.2181, 14.9273, 38.6684, -40.4681, 14.9273, 37.9184, -38.7181, 14.9273, 38.1684, -38.7181, 14.9273, 37.4184, -37.7181, 14.9273, 36.4184, -36.9681, 14.9273, 25.4184, -36.9681, 14.9273, 36.4184, -35.9681, 14.9273, 36.9184, -35.2181, 14.9273, 38.6684, -25.2181, 14.9273, 38.6684, -25.2181, 14.9273, 25.4184, -37.4681, 15.9273, 37.9184, -36.4681, 16.1773, 38.6684, -36.9681, 16.1773, 37.6684, -44.4681, 14.9273, 42.1684, -43.9681, 14.9273, 40.4184, -44.7181, 14.9273, 40.1684, -54.4681, 14.9273, 42.1684, -42.9681, 15.9273, 39.4184, -42.7181, 15.9273, 38.6684, -43.2181, 16.1773, 38.4184, -43.7181, 16.1773, 39.1684, -28.7181, 14.9273, 52.1684, -27.4681, 14.9273, 51.9184, -26.9681, 14.9273, 50.9184, -35.7181, 14.9273, 39.6684, -37.2181, 14.9273, 39.9184, -37.2181, 14.9273, 41.4184, -39.4681, 14.9273, 54.6684, -29.2181, 14.9273, 54.6684, -29.2181, 14.9273, 52.9184, -39.4681, 14.9273, 43.1684, -25.2181, 14.9273, 50.9184, -38.2181, 15.9273, 40.9184, -38.2181, 15.9273, 40.1684, -39.4681, 15.9273, 38.9184, -41.2181, 15.9273, 39.9184, -41.2181, 15.9273, 40.9184, -39.9681, 15.9273, 42.1684, -39.0931, 16.1773, 41.5434, -42.9681, 16.1773, 42.6684, -42.4681, 16.1773, 42.6684, -42.7181, 15.9273, 41.6684, -43.4681, 16.1773, 41.6684, -43.9681, 14.9273, 43.1684, -42.7181, 14.9273, 54.6684, -42.7181, 14.9273, 43.9184, -54.4681, 14.9273, 54.6684, -40.4681, 14.9273, 43.1684, -41.2181, 14.9273, 42.4184, -41.4681, 14.9273, 43.4184, -30.7181, 19.4273, 50.4184, -30.7181, 19.4273, 50.9184, -30.2181, 19.6773, 50.9184, -30.2181, 19.6773, 50.4184)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(7, 6, 5), PackedInt32Array(9, 8, 7), PackedInt32Array(7, 5, 2), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 2), PackedInt32Array(10, 2, 3), PackedInt32Array(10, 3, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(13, 15, 14), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 16), PackedInt32Array(13, 16, 15), PackedInt32Array(18, 17, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(22, 23, 0), PackedInt32Array(0, 1, 22), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(30, 29, 28), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 15), PackedInt32Array(36, 35, 34), PackedInt32Array(31, 14, 15), PackedInt32Array(28, 36, 34), PackedInt32Array(28, 34, 30), PackedInt32Array(30, 34, 37), PackedInt32Array(30, 37, 33), PackedInt32Array(30, 33, 15), PackedInt32Array(15, 38, 30), PackedInt32Array(39, 45, 40), PackedInt32Array(40, 45, 44), PackedInt32Array(40, 44, 43), PackedInt32Array(40, 43, 42), PackedInt32Array(40, 42, 41), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 49), PackedInt32Array(23, 20, 50), PackedInt32Array(52, 51, 50), PackedInt32Array(50, 51, 53), PackedInt32Array(50, 53, 23), PackedInt32Array(56, 55, 54), PackedInt32Array(54, 37, 56), PackedInt32Array(56, 37, 52), PackedInt32Array(52, 37, 51), PackedInt32Array(51, 37, 34), PackedInt32Array(60, 59, 57), PackedInt32Array(57, 59, 58)]
+
+[sub_resource type="GDScript" id="GDScript_m33jr"]
+script/source = "extends StaticBody3D
+
+@onready var _area_3d: Area3D = %Area3D
+
+
+func _ready() -> void:
+	_area_3d.body_entered.connect(func (_body_that_entered: PhysicsBody3D) -> void:
+		Events.flag_reached.emit()
+	)
+"
 
 [node name="Level3" type="Node3D"]
 
@@ -517,3 +529,4 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -73.37
 
 [node name="flag_teamRed" parent="Platform17" instance=ExtResource("24_8s7fs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.2796, 21.0886, 52.7249)
+script = SubResource("GDScript_m33jr")

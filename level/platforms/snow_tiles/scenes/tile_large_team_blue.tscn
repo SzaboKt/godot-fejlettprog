@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd2vq3m61j81d"]
 
-[ext_resource type="PackedScene" uid="uid://74j3vumcyhcc" path="res://level/platforms/snow_tiles/tileLarge_teamBlue.fbx" id="1_7sfmf"]
+[ext_resource type="PackedScene" uid="uid://74j3vumcyhcc" path="res://assets/tiles/snow/tileLarge_teamBlue.fbx" id="1_7sfmf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcyg6"]
 
