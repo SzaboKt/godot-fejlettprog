@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bytgkysthi0ik"]
+[gd_scene load_steps=57 format=3 uid="uid://bytgkysthi0ik"]
 
 [ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_octfv"]
 [ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_ypwww"]
@@ -11,19 +11,38 @@
 [ext_resource type="PackedScene" uid="uid://bcsxy45te0fqw" path="res://level/platforms/moving_platforms/moving_platform_forest_large.tscn" id="8_lopto"]
 [ext_resource type="PackedScene" uid="uid://c1d2hwki4vwrx" path="res://level/automatic_bow/automatic_bow_forest.tscn" id="9_6xa2d"]
 [ext_resource type="PackedScene" uid="uid://dfffd8508rgw0" path="res://level/misc_assets/scenes/target_ground_forest.tscn" id="10_07kww"]
+[ext_resource type="PackedScene" uid="uid://bu7p0tbtehv01" path="res://level/misc_assets/scenes/forest/pothos_vine_large_d.tscn" id="11_apok7"]
 [ext_resource type="PackedScene" uid="uid://b2klloh6vq44r" path="res://level/swiper/scenes/animated_double_swiper.tscn" id="11_eueb8"]
 [ext_resource type="PackedScene" uid="uid://f1k8libk3wfs" path="res://level/tree/scenes/tree_large.tscn" id="12_f1jq1"]
 [ext_resource type="PackedScene" uid="uid://dt7i2sgycacsp" path="res://level/misc_assets/scenes/forest/bench.tscn" id="13_5mhvx"]
+[ext_resource type="PackedScene" uid="uid://hq57emfodqtm" path="res://level/misc_assets/scenes/forest/grass_1_a_color_1.tscn" id="14_dvor1"]
 [ext_resource type="PackedScene" uid="uid://dsvgonqrcvpnk" path="res://level/platforms/grass_tiles/scenes/tile_extra_large_forest.tscn" id="14_hrebq"]
+[ext_resource type="PackedScene" uid="uid://b10qdjfw2sy5n" path="res://level/misc_assets/scenes/forest/pothos_vine_medium_d.tscn" id="16_6ribc"]
 [ext_resource type="PackedScene" uid="uid://te3ecdmuhui7" path="res://level/misc_assets/scenes/forest/flower_a.tscn" id="16_b3knk"]
 [ext_resource type="PackedScene" uid="uid://bbtdkcx7frcki" path="res://level/misc_assets/scenes/forest/flower_b.tscn" id="17_e2u7k"]
+[ext_resource type="PackedScene" uid="uid://dvyafcph7jhfu" path="res://level/misc_assets/scenes/forest/pothos_vine_medium_c.tscn" id="17_euduj"]
 [ext_resource type="PackedScene" uid="uid://lbwcq64onjd" path="res://level/misc_assets/scenes/forest/pothos_vine_large_c.tscn" id="18_b3knk"]
 [ext_resource type="PackedScene" uid="uid://degtsopb0wfjj" path="res://level/misc_assets/scenes/forest/fountain.tscn" id="18_e2u7k"]
+[ext_resource type="PackedScene" uid="uid://ob4ogu1r54y5" path="res://level/misc_assets/scenes/forest/pothos_vine_medium_b.tscn" id="19_opt0f"]
 [ext_resource type="PackedScene" uid="uid://b82101p3ft53o" path="res://ball/multi-color_ball/ball.tscn" id="20_510pp"]
 [ext_resource type="PackedScene" uid="uid://me2krwhpqgrn" path="res://rouge/rogue.tscn" id="21_krmuh"]
 [ext_resource type="PackedScene" uid="uid://tco41lpdpacl" path="res://spike_roller/spike_roller.tscn" id="22_krmuh"]
 [ext_resource type="PackedScene" uid="uid://db7whh5ia8l4u" path="res://level/platforms/grass_tiles/scenes/stairs.tscn" id="23_b30fa"]
+[ext_resource type="PackedScene" uid="uid://rnwpnmfo4yuk" path="res://level/misc_assets/scenes/forest/grass_2_d_color_1.tscn" id="23_pms34"]
+[ext_resource type="PackedScene" uid="uid://dv1qgjpi2jkkx" path="res://level/misc_assets/scenes/forest/grass_1_d_color_1.tscn" id="24_1copb"]
 [ext_resource type="PackedScene" uid="uid://iq628otk757r" path="res://level/interactable/level_flag/flag_team_red.tscn" id="24_8s7fs"]
+[ext_resource type="PackedScene" uid="uid://bfwcnxgpo5tke" path="res://level/tree/scenes/tree_3_a_color_1.tscn" id="25_2v21y"]
+[ext_resource type="PackedScene" uid="uid://bvtpgqg2ed1fp" path="res://level/misc_assets/pothos_vine_medium_C.fbx" id="25_ynwkh"]
+[ext_resource type="PackedScene" uid="uid://c7w4kdv6c21y0" path="res://level/tree/scenes/tree_3_c_color_1.tscn" id="26_dq5ba"]
+[ext_resource type="PackedScene" uid="uid://w7yllfymfphx" path="res://level/tree/scenes/tree_3_b_color_1.tscn" id="27_6u0b5"]
+[ext_resource type="PackedScene" uid="uid://c86hpd41s7ffg" path="res://level/misc_assets/scenes/forest/pothos_plant_small.tscn" id="28_vnjim"]
+[ext_resource type="PackedScene" uid="uid://dmhp60ll7gyf4" path="res://level/misc_assets/scenes/forest/foliage_b.tscn" id="29_wnvu3"]
+[ext_resource type="PackedScene" uid="uid://b4o8835y3djec" path="res://level/misc_assets/pothos_vine_small_C.fbx" id="30_m33jr"]
+[ext_resource type="PackedScene" uid="uid://c1kmdlr1pyhu3" path="res://level/misc_assets/scenes/forest/grass_2_a_color_1.tscn" id="31_ikvvc"]
+[ext_resource type="PackedScene" uid="uid://cs48qatsng2do" path="res://level/misc_assets/scenes/forest/pothos_vine_medium_a.tscn" id="34_6l608"]
+[ext_resource type="PackedScene" uid="uid://k62egldsfbmg" path="res://level/misc_assets/scenes/forest/grass_2_b_color_1.tscn" id="39_1copb"]
+[ext_resource type="PackedScene" uid="uid://codq614xsqgm2" path="res://level/misc_assets/pothos_vine_small_D.fbx" id="42_g5u8c"]
+[ext_resource type="PackedScene" uid="uid://biwqawj4srlxb" path="res://level/misc_assets/detail_forest.fbx" id="43_m33jr"]
 
 [sub_resource type="Curve" id="Curve_f0ovp"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.689394, 0.595506), 0.51276, 0.0, 0, 0]
@@ -91,13 +110,6 @@ volumetric_fog_density = 0.01
 volumetric_fog_albedo = Color(0.843137, 0.737255, 0.329412, 1)
 volumetric_fog_emission = Color(0.843137, 0.737255, 0.329412, 1)
 
-[sub_resource type="Curve3D" id="Curve3D_5mhvx"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
 [sub_resource type="Curve3D" id="Curve3D_lopto"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0),
@@ -115,6 +127,13 @@ point_count = 2
 [sub_resource type="Curve3D" id="Curve3D_6xa2d"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_5mhvx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -139,11 +158,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0621166, -27.1379, 1.34726)
 
 [node name="Trees" type="Node3D" parent="."]
 
-[node name="Path3D4" parent="." instance=ExtResource("8_lopto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3896, 4.0432, 32.3416)
-curve = SubResource("Curve3D_5mhvx")
-loop = false
-
 [node name="Platform1" type="Node3D" parent="."]
 
 [node name="flower_A" parent="Platform1" instance=ExtResource("16_b3knk")]
@@ -165,17 +179,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00697, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22442, 0, 1.65096)
 
 [node name="foliage_A" parent="Platform1" instance=ExtResource("7_w5o0a")]
-transform = Transform3D(-0.964179, 0, 0.265253, 0, 1, 0, -0.265253, 0, -0.964179, 1.92557, 0.0707492, 1.55455)
+transform = Transform3D(-0.884329, 0, 0.466865, 0, 1, 0, -0.466865, 0, -0.884329, 1.92557, 0.0707492, 1.55455)
 
 [node name="Platform2" type="Node3D" parent="."]
 
 [node name="tileMedium_forest" parent="Platform2" instance=ExtResource("5_vk6f1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84751, -1.23103, 6.77149)
 
+[node name="pothos_vine_large_D" parent="Platform2" instance=ExtResource("11_apok7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58511, 0.327024, 7.13983)
+
 [node name="Platfrorm3" type="Node3D" parent="."]
 
 [node name="tileMedium_forest2" parent="Platfrorm3" instance=ExtResource("5_vk6f1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49876, 0, 10.1028)
+
+[node name="pothos_vine_large_C" parent="Platfrorm3" instance=ExtResource("18_b3knk")]
+transform = Transform3D(-0.557528, 0, 0.830158, 0, 1, 0, -0.830158, 0, -0.557528, 2.39736, 1.2479, 9.97943)
 
 [node name="Platform4" type="Node3D" parent="."]
 
@@ -208,6 +228,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.53042, 12.2093, 32.5062)
 [node name="bench" parent="Platform7" instance=ExtResource("13_5mhvx")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.84099, 12.3301, 32.549)
 
+[node name="Grass_1_A_Color1" parent="Platform7" instance=ExtResource("14_dvor1")]
+transform = Transform3D(0.369328, -0.179845, 0.649648, 0.0240098, 0.975342, 0.21541, -0.336185, -0.127918, 0.729079, 4.84445, 12.3617, 31.943)
+
+[node name="pothos_vine_medium_D" parent="Platform7" instance=ExtResource("16_6ribc")]
+transform = Transform3D(0.999074, 0, 0.0430265, 0, 1, 0, -0.0430265, 0, 0.999074, 8.12169, 12.4259, 28.6252)
+
+[node name="pothos_vine_medium_C" parent="Platform7" instance=ExtResource("17_euduj")]
+transform = Transform3D(-0.408824, 0, 0.912613, 0, 1, 0, -0.912613, 0, -0.408824, 8.11172, 12.3186, 28.5089)
+
+[node name="flower_A" parent="Platform7" instance=ExtResource("16_b3knk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31473, 12.3959, 31.9315)
+
+[node name="flower_A2" parent="Platform7" instance=ExtResource("16_b3knk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.90662, 12.3959, 27.9971)
+
+[node name="flower_B" parent="Platform7" instance=ExtResource("17_e2u7k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54277, 12.3959, 27.7143)
+
 [node name="Platform8" type="Node3D" parent="."]
 
 [node name="Path3D3" parent="Platform8" instance=ExtResource("8_lopto")]
@@ -231,6 +269,9 @@ wait_time = 2.5
 [node name="PlatformAndTarget2" parent="Platform9" instance=ExtResource("10_07kww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67368, 11.7701, 13.9697)
 
+[node name="pothos_vine_medium_B" parent="Platform9" instance=ExtResource("19_opt0f")]
+transform = Transform3D(-0.960406, 0, 0.278606, 0, 1, 0, -0.278606, 0, -0.960406, -0.0661418, 11.5675, 13.1203)
+
 [node name="Platform10" type="Node3D" parent="."]
 
 [node name="tileMedium_forest3" parent="Platform10" instance=ExtResource("5_vk6f1")]
@@ -252,75 +293,210 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7583, 13.2862, 34.5124)
 [node name="AnimatedDoubleSwiper" parent="Platform12" instance=ExtResource("11_eueb8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6152, 14.7943, 34.4823)
 
+[node name="Grass_1_A_Color1" parent="Platform12" instance=ExtResource("14_dvor1")]
+transform = Transform3D(0.281495, 0.166321, -0.945039, -0.0474799, 0.986072, 0.1594, 0.958387, 0, 0.285471, -14.2246, 14.7808, 34.4417)
+
 [node name="Platform13" type="Node3D" parent="."]
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Platform13"]
-navigation_mesh = SubResource("NavigationMesh_e2u7k")
-
-[node name="ball" parent="Platform13/NavigationRegion3D" instance=ExtResource("20_510pp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3958, 15.3261, 50.6562)
-
-[node name="Rogue" parent="Platform13/NavigationRegion3D" instance=ExtResource("21_krmuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5086, 14.5011, 48.7378)
-
-[node name="Rogue2" parent="Platform13/NavigationRegion3D" instance=ExtResource("21_krmuh")]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -36.192, 14.5193, 31.194)
-
-[node name="tree" parent="Platform13/NavigationRegion3D" instance=ExtResource("4_f0ovp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4392, 14.4662, 53.7759)
-
-[node name="tree_large" parent="Platform13/NavigationRegion3D" instance=ExtResource("12_f1jq1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5947, 14.4802, 52.7155)
-
-[node name="fountain" parent="Platform13/NavigationRegion3D" instance=ExtResource("18_e2u7k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.7503, 14.4773, 40.5265)
-
-[node name="tileLarge_forest4" parent="Platform13/NavigationRegion3D" instance=ExtResource("14_hrebq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.9351, 11.9394, 40.0362)
-
-[node name="bench" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
-transform = Transform3D(-0.564376, 0, 0.825518, 0, 1, 0, -0.825518, 0, -0.564376, -42.82, 14.4773, 42.0907)
-
-[node name="bench2" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
-transform = Transform3D(0.43498, 0, 0.90044, 0, 1, 0, -0.90044, 0, 0.43498, -43.1595, 14.4773, 38.9661)
-
-[node name="bench3" parent="Platform13/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
-transform = Transform3D(0.627583, 0, -0.77855, 0, 1, 0, 0.77855, 0, 0.627583, -36.9479, 14.4773, 38.2269)
+[node name="Path3D4" parent="Platform13" instance=ExtResource("8_lopto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3896, 4.0432, 32.3416)
+curve = SubResource("Curve3D_5mhvx")
+loop = false
 
 [node name="Platform14" type="Node3D" parent="."]
 
-[node name="tileMedium_forest" parent="Platform14" instance=ExtResource("5_vk6f1")]
+[node name="pothos_vine_medium_D" parent="Platform14" instance=ExtResource("16_6ribc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3135, 14.3876, 25.5063)
+skeleton = NodePath("../..")
+
+[node name="pothos_vine_large_D2" parent="Platform14" instance=ExtResource("11_apok7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3996, 14.3876, 25.4677)
+skeleton = NodePath("../..")
+
+[node name="Grass_2_D_Color1" parent="Platform14" instance=ExtResource("23_pms34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.5699, 14.4515, 28.3144)
+skeleton = NodePath("../..")
+
+[node name="Grass_2_D_Color2" parent="Platform14" instance=ExtResource("23_pms34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7204, 14.4515, 36.0559)
+skeleton = NodePath("../..")
+
+[node name="Grass_2_D_Color3" parent="Platform14" instance=ExtResource("23_pms34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.2148, 14.4515, 48.9035)
+skeleton = NodePath("../..")
+
+[node name="Grass_2_D_Color4" parent="Platform14" instance=ExtResource("23_pms34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.9206, 14.4515, 47.4903)
+skeleton = NodePath("../..")
+
+[node name="Grass_1_D_Color1" parent="Platform14" instance=ExtResource("24_1copb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5833, 14.446, 42.7144)
+skeleton = NodePath("../..")
+
+[node name="Grass_1_D_Color2" parent="Platform14" instance=ExtResource("24_1copb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.3937, 14.446, 35.3259)
+skeleton = NodePath("../..")
+
+[node name="Grass_1_D_Color3" parent="Platform14" instance=ExtResource("24_1copb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.1204, 14.446, 33.4636)
+skeleton = NodePath("../..")
+
+[node name="Grass_1_D_Color4" parent="Platform14" instance=ExtResource("24_1copb")]
+transform = Transform3D(1, 0, 0, 0, 0.999976, 0.00691145, 0, -0.00691145, 0.999976, -38.4327, 14.446, 53.0723)
+skeleton = NodePath("../..")
+
+[node name="foliage_A" parent="Platform14" instance=ExtResource("7_w5o0a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.372, 14.4932, 52.4474)
+skeleton = NodePath("../NavigationRegion3D")
+
+[node name="pothos_vine_large_C" parent="Platform14" instance=ExtResource("18_b3knk")]
+transform = Transform3D(-0.27265, 0, 0.962113, 0, 1, 0, -0.962113, 0, -0.27265, -25.1002, 14.0269, 32.4948)
+skeleton = NodePath("../NavigationRegion3D")
+
+[node name="pothos_vine_medium_C" parent="Platform14" instance=ExtResource("25_ynwkh")]
+transform = Transform3D(0.309382, 0, 0.950938, 0, 1, 0, -0.950938, 0, 0.309382, -25.1036, 14.076, 49.8869)
+skeleton = NodePath("../..")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Platform14"]
+navigation_mesh = SubResource("NavigationMesh_e2u7k")
+
+[node name="ball" parent="Platform14/NavigationRegion3D" instance=ExtResource("20_510pp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3958, 15.3261, 50.6562)
+
+[node name="Rogue" parent="Platform14/NavigationRegion3D" instance=ExtResource("21_krmuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5086, 14.5011, 48.7378)
+
+[node name="Rogue2" parent="Platform14/NavigationRegion3D" instance=ExtResource("21_krmuh")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -36.192, 14.5193, 31.194)
+
+[node name="tree" parent="Platform14/NavigationRegion3D" instance=ExtResource("4_f0ovp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4392, 14.4662, 53.7759)
+
+[node name="tree_large" parent="Platform14/NavigationRegion3D" instance=ExtResource("12_f1jq1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5947, 14.4802, 52.7155)
+
+[node name="fountain" parent="Platform14/NavigationRegion3D" instance=ExtResource("18_e2u7k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.7503, 14.4773, 40.5265)
+
+[node name="tileLarge_forest4" parent="Platform14/NavigationRegion3D" instance=ExtResource("14_hrebq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.9351, 11.9394, 40.0362)
+
+[node name="bench" parent="Platform14/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
+transform = Transform3D(-0.564376, 0, 0.825518, 0, 1, 0, -0.825518, 0, -0.564376, -42.82, 14.4773, 42.0907)
+
+[node name="bench2" parent="Platform14/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
+transform = Transform3D(0.43498, 0, 0.90044, 0, 1, 0, -0.90044, 0, 0.43498, -43.1595, 14.4773, 38.9661)
+
+[node name="bench3" parent="Platform14/NavigationRegion3D" instance=ExtResource("13_5mhvx")]
+transform = Transform3D(0.627583, 0, -0.77855, 0, 1, 0, 0.77855, 0, 0.627583, -36.9479, 14.4773, 38.2269)
+
+[node name="pothos_vine_small_C" parent="Platform14/NavigationRegion3D" instance=ExtResource("30_m33jr")]
+transform = Transform3D(-0.398861, 0, 0.917011, 0, 1, 0, -0.917011, 0, -0.398861, -25.0091, 14.1224, 49.8427)
+
+[node name="Platform15" type="Node3D" parent="."]
+
+[node name="tileMedium_forest" parent="Platform15" instance=ExtResource("5_vk6f1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 13, 41)
 
-[node name="tileLarge_forest" parent="." instance=ExtResource("3_ypwww")]
+[node name="Platform16" type="Node3D" parent="."]
+
+[node name="tileLarge_forest" parent="Platform16" instance=ExtResource("3_ypwww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3087, 14.379, 41.0109)
 
-[node name="spikeRoller" parent="." instance=ExtResource("22_krmuh")]
+[node name="spikeRoller" parent="Platform16" instance=ExtResource("22_krmuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.1179, 15.3943, 39.4018)
 
-[node name="spikeRoller2" parent="." instance=ExtResource("22_krmuh")]
+[node name="spikeRoller2" parent="Platform16" instance=ExtResource("22_krmuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.1176, 15.3943, 42.6926)
 
-[node name="spikeRoller3" parent="." instance=ExtResource("22_krmuh")]
+[node name="spikeRoller3" parent="Platform16" instance=ExtResource("22_krmuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.2305, 15.3943, 39.3933)
 
-[node name="spikeRoller4" parent="." instance=ExtResource("22_krmuh")]
+[node name="spikeRoller4" parent="Platform16" instance=ExtResource("22_krmuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.3735, 15.3943, 39.3791)
 
-[node name="spikeRoller5" parent="." instance=ExtResource("22_krmuh")]
+[node name="spikeRoller5" parent="Platform16" instance=ExtResource("22_krmuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.205, 15.3943, 42.6641)
 
-[node name="spikeRoller6" parent="." instance=ExtResource("22_krmuh")]
+[node name="spikeRoller6" parent="Platform16" instance=ExtResource("22_krmuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.3643, 15.3943, 42.6556)
 
-[node name="tileLarge_forest2" parent="." instance=ExtResource("3_ypwww")]
+[node name="Platform17" type="Node3D" parent="."]
+
+[node name="tileLarge_forest2" parent="Platform17" instance=ExtResource("3_ypwww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.2056, 16.0678, 41.0511)
 
-[node name="Node3D" parent="." instance=ExtResource("23_b30fa")]
+[node name="Node3D" parent="Platform17" instance=ExtResource("23_b30fa")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -73.4153, 17.0278, 43.3887)
 
-[node name="Node3D2" parent="." instance=ExtResource("23_b30fa")]
+[node name="Node3D2" parent="Platform17" instance=ExtResource("23_b30fa")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -73.3777, 19.0582, 49.3701)
 
-[node name="flag_teamRed" parent="." instance=ExtResource("24_8s7fs")]
+[node name="flag_teamRed" parent="Platform17" instance=ExtResource("24_8s7fs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.2796, 21.0886, 52.7249)
+
+[node name="Tree_3_A_Color1" parent="." instance=ExtResource("25_2v21y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.31638, 2.1905, 15.5454)
+
+[node name="Tree_3_A_Color2" parent="." instance=ExtResource("25_2v21y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0126, 14.7386, 27.4311)
+
+[node name="Tree_3_C_Color1" parent="." instance=ExtResource("26_dq5ba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2972, 14.8696, 27.4324)
+
+[node name="Tree_3_B_Color1" parent="." instance=ExtResource("27_6u0b5")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -71.5258, 21.2055, 54.3682)
+
+[node name="pothos_plant_small" parent="." instance=ExtResource("28_vnjim")]
+transform = Transform3D(-0.99899, 0, 0.0449272, 0, 1, 0, -0.0449272, 0, -0.99899, 8.14572, 1.89672, 13.5457)
+
+[node name="pothos_vine_large_C" parent="." instance=ExtResource("18_b3knk")]
+transform = Transform3D(0.627854, 0, -0.778331, 0, 1, 0, 0.778331, 0, 0.627854, 2.66957, 1.83511, 19.3071)
+
+[node name="foliage_A" parent="." instance=ExtResource("7_w5o0a")]
+transform = Transform3D(0.873245, 0, 0.487281, 0, 1, 0, -0.487281, 0, 0.873245, 3.58483, 2.07056, 15.0981)
+
+[node name="foliage_B" parent="." instance=ExtResource("29_wnvu3")]
+transform = Transform3D(0.375254, 0, -0.926922, 0, 1, 0, 0.926922, 0, 0.375254, 2.89546, 2.07056, 15.8488)
+
+[node name="foliage_B2" parent="." instance=ExtResource("29_wnvu3")]
+transform = Transform3D(0.513841, 0, -0.857886, 0, 1, 0, 0.857886, 0, 0.513841, 7.73261, 12.441, 32.127)
+
+[node name="Grass_1_A_Color1" parent="." instance=ExtResource("14_dvor1")]
+transform = Transform3D(0.241761, 0.12156, -0.223708, 0, 0.878659, 0.47745, 0.0636505, -0.461716, 0.849703, 4.93273, 12.2731, 31.9355)
+
+[node name="Grass_2_A_Color1" parent="." instance=ExtResource("31_ikvvc")]
+transform = Transform3D(0.237727, 0.112552, -0.953046, -0.0454005, 0.589349, 0.18201, 0.970271, 0, 0.242024, -0.149636, 11.7603, 14.4778)
+
+[node name="Grass_2_A_Color2" parent="." instance=ExtResource("31_ikvvc")]
+transform = Transform3D(-0.258193, -0.0211586, -0.962379, -0.0219307, 0.249103, -0.0817436, 0.965844, 0, -0.259122, -0.102518, 11.755, 14.6449)
+
+[node name="Grass_2_A_Color3" parent="." instance=ExtResource("31_ikvvc")]
+transform = Transform3D(0.54777, 0.153624, -0.822404, -0.0851616, 0.988129, 0.127859, 0.832283, 0, 0.554351, -4.50267, 11.8186, 13.3262)
+
+[node name="Grass_2_A_Color4" parent="." instance=ExtResource("31_ikvvc")]
+transform = Transform3D(0.96105, 0, -0.276375, 0.0235399, 0.747275, 0.0818559, 0.275371, -0.0638801, 0.957557, -4.63027, 11.8169, 13.2437)
+
+[node name="pothos_vine_medium_A" parent="." instance=ExtResource("34_6l608")]
+transform = Transform3D(0.0523533, 0, -0.998629, 0, 1, 0, 0.998629, 0, 0.0523533, -5.57624, 11.518, 13.8631)
+
+[node name="pothos_vine_large_D" parent="." instance=ExtResource("11_apok7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81137, 12.4259, 32.8946)
+
+[node name="foliage_B3" parent="." instance=ExtResource("29_wnvu3")]
+transform = Transform3D(0.884059, 0, -0.467374, 0, 1, 0, 0.467374, 0, 0.884059, -27.3465, 14.4688, 53.5698)
+
+[node name="Grass_2_B_Color1" parent="." instance=ExtResource("39_1copb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2251, 14.7892, 34.7066)
+
+[node name="pothos_vine_small_D" parent="." instance=ExtResource("42_g5u8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3007, 14.4959, 53.4873)
+
+[node name="pothos_vine_small_D2" parent="." instance=ExtResource("42_g5u8c")]
+transform = Transform3D(-0.65235, 0, 0.757918, 0, 1, 0, -0.757918, 0, -0.65235, -26.3284, 14.4375, 53.5722)
+
+[node name="detail_forest" parent="." instance=ExtResource("43_m33jr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31843, 2.02926, 18.1239)
+
+[node name="pothos_vine_large_C2" parent="." instance=ExtResource("18_b3knk")]
+transform = Transform3D(-0.985894, 0, -0.167371, 0, 1, 0, 0.167371, 0, -0.985894, -34.0683, 14.2911, 25.2241)
