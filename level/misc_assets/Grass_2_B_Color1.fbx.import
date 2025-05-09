@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6b86qk31wkt4"
-path="res://.godot/imported/pothos_vine_large_B.fbx-1ae2015353a61846f88c1db89212397c.scn"
+uid="uid://dqp0px4qwpmdm"
+path="res://.godot/imported/Grass_2_B_Color1.fbx-2c69a38eed833191a9f048975538cf99.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/pothos_vine_large_B.fbx"
-dest_files=["res://.godot/imported/pothos_vine_large_B.fbx-1ae2015353a61846f88c1db89212397c.scn"]
+source_file="res://level/misc_assets/Grass_2_B_Color1.fbx"
+dest_files=["res://.godot/imported/Grass_2_B_Color1.fbx-2c69a38eed833191a9f048975538cf99.scn"]
 
 [params]
 

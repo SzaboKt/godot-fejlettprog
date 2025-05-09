@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/pothos_vine_large_D.fbx-638096e109e4d83a37539
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

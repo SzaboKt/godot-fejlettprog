@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cxi2q42ojxo6f"
-path="res://.godot/imported/pothos_plant_large_potted.fbx-ca1c97b934fe0ed607e7a0526780f4dd.scn"
+uid="uid://ckfoeo6f7443u"
+path="res://.godot/imported/Grass_1_C_Color1.fbx-cb995e737954e4ffbe0828b81a47cb63.scn"
 
 [deps]
 
-source_file="res://level/misc_assets/pothos_plant_large_potted.fbx"
-dest_files=["res://.godot/imported/pothos_plant_large_potted.fbx-ca1c97b934fe0ed607e7a0526780f4dd.scn"]
+source_file="res://level/misc_assets/Grass_1_C_Color1.fbx"
+dest_files=["res://.godot/imported/Grass_1_C_Color1.fbx-cb995e737954e4ffbe0828b81a47cb63.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

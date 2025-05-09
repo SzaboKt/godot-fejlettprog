@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/pothos_plant_small.fbx-e702c264aa1f7a65ada823
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

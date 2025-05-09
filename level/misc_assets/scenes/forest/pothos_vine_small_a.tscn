@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://5taho423rbqv"]
+
+[ext_resource type="PackedScene" uid="uid://dxxeb1x7rt0fi" path="res://level/misc_assets/pothos_vine_small_A.fbx" id="1_g538w"]
+
+[node name="pothos_vine_small_A" instance=ExtResource("1_g538w")]
