@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbng0n5o416sg"
-path.s3tc="res://.godot/imported/cactus_body_albedo.webp-559f9c791e57761b424e02ed9eba5c20.s3tc.ctex"
+uid="uid://byssg8jdg77ws"
+path.s3tc="res://.godot/imported/tiny_treats_texture_1.png-5599554541d759675e659dba5663e190.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/environment/trees/cactus/cactus_body_albedo.webp"
-dest_files=["res://.godot/imported/cactus_body_albedo.webp-559f9c791e57761b424e02ed9eba5c20.s3tc.ctex"]
+source_file="res://assets/environment/fence/tiny_treats_texture_1.png"
+dest_files=["res://.godot/imported/tiny_treats_texture_1.png-5599554541d759675e659dba5663e190.s3tc.ctex"]
 
 [params]
 

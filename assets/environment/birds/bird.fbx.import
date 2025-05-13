@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cngyrd60kryry"
-path="res://.godot/imported/rocksA_forest.fbx-ce78ac3aa48e19d1462d2078f6951f02.scn"
+uid="uid://d3opvcgxy8id0"
+path="res://.godot/imported/bird.fbx-2833aee97f4816cebca0bcc1b0d47a9b.scn"
 
 [deps]
 
-source_file="res://assets/environment/stones/rocksA_forest.fbx"
-dest_files=["res://.godot/imported/rocksA_forest.fbx-ce78ac3aa48e19d1462d2078f6951f02.scn"]
+source_file="res://assets/environment/birds/bird.fbx"
+dest_files=["res://.godot/imported/bird.fbx-2833aee97f4816cebca0bcc1b0d47a9b.scn"]
 
 [params]
 

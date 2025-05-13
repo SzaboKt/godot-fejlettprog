@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cngyrd60kryry"
-path="res://.godot/imported/rocksA_forest.fbx-ce78ac3aa48e19d1462d2078f6951f02.scn"
+uid="uid://b1j30vtqog00b"
+path="res://.godot/imported/cactus_D.fbx-70c8cee510e78bed90efb9c31a40a3cc.scn"
 
 [deps]
 
-source_file="res://assets/environment/stones/rocksA_forest.fbx"
-dest_files=["res://.godot/imported/rocksA_forest.fbx-ce78ac3aa48e19d1462d2078f6951f02.scn"]
+source_file="res://assets/environment/cactus/cactus_D.fbx"
+dest_files=["res://.godot/imported/cactus_D.fbx-70c8cee510e78bed90efb9c31a40a3cc.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/detail_forest.fbx-1cd5d109aa081d8cd80aa15abf4
 
 [params]
 
-nodes/root_type="MeshInstance3D"
+nodes/root_type="Node3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

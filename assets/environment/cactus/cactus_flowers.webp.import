@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gnyn7k4wc00f"
-path.s3tc="res://.godot/imported/cactus_flowers.webp-1950c0cdb9c9211b7f8de6a4562f8615.s3tc.ctex"
+path.s3tc="res://.godot/imported/cactus_flowers.webp-30b7075cbf12fe20e81d38bfac726a49.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/environment/trees/cactus/cactus_flowers.webp"
-dest_files=["res://.godot/imported/cactus_flowers.webp-1950c0cdb9c9211b7f8de6a4562f8615.s3tc.ctex"]
+source_file="res://assets/environment/cactus/cactus_flowers.webp"
+dest_files=["res://.godot/imported/cactus_flowers.webp-30b7075cbf12fe20e81d38bfac726a49.s3tc.ctex"]
 
 [params]
 

@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cngyrd60kryry"
-path="res://.godot/imported/rocksA_forest.fbx-ce78ac3aa48e19d1462d2078f6951f02.scn"
+uid="uid://dbhujm7ffegl7"
+path="res://.godot/imported/succulent_D.fbx-dffd9f44d9dbfbe5f08eeec0db45d0a5.scn"
 
 [deps]
 
-source_file="res://assets/environment/stones/rocksA_forest.fbx"
-dest_files=["res://.godot/imported/rocksA_forest.fbx-ce78ac3aa48e19d1462d2078f6951f02.scn"]
+source_file="res://assets/environment/flowers/succulent_D.fbx"
+dest_files=["res://.godot/imported/succulent_D.fbx-dffd9f44d9dbfbe5f08eeec0db45d0a5.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

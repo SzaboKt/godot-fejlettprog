@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd5h3i40j2wsd"
-path.s3tc="res://.godot/imported/cactus_body_normal.webp-69537e94265d956e9bb057a76e459fc1.s3tc.ctex"
+uid="uid://xlj8u6o4jxa0"
+path.s3tc="res://.godot/imported/tiny_treats_texture_1.png-02a02436cc18276f86b5a4335370a2c3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/environment/trees/cactus/cactus_body_normal.webp"
-dest_files=["res://.godot/imported/cactus_body_normal.webp-69537e94265d956e9bb057a76e459fc1.s3tc.ctex"]
+source_file="res://assets/environment/street_lamp/tiny_treats_texture_1.png"
+dest_files=["res://.godot/imported/tiny_treats_texture_1.png-02a02436cc18276f86b5a4335370a2c3.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://level/cactus/textures/plants_2/Plants_2_Normal.webp"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
