@@ -13,9 +13,9 @@ var player: CharacterBody3D
 
 func _ready() -> void:
 	if arrow_type == "Rouge":
-		PROJECTILE = preload("res://projectile/projectile.tscn")
+		PROJECTILE = preload("res://enemies/bows/projectile/projectile.tscn")
 	elif arrow_type == "Snow":
-		PROJECTILE = preload("res://projectile/snow_projectile.tscn")
+		PROJECTILE = preload("res://enemies/bows/projectile/arrow/snow_arrow.tscn")
 	cool_down_timer.wait_time = wait_time
 
 func _physics_process(delta: float) -> void:

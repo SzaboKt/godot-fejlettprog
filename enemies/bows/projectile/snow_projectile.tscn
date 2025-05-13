@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvy8y8xlpwf06"]
 
-[ext_resource type="Script" uid="uid://fjjnml2tugh6" path="res://projectile/projectile.gd" id="1_oe4vh"]
-[ext_resource type="PackedScene" uid="uid://cajuwwtndw741" path="res://projectile/arrow/snow_arrow.tscn" id="2_oe4vh"]
+[ext_resource type="Script" uid="uid://fjjnml2tugh6" path="res://enemies/bows/projectile/projectile.gd" id="1_oe4vh"]
+[ext_resource type="PackedScene" uid="uid://cajuwwtndw741" path="res://enemies/bows/projectile/arrow/snow_arrow.tscn" id="2_oe4vh"]
 
 [node name="Projectile" type="RayCast3D"]
 top_level = true

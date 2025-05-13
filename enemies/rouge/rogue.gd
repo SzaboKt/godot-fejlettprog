@@ -38,16 +38,14 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if player:
-		look_at(player.global_position, Vector3(0,1,0), true)
+		var player_position = player.global_position
+		player_position.y = player.get_global_transform_interpolated().origin.y
+		look_at(player_position, Vector3(0,1,0), true)
 		animation_tree["parameters/conditions/is_shooting"] = true
 		animation_tree["parameters/conditions/idle"] = false
 		animation_tree["parameters/conditions/is_walking"] = false
 		if state_machine.get_current_node() == "Walking_B":
 			velocity = Vector3.ZERO
-	#elif being_pushed:
-		#print(velocity)
-		#move_toward(velocity.x, 0.0, delta)
-		#move_toward(velocity.z, 0.0, delta)
 	else:
 		animation_tree["parameters/conditions/is_shooting"] = false
 		if idle_timer.is_stopped() and not state_machine.get_current_node() in ["1H_Ranged_Shoot", "1H_Ranged_Reload"]:

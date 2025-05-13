@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cb6cohscwlkw4"
-path="res://.godot/imported/arrow.gltf-3e4b3b5f8e62e0355e6e591e291d78b5.scn"
+uid="uid://cguvdnpbaxlto"
+path="res://.godot/imported/arrow_teamBlue.fbx-281f24f4a10845bb0d5048d9686aefe8.scn"
 
 [deps]
 
-source_file="res://projectile/arrow/arrow.gltf"
-dest_files=["res://.godot/imported/arrow.gltf-3e4b3b5f8e62e0355e6e591e291d78b5.scn"]
+source_file="res://enemies/bows/projectile/arrow/arrow_teamBlue.fbx"
+dest_files=["res://.godot/imported/arrow_teamBlue.fbx-281f24f4a10845bb0d5048d9686aefe8.scn"]
 
 [params]
 
@@ -28,10 +28,11 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

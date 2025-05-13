@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct66jeg6lw5o7"]
+
+[ext_resource type="Script" uid="uid://cf3xt3lev78bv" path="res://enemies/bows/automatic_bow/automatic_bow.gd" id="1_a31mf"]
+[ext_resource type="PackedScene" uid="uid://io6a7ad040xs" path="res://enemies/bows/bow_team_blue.tscn" id="1_qnu83"]
+[ext_resource type="PackedScene" uid="uid://cg7wc3vjfe4vc" path="res://level/platforms/snow_tiles/simple_scenes/button_team_blue.tscn" id="2_8vjgx"]
+[ext_resource type="PackedScene" uid="uid://ba5fay6ja3xen" path="res://enemies/bows/projectile/projectile_launcher.tscn" id="3_8vjgx"]
+
+[node name="AutomaticBow" type="Node3D"]
+script = ExtResource("1_a31mf")
+
+[node name="bow_teamBlue" parent="." instance=ExtResource("1_qnu83")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, -0.00721539, 1.2187, -0.226099)
+
+[node name="ProjectileLauncher" parent="." instance=ExtResource("3_8vjgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0110632, 1.23519, -0.121916)
+arrow_type = "Snow"
+wait_time = 10.0
+
+[node name="button_teamBlue" parent="." instance=ExtResource("2_8vjgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0245064, 0, 0.0700409)

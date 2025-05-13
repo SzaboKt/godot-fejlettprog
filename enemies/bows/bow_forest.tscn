@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfh1runmswt21"]
+
+[ext_resource type="PackedScene" uid="uid://uk713wpm2mbk" path="res://assets/enemies/bows/bow_teamBlue.fbx" id="1_4635r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drteb"]
+albedo_color = Color(0.282353, 0.737255, 0.552941, 1)
+
+[node name="bow_teamBlue" instance=ExtResource("1_4635r")]
+
+[node name="bow_teamBlue" parent="." index="0"]
+surface_material_override/2 = SubResource("StandardMaterial3D_drteb")
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." index="1"]
+depth = 0.15
+polygon = PackedVector2Array(0.606108, 0.687728, 0.624245, 0.436821, 0.482166, 0.234281, 0.176844, 0.143592, -0.291718, 0.143592, -0.542625, 0.279626, -0.621223, 0.461005, -0.58797, 0.684705, -0.612154, 0.748188, -0.76028, 0.651452, -0.844923, 0.327993, -0.633315, -0.0166264, -0.32497, -0.146615, 0.361246, -0.140569, 0.714935, 0.0680171, 0.817716, 0.364269, 0.787486, 0.627269, 0.66959, 0.720981, 0.615176, 0.739119)

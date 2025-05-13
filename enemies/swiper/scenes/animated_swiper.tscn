@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://be4uvbwl6k511"]
+
+[ext_resource type="Script" uid="uid://cmljrxxenca82" path="res://enemies/swiper/scenes/animated_swiper.gd" id="1_bo2uq"]
+[ext_resource type="PackedScene" uid="uid://dlt241n0voe70" path="res://enemies/swiper/scenes/swiper_long_team_red.tscn" id="1_hq8l1"]
+
+[sub_resource type="Animation" id="Animation_jkiyx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pmxvb"]
+resource_name = "swipe"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 1.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.785398, 0), Vector3(0, 0, 0), Vector3(0, -0.785398, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t375l"]
+_data = {
+&"RESET": SubResource("Animation_jkiyx"),
+&"swipe": SubResource("Animation_pmxvb")
+}
+
+[node name="AnimatedSwiper" type="Node3D" node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_bo2uq")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../swiperLong_teamRed")
+libraries = {
+&"": SubResource("AnimationLibrary_t375l")
+}
+
+[node name="swiperLong_teamRed" parent="." instance=ExtResource("1_hq8l1")]
+top_level = false
+script = null
+
+[editable path="swiperLong_teamRed"]

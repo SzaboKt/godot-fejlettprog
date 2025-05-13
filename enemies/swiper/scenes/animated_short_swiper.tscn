@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://buu0xfxmcdp6"]
+
+[ext_resource type="PackedScene" uid="uid://ddn3l30lrn8rq" path="res://enemies/swiper/scenes/swiper_team_red.tscn" id="1_2beoe"]
+[ext_resource type="Script" uid="uid://cmljrxxenca82" path="res://enemies/swiper/scenes/animated_swiper.gd" id="1_l3jaw"]
+
+[sub_resource type="Animation" id="Animation_2mrm4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("swiper_teamRed:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l3jaw"]
+resource_name = "swipe"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("swiper_teamRed:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(-7.90226, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlc3v"]
+_data = {
+&"RESET": SubResource("Animation_2mrm4"),
+&"swipe": SubResource("Animation_l3jaw")
+}
+
+[node name="AnimatedShortSwiper" type="Node3D" node_paths=PackedStringArray("animation_player")]
+transform = Transform3D(0.0031348, 0, -0.999995, 0, 1, 0, 0.999995, 0, 0.0031348, 0, 0, 0)
+script = ExtResource("1_l3jaw")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mlc3v")
+}
+
+[node name="swiper_teamRed" parent="." instance=ExtResource("1_2beoe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[editable path="swiper_teamRed"]

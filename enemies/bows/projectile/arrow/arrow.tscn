@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://bweayt4fipjsl"]
 
-[ext_resource type="PackedScene" uid="uid://cb6cohscwlkw4" path="res://projectile/arrow/arrow.gltf" id="1_uy1j3"]
-[ext_resource type="Texture2D" uid="uid://clougak088ohr" path="res://projectile/arrow/rogue_texture.png" id="2_v07t0"]
+[ext_resource type="PackedScene" uid="uid://cb6cohscwlkw4" path="res://enemies/bows/projectile/arrow/arrow.gltf" id="1_uy1j3"]
+[ext_resource type="Texture2D" uid="uid://clougak088ohr" path="res://enemies/bows/projectile/arrow/rogue_texture.png" id="2_v07t0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43p6h"]
 resource_name = "rogue_texture"
@@ -43,8 +43,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6ugjw")
 
-[node name="arrow2" type="MeshInstance3D" instance=ExtResource("1_uy1j3")]
+[node name="arrow2" instance=ExtResource("1_uy1j3")]
 
-[node name="arrow" type="MeshInstance3D" parent="." index="0"]
+[node name="arrow2" type="MeshInstance3D" parent="." index="0"]
 mesh = SubResource("ArrayMesh_k6xkc")
 skeleton = NodePath("")

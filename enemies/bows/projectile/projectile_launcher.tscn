@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ba5fay6ja3xen"]
 
-[ext_resource type="Script" uid="uid://bxybjtguvjwrk" path="res://projectile/projectile_launcher.gd" id="1_dwv01"]
+[ext_resource type="Script" uid="uid://bxybjtguvjwrk" path="res://enemies/bows/projectile/projectile_launcher.gd" id="1_dwv01"]
 
 [node name="ProjectileLauncher" type="Node3D"]
 script = ExtResource("1_dwv01")

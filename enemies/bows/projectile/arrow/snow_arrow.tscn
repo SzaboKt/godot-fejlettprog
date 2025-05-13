@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cajuwwtndw741"]
 
-[ext_resource type="PackedScene" uid="uid://cguvdnpbaxlto" path="res://projectile/arrow/arrow_teamBlue.fbx" id="1_ymp5p"]
+[ext_resource type="PackedScene" uid="uid://cguvdnpbaxlto" path="res://enemies/bows/projectile/arrow/arrow_teamBlue.fbx" id="1_ymp5p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymp5p"]
 
