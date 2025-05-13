@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn76ymm766ixq"]
+
+[ext_resource type="PackedScene" uid="uid://7uk6oaumpwm6" path="res://assets/environment/fence/fence_post.fbx" id="1_nngto"]
+[ext_resource type="PackedScene" uid="uid://rpodw8aup1lx" path="res://level/environment/photos_plant/singles/pothos_vine_small_d.tscn" id="2_hjori"]
+
+[node name="fence_post" instance=ExtResource("1_nngto")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." index="1"]
+depth = 0.34
+polygon = PackedVector2Array(-0.0167544, 1.31243, -0.268071, 0.99968, -0.167544, 0.00558485, 0.184299, -0.00558476, 0.26807, 0.99968)
+
+[node name="pothos_vine_small_D" parent="." index="2" instance=ExtResource("2_hjori")]
+transform = Transform3D(-0.859911, 0.062969, -0.506545, 0.00376672, 0.993118, 0.117061, 0.510429, 0.0987539, -0.85423, 0.265536, 0.0650728, 0.0617793)

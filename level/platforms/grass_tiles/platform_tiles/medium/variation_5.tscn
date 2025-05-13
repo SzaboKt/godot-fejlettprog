@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1s6gwaj6f8n0"]
+
+[ext_resource type="PackedScene" uid="uid://bnfr222dtbpjo" path="res://level/platforms/grass_tiles/simple_scenes/tile_medium_forest.tscn" id="1_bs64d"]
+[ext_resource type="PackedScene" uid="uid://dx2q8giyldc3o" path="res://level/environment/stones/rocks_b_forest.tscn" id="2_w3o0q"]
+[ext_resource type="PackedScene" uid="uid://bgp5oauel3a7y" path="res://level/environment/grass/grass_2_c_color_1.tscn" id="3_4ei8d"]
+[ext_resource type="PackedScene" uid="uid://c86hpd41s7ffg" path="res://level/environment/photos_plant/small_3/pothos_plant_small.tscn" id="4_xrntr"]
+
+[node name="Variation4" type="Node3D"]
+
+[node name="tileMedium_forest2" parent="." instance=ExtResource("1_bs64d")]
+
+[node name="rocksB_forest" parent="." instance=ExtResource("2_w3o0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.189859, 1.48699, -0.277146)
+
+[node name="Grass_2_C_Color1" parent="." instance=ExtResource("3_4ei8d")]
+transform = Transform3D(0.5, 0, 0, 0, 0.484409, -0.123888, 0, 0.123888, 0.484409, 0.362522, 1.47681, -0.43835)
+
+[node name="pothos_plant_small" parent="." instance=ExtResource("4_xrntr")]
+transform = Transform3D(-0.454628, 0, 0.890681, 0, 1, 0, -0.890681, 0, -0.454628, 0.779688, 1.4342, 0.78523)

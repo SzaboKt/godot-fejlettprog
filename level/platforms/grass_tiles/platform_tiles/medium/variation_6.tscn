@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://csh3qhsklhboh"]
+
+[ext_resource type="PackedScene" uid="uid://bnfr222dtbpjo" path="res://level/platforms/grass_tiles/simple_scenes/tile_medium_forest.tscn" id="1_mu3s2"]
+[ext_resource type="PackedScene" uid="uid://rnwpnmfo4yuk" path="res://level/environment/grass/grass_2_d_color_1.tscn" id="2_tfdls"]
+[ext_resource type="PackedScene" uid="uid://ch0pcllvupu4b" path="res://level/environment/flowers/singles/flower_blue_double.tscn" id="3_mu3s2"]
+
+[node name="Variation4" type="Node3D"]
+
+[node name="tileMedium_forest2" parent="." instance=ExtResource("1_mu3s2")]
+
+[node name="Grass_2_D_Color1" parent="." instance=ExtResource("2_tfdls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.473886, 1.45435, 0.388558)
+
+[node name="flower_B" parent="." instance=ExtResource("3_mu3s2")]
+transform = Transform3D(1, 0, 0, 0, 0.992108, -0.125385, 0, 0.125385, 0.992108, 0.688545, 1.48463, -0.648173)
+
+[node name="flower_B2" parent="." instance=ExtResource("3_mu3s2")]
+transform = Transform3D(1, 0, 0, 0, 0.995168, 0.0981908, 0, -0.0981908, 0.995168, 0.814008, 1.48142, -0.356093)

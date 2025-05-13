@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2ltugp8s3h3c"]
+
+[ext_resource type="PackedScene" uid="uid://c86hpd41s7ffg" path="res://level/environment/photos_plant/small_3/pothos_plant_small.tscn" id="1_irmaj"]
+[ext_resource type="PackedScene" uid="uid://lbwcq64onjd" path="res://level/environment/photos_plant/singles/pothos_vine_large_c.tscn" id="2_kbft4"]
+[ext_resource type="PackedScene" uid="uid://3r1nm3th3e3" path="res://level/platforms/grass_tiles/simple_scenes/tile_large_forest.tscn" id="4_cu0x5"]
+[ext_resource type="PackedScene" uid="uid://glic1yhed6pv" path="res://level/environment/trees/oval/with_grass/variation_1.tscn" id="5_5mmjh"]
+[ext_resource type="PackedScene" uid="uid://drukrmtgcwv7w" path="res://level/environment/fence/with_grass/straight/variation_1.tscn" id="5_irmaj"]
+[ext_resource type="PackedScene" uid="uid://te3ecdmuhui7" path="res://level/environment/flowers/singles/flower_white.tscn" id="6_kbft4"]
+
+[node name="Variation2" type="Node3D"]
+
+[node name="pothos_plant_small" parent="." instance=ExtResource("1_irmaj")]
+transform = Transform3D(-0.99899, 0, 0.0449272, 0, 1, 0, -0.0449272, 0, -0.99899, 2.76814, 0.868711, -2.97728)
+skeleton = NodePath("../..")
+
+[node name="pothos_vine_large_C" parent="." instance=ExtResource("2_kbft4")]
+transform = Transform3D(0.627854, 0, -0.778331, 0, 1, 0, 0.778331, 0, 0.627854, -2.70801, 0.807101, 2.78412)
+skeleton = NodePath("../..")
+
+[node name="tileLarge_forest2" parent="." instance=ExtResource("4_cu0x5")]
+
+[node name="Variation1" parent="." instance=ExtResource("5_5mmjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07529, 1.19043, -2.17127)
+
+[node name="Variation2" parent="." instance=ExtResource("5_irmaj")]
+transform = Transform3D(-0.836449, 0, -0.548045, 0, 1, 0, 0.548045, 0, -0.836449, 2.63635, 0.97081, 2.01713)
+
+[node name="flower_A" parent="." instance=ExtResource("6_kbft4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55564, 0.960214, -2.43911)

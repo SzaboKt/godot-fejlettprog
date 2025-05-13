@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch0pcllvupu4b"]
+
+[ext_resource type="PackedScene" uid="uid://crd4bv2mm7dr1" path="res://assets/environment/flowers/flower_B.fbx" id="1_a7mcx"]
+[ext_resource type="PackedScene" uid="uid://bbtdkcx7frcki" path="res://level/environment/flowers/singles/flower_blue.tscn" id="2_kt155"]
+
+[node name="flower_B" instance=ExtResource("1_a7mcx")]
+
+[node name="flower_B2" parent="." index="1" instance=ExtResource("2_kt155")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

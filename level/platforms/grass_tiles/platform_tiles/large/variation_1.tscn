@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwv4o31qd7nt2"]
+
+[ext_resource type="PackedScene" uid="uid://lbwcq64onjd" path="res://level/environment/photos_plant/singles/pothos_vine_large_c.tscn" id="3_spuip"]
+[ext_resource type="PackedScene" uid="uid://3r1nm3th3e3" path="res://level/platforms/grass_tiles/simple_scenes/tile_large_forest.tscn" id="4_breqn"]
+[ext_resource type="PackedScene" uid="uid://5d7tto3pebay" path="res://level/environment/trees/normal/with_grass/variation_1.tscn" id="5_rmuok"]
+[ext_resource type="PackedScene" uid="uid://dtk8xj8ltyhn4" path="res://level/environment/flowers/flowers_2/blue_and_white.tscn" id="6_65se2"]
+[ext_resource type="PackedScene" uid="uid://bixyr0m3s2n56" path="res://level/environment/fence/with_grass_and_bird/wide_long/variation_1.tscn" id="6_jonbb"]
+[ext_resource type="PackedScene" uid="uid://2w8djsix1xym" path="res://level/environment/photos_plant/small_2_medium_1/photos_plant_multiple_variation_1.tscn" id="7_x4kpt"]
+
+[node name="Variation1" type="Node3D"]
+
+[node name="pothos_vine_large_C" parent="." instance=ExtResource("3_spuip")]
+transform = Transform3D(0.12516, 0, -0.992137, 0, 1, 0, 0.992137, 0, 0.12516, -2.8255, 0, -2.09654)
+skeleton = NodePath("../..")
+
+[node name="tileLarge_forest" parent="." instance=ExtResource("4_breqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00697, 0)
+
+[node name="PhotosPlantMultipleVariation1" parent="." instance=ExtResource("7_x4kpt")]
+transform = Transform3D(0.954167, 0, 0.299274, 0, 1, 0, -0.299274, 0, 0.954167, -0.49677, -0.0282144, 2.91192)
+
+[node name="BlueAndWhite" parent="." instance=ExtResource("6_65se2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47201, -0.0174885, -2.77889)
+
+[node name="TreeWithGrassVariation1" parent="." instance=ExtResource("5_rmuok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45353, 0, 2.20855)
+
+[node name="fence_straight_long" parent="." instance=ExtResource("6_jonbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.39778, -0.0632978, 0.329267)

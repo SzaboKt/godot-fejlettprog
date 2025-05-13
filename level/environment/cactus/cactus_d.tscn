@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://des3pmjidnofa"]
+
+[ext_resource type="PackedScene" uid="uid://b1j30vtqog00b" path="res://assets/environment/cactus/cactus_D.fbx" id="1_22d71"]
+
+[node name="cactus_D" instance=ExtResource("1_22d71")]

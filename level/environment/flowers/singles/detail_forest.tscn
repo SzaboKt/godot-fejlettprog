@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://gp65dwo1j4o7"]
+
+[ext_resource type="PackedScene" uid="uid://biwqawj4srlxb" path="res://assets/environment/flowers/detail_forest.fbx" id="1_23ggq"]
+
+[node name="detail_forest" instance=ExtResource("1_23ggq")]

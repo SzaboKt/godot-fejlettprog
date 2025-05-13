@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b02i76p8gmmd5"]
+
+[ext_resource type="PackedScene" uid="uid://bgens6q0srmd0" path="res://assets/environment/fence/fence_straight_long.fbx" id="1_3iltw"]
+
+[node name="fence_straight_long" instance=ExtResource("1_3iltw")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." index="1"]
+depth = 0.33
+polygon = PackedVector2Array(-1.25305, 1.02065, -1.00265, 1.31621, -0.731718, 1.00013, -0.752243, 0.840034, -0.263749, 0.831824, -0.267854, 1.01244, -0.00513385, 1.3039, 0.274006, 0.987814, 0.249376, 0.823614, 0.737871, 0.823614, 0.725556, 0.991919, 0.996486, 1.31211, 1.27973, 0.987814, 1.1689, -0.0220158, 0.828181, -0.00970072, 0.811761, 0.187339, 0.191906, 0.191444, 0.159066, -0.0138057, -0.148809, -0.0179108, -0.193964, 0.187339, -0.805608, 0.187339, -0.846658, -0.0179108, -1.15453, -0.0179108)

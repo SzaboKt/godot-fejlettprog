@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://2w8djsix1xym"]
+
+[ext_resource type="PackedScene" uid="uid://cs48qatsng2do" path="res://level/environment/photos_plant/singles/pothos_vine_medium_a.tscn" id="1_r8gd5"]
+[ext_resource type="PackedScene" uid="uid://rpodw8aup1lx" path="res://level/environment/photos_plant/singles/pothos_vine_small_d.tscn" id="2_1u1j3"]
+[ext_resource type="PackedScene" uid="uid://5qd7842m1851" path="res://level/environment/photos_plant/singles/pothos_vine_small_c.tscn" id="3_8ofmn"]
+
+[node name="PhotosPlantMultipleVariation1" type="Node3D"]
+
+[node name="pothos_vine_medium_A" parent="." instance=ExtResource("1_r8gd5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0488665, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="pothos_vine_small_D" parent="." instance=ExtResource("2_1u1j3")]
+transform = Transform3D(-0.672902, 0.0132292, 0.739613, 0.00890274, 0.999913, -0.00978536, -0.739678, 0, -0.672961, -0.0362352, 0, -0.00984001)
+skeleton = NodePath("../..")
+
+[node name="pothos_vine_small_C" parent="." instance=ExtResource("3_8ofmn")]
+transform = Transform3D(0.792588, 0, -0.609758, 0, 1, 0, 0.609758, 0, 0.792588, -0.0236331, 0, 0)
+skeleton = NodePath("../..")

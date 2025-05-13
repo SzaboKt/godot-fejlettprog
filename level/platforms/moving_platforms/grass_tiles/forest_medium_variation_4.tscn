@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://54kd7g8csixa"]
+[gd_scene load_steps=8 format=3 uid="uid://c14ea64ijqomq"]
 
-[ext_resource type="Script" uid="uid://ciik67gyxcnxq" path="res://level/platforms/moving_platforms/moving_platform.gd" id="1_lko04"]
-[ext_resource type="PackedScene" uid="uid://bd2vq3m61j81d" path="res://level/platforms/snow_tiles/simple_scenes/tile_large_team_blue.tscn" id="1_y1h2u"]
-[ext_resource type="PackedScene" uid="uid://bb4ij6rg10tgu" path="res://level/environment/stones/cobblestones.tscn" id="3_2rv78"]
+[ext_resource type="Script" uid="uid://ciik67gyxcnxq" path="res://level/platforms/moving_platforms/moving_platform.gd" id="1_4duu0"]
+[ext_resource type="PackedScene" uid="uid://dpnpdwmc2q8aw" path="res://level/platforms/grass_tiles/platform_tiles/medium/variation_4.tscn" id="2_4duu0"]
 
 [sub_resource type="Curve3D" id="Curve3D_53np6"]
 _data = {
@@ -11,8 +10,8 @@ _data = {
 }
 point_count = 1
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_y1h2u"]
-size = Vector3(6.03345, 6.00446, 1.02942)
+[sub_resource type="BoxShape3D" id="BoxShape3D_7u5gi"]
+size = Vector3(2.00366, 2.03638, 1.53601)
 
 [sub_resource type="Animation" id="Animation_lko04"]
 length = 0.001
@@ -54,31 +53,26 @@ _data = {
 
 [node name="Path3D" type="Path3D"]
 curve = SubResource("Curve3D_53np6")
-script = ExtResource("1_lko04")
+script = ExtResource("1_4duu0")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+rotation_mode = 4
+tilt_enabled = false
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="PathFollow3D"]
 remote_path = NodePath("../../AnimatableBody3D")
+update_rotation = false
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
 
-[node name="tileLarge_teamBlue" parent="AnimatableBody3D" instance=ExtResource("1_y1h2u")]
-transform = Transform3D(-4.37114e-08, 0, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1.91069e-15, 4.37114e-08, 3.82137e-15, 4.37114e-08)
-
-[node name="cobblestones" parent="AnimatableBody3D" instance=ExtResource("3_2rv78")]
-transform = Transform3D(-4.37114e-08, -3.59989e-21, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1.91069e-15, 1.219, -1.689, -0.994126)
-skeleton = NodePath("../..")
-
-[node name="cobblestones2" parent="AnimatableBody3D" instance=ExtResource("3_2rv78")]
-transform = Transform3D(-0.655427, -3.59989e-21, -0.755259, 0.755259, -4.37114e-08, -0.655427, -3.30134e-08, -1, 2.86496e-08, -0.112, 1.268, -0.976146)
-skeleton = NodePath("../..")
+[node name="Variation4" parent="AnimatableBody3D" instance=ExtResource("2_4duu0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1.91069e-15, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, -8.35187e-23, 0, -8.35187e-23, 1, 0.012085, -0.000152599, -0.500916)
-shape = SubResource("BoxShape3D_y1h2u")
+transform = Transform3D(1, 0, 0, 0, 1, -8.35189e-23, 0, -8.35188e-23, 1, 0.00646973, 0.00183106, -0.749084)
+shape = SubResource("BoxShape3D_7u5gi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtk8xj8ltyhn4"]
+
+[ext_resource type="PackedScene" uid="uid://te3ecdmuhui7" path="res://level/environment/flowers/singles/flower_white.tscn" id="1_5djdw"]
+[ext_resource type="PackedScene" uid="uid://bbtdkcx7frcki" path="res://level/environment/flowers/singles/flower_blue.tscn" id="2_fyqgp"]
+
+[node name="BlueAndWhite" type="MeshInstance3D"]
+
+[node name="flower_A" parent="." instance=ExtResource("1_5djdw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11826, 0, 0.133221)
+skeleton = NodePath("../../..")
+
+[node name="flower_B" parent="." instance=ExtResource("2_fyqgp")]
+transform = Transform3D(0.821239, 0, -0.570585, 0, 1, 0, 0.570585, 0, 0.821239, 0.139007, 0, -0.0156634)
+skeleton = NodePath("../../..")

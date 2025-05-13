@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcsxy45te0fqw"]
+
+[ext_resource type="Script" uid="uid://ciik67gyxcnxq" path="res://level/platforms/moving_platforms/moving_platform.gd" id="1_gbeb4"]
+[ext_resource type="PackedScene" uid="uid://3r1nm3th3e3" path="res://level/platforms/grass_tiles/simple_scenes/tile_large_forest.tscn" id="2_gbeb4"]
+
+[sub_resource type="Curve3D" id="Curve3D_gbeb4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0rvvx"]
+size = Vector3(6.04861, 6.02271, 1.04248)
+
+[sub_resource type="Animation" id="Animation_lko04"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow3D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_y1h2u"]
+resource_name = "move"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow3D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2rv78"]
+_data = {
+&"RESET": SubResource("Animation_lko04"),
+&"move": SubResource("Animation_y1h2u")
+}
+
+[node name="Path3D" type="Path3D"]
+curve = SubResource("Curve3D_gbeb4")
+script = ExtResource("1_gbeb4")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+rotation_mode = 4
+tilt_enabled = false
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="PathFollow3D"]
+remote_path = NodePath("../../AnimatableBody3D")
+update_rotation = false
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+
+[node name="tileLarge_forest" parent="AnimatableBody3D" instance=ExtResource("2_gbeb4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1.91069e-15, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -8.35187e-23, 0, -8.35187e-23, 1, 0.00315857, 0.00671384, -0.501221)
+shape = SubResource("BoxShape3D_0rvvx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2rv78")
+}

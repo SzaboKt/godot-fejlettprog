@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://db7whh5ia8l4u"]
+
+[ext_resource type="PackedScene" uid="uid://3r1nm3th3e3" path="res://level/platforms/grass_tiles/simple_scenes/tile_large_forest.tscn" id="1_vxc0j"]
+[ext_resource type="PackedScene" uid="uid://dvou0lh0enfv5" path="res://level/platforms/grass_tiles/simple_scenes/tile_slope_low_high_forest.tscn" id="2_rnsyd"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="tileLarge_forest" parent="." instance=ExtResource("1_vxc0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69765, 1.01781, 0.107618)
+
+[node name="tileSlopeLowHigh_forest" parent="." instance=ExtResource("2_rnsyd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32237, 0, -0.988842)
+
+[node name="tileSlopeLowHigh_forest2" parent="." instance=ExtResource("2_rnsyd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.316957, 0, 0.991259)

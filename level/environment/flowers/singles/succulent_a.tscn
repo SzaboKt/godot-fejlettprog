@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://derkec6bnc205"]
+
+[ext_resource type="PackedScene" uid="uid://dg02eugorxaqt" path="res://assets/environment/flowers/succulent_A.fbx" id="1_qklli"]
+
+[node name="succulent_A" instance=ExtResource("1_qklli")]

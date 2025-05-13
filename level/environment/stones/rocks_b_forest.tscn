@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx2q8giyldc3o"]
+
+[ext_resource type="PackedScene" uid="uid://bclhntyvu8uvc" path="res://assets/environment/stones/rocksB_forest.fbx" id="1_teqpq"]
+
+[node name="rocksB_forest" instance=ExtResource("1_teqpq")]

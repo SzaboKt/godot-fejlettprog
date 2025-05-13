@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0lx63k77mv8i"]
+
+[ext_resource type="PackedScene" uid="uid://bnfr222dtbpjo" path="res://level/platforms/grass_tiles/simple_scenes/tile_medium_forest.tscn" id="1_62ulo"]
+[ext_resource type="PackedScene" uid="uid://lbwcq64onjd" path="res://level/environment/photos_plant/singles/pothos_vine_large_c.tscn" id="2_vc4fy"]
+[ext_resource type="PackedScene" uid="uid://drc53rr6jdyoi" path="res://level/environment/flowers/flowers_2/blue_and_blue.tscn" id="3_vc4fy"]
+
+[node name="Variation2" type="Node3D"]
+
+[node name="tileMedium_forest2" parent="." instance=ExtResource("1_62ulo")]
+
+[node name="pothos_vine_large_C" parent="." instance=ExtResource("2_vc4fy")]
+transform = Transform3D(-0.557528, 0, 0.830158, 0, 1, 0, -0.830158, 0, -0.557528, 0.841541, 1.15003, -0.0905128)
+
+[node name="Node3D" parent="." instance=ExtResource("3_vc4fy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.468092, 1.5242, 0.604519)

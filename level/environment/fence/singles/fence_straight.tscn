@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://y0h7ipiu1oc1"]
+
+[ext_resource type="PackedScene" uid="uid://bd4vt5pct1ju0" path="res://assets/environment/fence/fence_straight.fbx" id="1_7trp7"]
+[ext_resource type="PackedScene" uid="uid://c1kmdlr1pyhu3" path="res://level/environment/grass/grass_2_a_color_1.tscn" id="2_estk7"]
+[ext_resource type="PackedScene" uid="uid://hq57emfodqtm" path="res://level/environment/grass/grass_1_a_color_1.tscn" id="3_2jx6t"]
+
+[node name="Variation1" instance=ExtResource("1_7trp7")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." index="1"]
+depth = 0.32
+polygon = PackedVector2Array(-0.264872, 0.988514, -0.00215262, 1.31691, 0.276987, 0.996724, 0.252357, 0.840734, 0.728537, 0.832524, 0.720327, 1.00493, 0.983047, 1.30049, 1.01589, 1.3046, 1.27861, 0.992619, 1.17188, -0.0172107, 0.806532, -0.00489563, 0.794217, 0.163409, 0.194887, 0.183934, 0.157942, -0.0090006, -0.178667, -0.0131056)
+
+[node name="Grass_2_A_Color1" parent="." index="2" instance=ExtResource("2_estk7")]
+transform = Transform3D(-0.251418, -0.147896, 0.956512, -0.0375971, 0.989003, 0.143037, -0.967148, 0, -0.254214, -0.221082, 0.0163118, 0.180225)
+
+[node name="Grass_2_A_Color2" parent="." index="3" instance=ExtResource("2_estk7")]
+transform = Transform3D(-0.701398, 0, 0.265596, 0, 0.75, 0, -0.265596, 0, -0.701398, -0.140245, 0.0147457, 0.237098)
+
+[node name="Grass_1_A_Color1" parent="." index="4" instance=ExtResource("3_2jx6t")]
+transform = Transform3D(-0.288499, 0.150342, -0.67577, 0.0725689, 0.734635, 0.132457, 0.688478, -0.0144351, -0.297136, 1.19442, 0.00729299, 0.116604)

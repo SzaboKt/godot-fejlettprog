@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://glic1yhed6pv"]
+
+[ext_resource type="PackedScene" uid="uid://bkx1a7f7xm3td" path="res://level/environment/grass/foliage_a.tscn" id="1_phdiu"]
+[ext_resource type="PackedScene" uid="uid://dmhp60ll7gyf4" path="res://level/environment/grass/foliage_b.tscn" id="2_aj08v"]
+[ext_resource type="PackedScene" uid="uid://bfwcnxgpo5tke" path="res://level/environment/trees/oval/singles/tree_3_a_color_1.tscn" id="3_b4bqa"]
+
+[node name="Variation1" type="Node3D"]
+
+[node name="foliage_A" parent="." instance=ExtResource("1_phdiu")]
+transform = Transform3D(0.894005, 0, 0.448056, 0, 1, 0, -0.448056, 0, 0.894005, 0.20767, -0.133822, -0.38764)
+skeleton = NodePath("../../..")
+
+[node name="foliage_B" parent="." instance=ExtResource("2_aj08v")]
+transform = Transform3D(0.333758, 0, -0.942659, 0, 1, 0, 0.942659, 0, 0.333758, -0.514329, -0.133822, 0.331733)
+skeleton = NodePath("../../..")
+
+[node name="Tree_3_A_Color1" parent="." instance=ExtResource("3_b4bqa")]

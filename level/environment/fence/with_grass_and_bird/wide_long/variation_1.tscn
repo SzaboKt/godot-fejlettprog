@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bixyr0m3s2n56"]
+
+[ext_resource type="PackedScene" uid="uid://bgens6q0srmd0" path="res://assets/environment/fence/fence_straight_long.fbx" id="1_qd1to"]
+[ext_resource type="PackedScene" uid="uid://k62egldsfbmg" path="res://level/environment/grass/grass_2_b_color_1.tscn" id="2_ap1nx"]
+[ext_resource type="PackedScene" uid="uid://bkx1a7f7xm3td" path="res://level/environment/grass/foliage_a.tscn" id="3_m4djl"]
+[ext_resource type="PackedScene" uid="uid://b1plmhp2peoi1" path="res://level/environment/birds/bird.tscn" id="4_46mpl"]
+
+[node name="Variation1" instance=ExtResource("1_qd1to")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." index="1"]
+depth = 0.33
+polygon = PackedVector2Array(-1.25305, 1.02065, -1.00265, 1.31621, -0.731718, 1.00013, -0.752243, 0.840034, -0.263749, 0.831824, -0.267854, 1.01244, -0.00513385, 1.3039, 0.274006, 0.987814, 0.249376, 0.823614, 0.737871, 0.823614, 0.725556, 0.991919, 0.996486, 1.31211, 1.27973, 0.987814, 1.1689, -0.0220158, 0.828181, -0.00970072, 0.811761, 0.187339, 0.191906, 0.191444, 0.159066, -0.0138057, -0.148809, -0.0179108, -0.193964, 0.187339, -0.805608, 0.187339, -0.846658, -0.0179108, -1.15453, -0.0179108)
+
+[node name="Grass_2_B_Color1" parent="." index="2" instance=ExtResource("2_ap1nx")]
+transform = Transform3D(0.706173, -0.336832, 0, 0.252624, 0.941565, 0, 0, 0, 1, -1.19738, -0.0207734, 0.0338538)
+
+[node name="foliage_A" parent="." index="3" instance=ExtResource("3_m4djl")]
+transform = Transform3D(-0.0996724, 0, -0.743347, 0, 0.75, 0, 0.743347, 0, -0.0996724, 0.247876, 0, 0.16133)
+
+[node name="bird" parent="." index="4" instance=ExtResource("4_46mpl")]
+transform = Transform3D(0.419995, 0, 0.271301, 0, 0.5, 0, -0.271301, 0, 0.419995, -0.0102378, 1.27582, 0.00911334)

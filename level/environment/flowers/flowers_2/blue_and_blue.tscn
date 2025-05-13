@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://drc53rr6jdyoi"]
+
+[ext_resource type="PackedScene" uid="uid://bbtdkcx7frcki" path="res://level/environment/flowers/singles/flower_blue.tscn" id="1_ym7rv"]
+
+[node name="BlueAndBlue" type="Node3D"]
+
+[node name="flower_B" parent="." instance=ExtResource("1_ym7rv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.109305, 0, 0.0376131)
+skeleton = NodePath("../..")
+
+[node name="flower_B2" parent="." instance=ExtResource("1_ym7rv")]
+transform = Transform3D(0.528735, 0, -0.848787, 0, 1, 0, 0.848787, 0, 0.528735, 0.112928, 0, -0.0122145)
+skeleton = NodePath("../..")
