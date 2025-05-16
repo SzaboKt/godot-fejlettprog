@@ -316,11 +316,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1779, 0, 2.19621)
 
 [node name="Node3D" parent="Platform5/LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
 transform = Transform3D(1, 0, 0, 0, 0.999936, -0.011292, 0, 0.011292, 0.999936, -2.88305, 2.85, 10.8)
-wait_time = 3.0
+wait_time = 1.0
 
 [node name="Node3D3" parent="Platform5/LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8125, 2.85, 10.8)
-wait_time = 3.0
+wait_time = 1.0
 
 [node name="Node3D4" parent="Platform5/LeftRowAutomaticBows" instance=ExtResource("7_vl510")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7696, 2.85, 10.8)

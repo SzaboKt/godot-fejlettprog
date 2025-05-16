@@ -15,7 +15,7 @@ func _ready() -> void:
 	if arrow_type == "Rouge":
 		PROJECTILE = preload("res://enemies/bows/projectile/projectile.tscn")
 	elif arrow_type == "Snow":
-		PROJECTILE = preload("res://enemies/bows/projectile/arrow/snow_arrow.tscn")
+		PROJECTILE = preload("res://enemies/bows/projectile/snow_projectile.tscn")
 	cool_down_timer.wait_time = wait_time
 
 func _physics_process(delta: float) -> void:

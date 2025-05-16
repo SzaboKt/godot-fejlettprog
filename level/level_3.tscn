@@ -171,7 +171,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 40.0
 
 [node name="KillPlane3D" parent="." instance=ExtResource("6_21jwj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0621166, -27.1379, 1.34726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -27.138, 0)
 
 [node name="Platform1" parent="." instance=ExtResource("4_g5u8c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.166947, -0.33858, 0.0545334)
